@@ -20,6 +20,8 @@ from PySide6.QtWidgets import (QApplication, QDateTimeEdit, QFrame, QLabel,
     QLineEdit, QMainWindow, QMenu, QMenuBar,
     QSizePolicy, QStatusBar, QWidget)
 
+from widgets.frontbrake import FrontBrakeBar
+
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
@@ -308,7 +310,7 @@ class Ui_MainWindow(object):
         font1 = QFont()
         font1.setPointSize(28)
         self.label.setFont(font1)
-        self.frontbrake = QFrame(self.centralwidget)
+        self.frontbrake = FrontBrakeBar(self.centralwidget)
         self.frontbrake.setObjectName(u"frontbrake")
         self.frontbrake.setGeometry(QRect(20, 319, 61, 151))
         palette6 = QPalette()
