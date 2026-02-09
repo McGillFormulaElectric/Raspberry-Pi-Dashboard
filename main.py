@@ -1,20 +1,25 @@
-from PySide6.QtWidgets import QApplication
-from PySide6.QtUiTools import QUiLoader
-from PySide6.QtCore import QFile
 import sys
 import os
-from PySide6.QtCore import Qt
+
+# ---- HARD FIXES FOR WINDOWS / DPI / OFF-SCREEN ISSUES ----
+os.environ["QT_AUTO_SCREEN_SCALE_FACTOR"] = "0"
+os.environ["QT_SCALE_FACTOR"] = "1"
+os.environ["QT_ENABLE_HIGHDPI_SCALING"] = "0"
+
+from PySide6.QtWidgets import QApplication
+from PySide6.QtUiTools import QUiLoader
+from PySide6.QtCore import QFile, Qt
+
 from widgets.frontbrake import FrontBrakeBar
 
 
 def main():
     app = QApplication(sys.argv)
 
-    # Create loader and register custom widget
+    # ---- UI LOADER ----
     loader = QUiLoader()
     loader.registerCustomWidget(FrontBrakeBar)
 
-    # Absolute path to the .ui file
     ui_path = os.path.join(
         os.path.dirname(__file__),
         "untitled",
@@ -25,25 +30,33 @@ def main():
     if not ui_file.open(QFile.ReadOnly):
         raise RuntimeError(f"Could not open UI file: {ui_path}")
 
-    # Load the UI (this IS the main window)
     window = loader.load(ui_file)
     ui_file.close()
 
     if window is None:
         raise RuntimeError("Failed to load UI")
 
-    # Get the promoted widget
-    frontbrake = window.findChild(FrontBrakeBar, "frontbrake")
-    if frontbrake is None:
-        raise RuntimeError(
-            "frontbrake not found — check objectName and promotion"
-        )
-
-    # Test value
-    frontbrake.setValue(60)
+    # ---- FORCE WINDOW STATE (CRITICAL ON WINDOWS) ----
+    window.setWindowFlags(
+        Qt.Window
+        | Qt.WindowMinimizeButtonHint
+        | Qt.WindowMaximizeButtonHint
+        | Qt.WindowCloseButtonHint
+    )
 
     window.setWindowState(Qt.WindowNoState)
-    window.setGeometry(100, 100, 1200, 800)
+    window.resize(1280, 800)
+    window.move(100, 100)
+
+    # ---- FIND WIDGETS ----
+    frontbrake = window.findChild(FrontBrakeBar, "frontbrake")
+    if frontbrake is None:
+        raise RuntimeError("frontbrake widget not found")
+
+    # ---- TEST VALUE ----
+    frontbrake.setValue(60)
+
+    # ---- SHOW WINDOW ----
     window.show()
     window.raise_()
     window.activateWindow()

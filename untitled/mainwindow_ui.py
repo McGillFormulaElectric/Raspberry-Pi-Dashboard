@@ -30,6 +30,8 @@ class Ui_MainWindow(object):
         MainWindow.setWindowOpacity(0.000000000000000)
         MainWindow.setAutoFillBackground(False)
         MainWindow.setStyleSheet(u"background-color: rgb(0, 0, 0);")
+        self.actionsettings = QAction(MainWindow)
+        self.actionsettings.setObjectName(u"actionsettings")
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
         self.dateTimeEdit = QDateTimeEdit(self.centralwidget)
@@ -510,6 +512,7 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
+        self.actionsettings.setText(QCoreApplication.translate("MainWindow", u"settings", None))
         self.lineEdit.setText(QCoreApplication.translate("MainWindow", u"Front Brake", None))
         self.lineEdit_2.setText(QCoreApplication.translate("MainWindow", u"Rear Brake", None))
         self.lineEdit_3.setText(QCoreApplication.translate("MainWindow", u"Throttle", None))
