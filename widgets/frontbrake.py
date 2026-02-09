@@ -3,7 +3,7 @@ from PySide6.QtGui import QPainter, QColor
 from PySide6.QtCore import Qt
 import sys
 class FrontBrakeBar(QFrame):
-    def __innit__(self, parent=None):
+    def __init__(self, parent=None):
         super().__init__(parent)
         self.value=0
     
