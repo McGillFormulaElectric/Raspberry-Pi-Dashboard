@@ -54,7 +54,7 @@ def main():
         raise RuntimeError("frontbrake widget not found")
 
     # ---- TEST VALUE ----
-    frontbrake.setValue(60)
+    frontbrake.setValue(0)
 
     # ---- SHOW WINDOW ----
     window.show()
