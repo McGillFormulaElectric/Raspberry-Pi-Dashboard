@@ -1,37 +1,37 @@
-from PySide6.QtWidgets import QFrame, QApplication, QMainWindow
+from PySide6.QtWidgets import QFrame, QApplication, QMainWindow, QWidget
 from PySide6.QtGui import QPainter, QColor
-from PySide6.QtCore import Qt
-import sys
-class FrontBrakeBar(QFrame):
-    def __init__(self, parent=None):
-        super().__init__(parent)
-        self.value=0
+from PySide6.QtCore import QTimer
+import serial
+
+
+def setup_serial():
+    global ser
+    ser = serial.Serial(port="COM3", baudrate=115200, timeout=0)
+
+def transfer_function(raw_value):
+    #mathhhhhhh
+    real_value=0
+
+    return real_value
+
+def frontbrake_resize(window, height):
+    height = min(700, height)
+    bar= window.frontbrakebar
+    bottom = bar.y() + bar.height()
+    bar.setFixedHeight(height)
+    bar.move(bar.x(), bottom - height)
+
+def uart_input(window):
+    global ser
+    if ser.in_waiting:
+        value = ser.readline.decode().strip()
+        frontbrake_resize(window, transfer_function(value))
     
-    def setValue(self,value):
-        self.value=max(0, min(100, value))
-        self.update()
 
-    def paintEvent(self, event):
-        painter = QPainter(self)
-        painter.setRenderHint(QPainter.Antialiasing)
+    
 
-        w = self.width()
-        h = self.height()
+        
+        
 
-        # ----- Bar ------
-        fill_height = int(h*(self.value/100))
-        fill_top = h- fill_height
 
-        painter.setBrush(QColor(0,120,255))
-        painter.setPen(Qt.NoPen)
-        painter.drawRect(0,fill_top, w, fill_height)
-
-        # ----- Moving Number ----
-        text = str(self.value)
-        painter.setPen(Qt.white)
-
-        text_y = fill_top - 6
-        text_y = max(12, text_y)
-
-        painter.drawText(0, text_y, w, 20, Qt.AlignCenter, text)
         

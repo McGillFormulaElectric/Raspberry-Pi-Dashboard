@@ -19,6 +19,8 @@ from PySide6.QtGui import (QAction, QBrush, QColor, QConicalGradient,
 from PySide6.QtWidgets import (QApplication, QLineEdit, QMainWindow, QMenu,
     QMenuBar, QSizePolicy, QStatusBar, QWidget)
 
+from frontbrakebar import frontbrakebar
+
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
@@ -33,13 +35,13 @@ class Ui_MainWindow(object):
         self.centralwidget.setObjectName(u"centralwidget")
         self.frontbrake = QLineEdit(self.centralwidget)
         self.frontbrake.setObjectName(u"frontbrake")
-        self.frontbrake.setGeometry(QRect(20, 690, 91, 26))
+        self.frontbrake.setGeometry(QRect(30, 690, 91, 26))
         sizePolicy = QSizePolicy(QSizePolicy.Policy.Preferred, QSizePolicy.Policy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.frontbrake.sizePolicy().hasHeightForWidth())
         self.frontbrake.setSizePolicy(sizePolicy)
-        self.frontbrake.setMaximumSize(QSize(91, 16777215))
+        self.frontbrake.setMaximumSize(QSize(16777215, 16777215))
         palette = QPalette()
         brush = QBrush(QColor(255, 255, 255, 255))
         brush.setStyle(Qt.BrushStyle.SolidPattern)
@@ -76,11 +78,9 @@ class Ui_MainWindow(object):
         palette.setBrush(QPalette.ColorGroup.Disabled, QPalette.ColorRole.PlaceholderText, brush)
 #endif
         self.frontbrake.setPalette(palette)
-        self.frontbrakebar = QWidget(self.centralwidget)
+        self.frontbrakebar = frontbrakebar(self.centralwidget)
         self.frontbrakebar.setObjectName(u"frontbrakebar")
-        self.frontbrakebar.setEnabled(True)
-        self.frontbrakebar.setGeometry(QRect(20, 10, 100, 666))
-        self.frontbrakebar.setMaximumSize(QSize(100, 16777215))
+        self.frontbrakebar.setGeometry(QRect(20, 29, 120, 641))
         self.frontbrakebar.setStyleSheet(u"background-color:rgb(58, 143, 255)")
         MainWindow.setCentralWidget(self.centralwidget)
         self.statusbar = QStatusBar(MainWindow)

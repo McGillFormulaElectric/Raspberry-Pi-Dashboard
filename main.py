@@ -1,68 +1,53 @@
-import sys
-import os
-
-# ---- HARD FIXES FOR WINDOWS / DPI / OFF-SCREEN ISSUES ----
-os.environ["QT_AUTO_SCREEN_SCALE_FACTOR"] = "0"
-os.environ["QT_SCALE_FACTOR"] = "1"
-os.environ["QT_ENABLE_HIGHDPI_SCALING"] = "0"
-
-from PySide6.QtWidgets import QApplication
+from PySide6.QtWidgets import QFrame, QApplication, QMainWindow, QWidget
+from PySide6.QtGui import QPainter, QColor
+from PySide6.QtCore import Qt, QFile, QTimer
 from PySide6.QtUiTools import QUiLoader
-from PySide6.QtCore import QFile, Qt
-
-from widgets.frontbrake import FrontBrakeBar
-
-
-def main():
-    app = QApplication(sys.argv)
-
-    # ---- UI LOADER ----
-    loader = QUiLoader()
-    loader.registerCustomWidget(FrontBrakeBar)
-
-    ui_path = os.path.join(
-        os.path.dirname(__file__),
-        "untitled",
-        "mainwindow.ui"
-    )
-
-    ui_file = QFile(ui_path)
-    if not ui_file.open(QFile.ReadOnly):
-        raise RuntimeError(f"Could not open UI file: {ui_path}")
-
-    window = loader.load(ui_file)
-    ui_file.close()
-
-    if window is None:
-        raise RuntimeError("Failed to load UI")
-
-    # ---- FORCE WINDOW STATE (CRITICAL ON WINDOWS) ----
-    window.setWindowFlags(
-        Qt.Window
-        | Qt.WindowMinimizeButtonHint
-        | Qt.WindowMaximizeButtonHint
-        | Qt.WindowCloseButtonHint
-    )
-
-    window.setWindowState(Qt.WindowNoState)
-    window.resize(1280, 800)
-    window.move(100, 100)
-
-    # ---- FIND WIDGETS ----
-    frontbrake = window.findChild(FrontBrakeBar, "frontbrake")
-    if frontbrake is None:
-        raise RuntimeError("frontbrake widget not found")
-
-    # ---- TEST VALUE ----
-    frontbrake.setValue(0)
-
-    # ---- SHOW WINDOW ----
-    window.show()
-    window.raise_()
-    window.activateWindow()
-
-    sys.exit(app.exec())
+from widgets.frontbrake import frontbrake_resize, uart_input, transfer_function, setup_serial
+import random
 
 
-if __name__ == "__main__":
-    main()
+#from widgets.frontbrake import frontbrakebar
+
+
+app = QApplication()
+loader = QUiLoader()
+ui_file = QFile("untitled/mainwindow.ui")
+ 
+ui_file.open(QFile.ReadOnly)
+
+window = loader.load(ui_file)
+#event loop -----begin --------
+
+setup_serial()
+timer = QTimer()
+timer.timeout.connect(lambda:uart_input(window))
+timer.start(5)
+#event loop -----begin --------
+'''
+# testing uart
+current_value = 0
+direction = 1
+
+def fake_uart():
+    global current_value, direction
+
+    current_value += 10 * direction
+
+    if current_value >= 700:
+        direction = -1
+    if current_value <= 0:
+        direction = 1
+
+    frontbrake_resize(window, current_value)
+
+timer = QTimer()
+timer.timeout.connect(fake_uart)
+timer.start(30)
+ui_file.close()
+#end test 
+'''
+
+window.show()
+#window.showFullScreen()
+app.exec()
+        
