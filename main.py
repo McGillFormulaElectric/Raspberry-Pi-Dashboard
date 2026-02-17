@@ -1,5 +1,6 @@
+from PySide6 import QtCore, QtGui, QtWidgets
 from PySide6.QtWidgets import QFrame, QApplication, QMainWindow, QWidget
-from PySide6.QtGui import QPainter, QColor
+from PySide6.QtGui import QPainter, QColor, QCursor
 from PySide6.QtCore import Qt, QFile, QTimer
 from PySide6.QtUiTools import QUiLoader
 from widgets.frontbrake import frontbrake_resize, uart_input, transfer_function, setup_serial
@@ -23,7 +24,7 @@ timer = QTimer()
 timer.timeout.connect(lambda:uart_input(window))
 timer.start(5)
 #event loop -----begin --------
-'''
+
 # testing uart
 current_value = 0
 direction = 1
@@ -45,9 +46,20 @@ timer.timeout.connect(fake_uart)
 timer.start(30)
 ui_file.close()
 #end test 
-'''
+
+def toggle_fullscreen():
+    if window.isFullScreen():
+        window.showNormal()
+    else:
+        window.showFullScreen()
+        
+QtGui.QShortcut(QtGui.QKeySequence("Ctrl+M"), window, activated=window.showMinimized)
+QtGui.QShortcut(QtGui.QKeySequence("Ctrl+F"), window, activated=toggle_fullscreen)
+QtGui.QShortcut(QtGui.QKeySequence("Ctrl+Q"), window, activated=QtWidgets.QApplication.quit)
+
+app.setOverrideCursor(QCursor(Qt.BlankCursor))
 
 window.show()
-#window.showFullScreen()
+window.showFullScreen()
 app.exec()
         

@@ -6,7 +6,7 @@ import serial
 
 def setup_serial():
     global ser
-    ser = serial.Serial(port="COM3", baudrate=115200, timeout=0)
+    ser = serial.Serial(port="/dev/serial0", baudrate=115200, timeout=0)
 
 def transfer_function(raw_value):
     #mathhhhhhh
