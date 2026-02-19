@@ -25,7 +25,7 @@ def uart_input(window):
     global ser
     if ser.in_waiting:
         value = ser.readline.decode().strip()
-        frontbrake_resize(window, transfer_function(value))
+        frontbrake_resize(window, value) #transfer_function(value)
     
 
     
