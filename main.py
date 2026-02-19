@@ -24,7 +24,7 @@ timer = QTimer()
 timer.timeout.connect(lambda:uart_input(window))
 timer.start(5)
 #event loop -----begin --------
-
+'''
 # testing uart
 current_value = 0
 direction = 1
@@ -40,7 +40,7 @@ def fake_uart():
         direction = 1
 
     frontbrake_resize(window, current_value)
-
+'''
 timer = QTimer()
 timer.timeout.connect(fake_uart)
 timer.start(30)
