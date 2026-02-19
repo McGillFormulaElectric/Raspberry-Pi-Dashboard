@@ -40,13 +40,13 @@ def fake_uart():
         direction = 1
 
     frontbrake_resize(window, current_value)
-'''
+
 timer = QTimer()
 timer.timeout.connect(fake_uart)
 timer.start(30)
 ui_file.close()
 #end test 
-
+'''
 def toggle_fullscreen():
     if window.isFullScreen():
         window.showNormal()
