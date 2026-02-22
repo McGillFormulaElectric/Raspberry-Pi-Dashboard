@@ -4,28 +4,18 @@ from PySide6.QtCore import QTimer
 import serial
 
 
-def setup_serial():
-    global ser
-    ser = serial.Serial(port="/dev/ttyS0", baudrate=115200, timeout=5)
-
-def transfer_function(raw_value):
-    #mathhhhhhh
-    real_value=0
-
-    return real_value
-
 def frontbrake_resize(window, height):
-    height = min(700, height)
-    bar= window.frontbrakebar
-    bottom = bar.y() + bar.height()
-    bar.setFixedHeight(height)
-    bar.move(bar.x(), bottom - height)
+    height = min(400, height) #400 gotten from max possible y value in qt creator
+    bar= window.frontbrakebar #custom object name given in creator
+    
+    bottom = bar.y() + bar.height() #find bottom of bar
+    
+    bar.setFixedHeight(height) #set to desired height
+    
+    bar.move(bar.x(), bottom - height) #move it down to bottom. needed because you can only control bottom of bar, not the top
+                                        
 
-def uart_input(window):
-    global ser
-    if ser.in_waiting:
-        value = ser.readline.decode().strip()
-        frontbrake_resize(window, value) #transfer_function(value)
+
     
 
     
