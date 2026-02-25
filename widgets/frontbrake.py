@@ -3,10 +3,27 @@ from PySide6.QtGui import QPainter, QColor
 from PySide6.QtCore import QTimer
 import serial
 
+ser = None
 
 def setup_serial():
     global ser
-    ser = serial.Serial(port="/dev/serial0", baudrate=115200, timeout=5)
+    ser = serial.Serial(port="/dev/serial0",
+                        baudrate=115200,
+                        timeout=0
+            )
+
+def uart_input(window):
+    global ser
+    if ser is None:
+        return
+    
+    if ser.in_waiting > 0:
+        raw = ser.read(1)
+        if len(raw) == 1:
+            value = raw[0]
+            print(value)
+            print("\n")
+            frontbrake_resize(window, value)
 
 def transfer_function(raw_value):
     #mathhhhhhh
@@ -15,22 +32,15 @@ def transfer_function(raw_value):
     return real_value
 
 def frontbrake_resize(window, height):
+    height = int(height)
+    print("The height here is:",height)
     height = min(700, height)
     bar= window.frontbrakebar
     bottom = bar.y() + bar.height()
     bar.setFixedHeight(height)
     bar.move(bar.x(), bottom - height)
 
-def uart_input(window):
-    global ser
-    if ser.in_waiting:
-        value = ser.readline.decode().strip()
-        frontbrake_resize(window, value) #transfer_function(value)
-    
 
-    
-
-        
         
 
 

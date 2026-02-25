@@ -17,6 +17,7 @@ ui_file = QFile("untitled/mainwindow.ui")
 ui_file.open(QFile.ReadOnly)
 
 window = loader.load(ui_file)
+ui_file.close()
 #event loop -----begin --------
 
 setup_serial()
