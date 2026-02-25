@@ -3,7 +3,8 @@ from PySide6.QtWidgets import QFrame, QApplication, QMainWindow, QWidget
 from PySide6.QtGui import QPainter, QColor, QCursor
 from PySide6.QtCore import Qt, QFile, QTimer
 from PySide6.QtUiTools import QUiLoader
-from widgets.frontbrake import frontbrake_resize, uart_input, transfer_function, setup_serial
+from widgets.frontbrake import frontbrake_resize
+from widgets.uart_logic import setup_serial, uart_input
 import random
 
 
@@ -24,7 +25,7 @@ setup_serial()
 timer = QTimer()
 timer.timeout.connect(lambda:uart_input(window))
 timer.start(5)
-#event loop -----begin --------
+#event loop -----end --------
 '''
 # testing uart
 current_value = 0
@@ -35,7 +36,7 @@ def fake_uart():
 
     current_value += 10 * direction
 
-    if current_value >= 700:
+    if current_value >= 400:
         direction = -1
     if current_value <= 0:
         direction = 1
@@ -60,6 +61,7 @@ QtGui.QShortcut(QtGui.QKeySequence("Ctrl+Q"), window, activated=QtWidgets.QAppli
 
 app.setOverrideCursor(QCursor(Qt.BlankCursor))
 
+#fake_uart()
 window.show()
 window.showFullScreen()
 app.exec()

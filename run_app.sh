@@ -2,7 +2,7 @@
 
 cd /home/mcgillformulaelectric/Raspberry-Pi-Dashboard || exit
 
-source venv/bin/activate
+source venv/bin/activate 
 
 python main.py
 
