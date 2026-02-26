@@ -3,8 +3,7 @@ from PySide6.QtWidgets import QFrame, QApplication, QMainWindow, QWidget
 from PySide6.QtGui import QPainter, QColor, QCursor
 from PySide6.QtCore import Qt, QFile, QTimer
 from PySide6.QtUiTools import QUiLoader
-from widgets.frontbrake import frontbrake_resize
-from widgets.uart_logic import setup_serial, uart_input
+from widgets.frontbrake import setup_serial, uart_input, frontbrake_resize
 import random
 
 
