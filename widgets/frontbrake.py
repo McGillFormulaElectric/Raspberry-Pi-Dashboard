@@ -7,7 +7,7 @@ ser = None
 
 def setup_serial():
     global ser
-    ser = serial.Serial(port='/dev/serial0',
+    ser = serial.Serial(port='COM4',
                         baudrate=115200,
                         timeout=0
             )
