@@ -43,6 +43,8 @@ class Dashboard:
         # Show window
         self.window.show()
         self.window.showFullScreen()
+    def run(self):
+        self.app.exec()
 
     def update_uart(self):
         uart_input(self.window)
@@ -72,8 +74,7 @@ class Dashboard:
         QtGui.QShortcut(QtGui.QKeySequence("Ctrl+F"), self.window, activated=self.toggle_fullscreen)
         QtGui.QShortcut(QtGui.QKeySequence("Ctrl+Q"), self.window, activated=QtWidgets.QApplication.quit)
 
-    def run(self):
-        self.app.exec()
+    
 
 
 if __name__ == "__main__":
