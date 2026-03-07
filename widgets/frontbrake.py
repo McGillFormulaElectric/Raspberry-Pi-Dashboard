@@ -33,7 +33,7 @@ def transfer_function(raw_value):
 
 def frontbrake_resize(window, height):
     print("The height here is:",height)
-    height = int(3.71*height)
+    height = int(371*(height/100))
     height = min(371, height)
     bar= window.frontbrakebar
     bottom = bar.y() + bar.height()
