@@ -5,7 +5,15 @@ from PySide6.QtCore import Qt, QFile, QTimer
 from PySide6.QtUiTools import QUiLoader
 from widgets.frontbrake import setup_serial, uart_input, frontbrake_resize
 import random
+from widgets.page_2 import pulse_light
+from dashboard_class import Dashboard
 
+
+
+if __name__ == "__main__":
+    dashboard = Dashboard()
+    dashboard.run()
+'''
 
 #from widgets.frontbrake import frontbrakebar
 
@@ -23,36 +31,29 @@ ui_file.close()
 setup_serial()
 timer = QTimer()
 timer.timeout.connect(lambda:uart_input(window))
+pulse_light(window)
 timer.start(5)
 #event loop -----end --------
-'''
-# testing uart
-current_value = 0
-direction = 1
 
-def fake_uart():
-    global current_value, direction
-
-    current_value += 10 * direction
-
-    if current_value >= 400:
-        direction = -1
-    if current_value <= 0:
-        direction = 1
-
-    frontbrake_resize(window, current_value)
-
-timer = QTimer()
-timer.timeout.connect(fake_uart)
-timer.start(30)
-ui_file.close()
-#end test 
-'''
 def toggle_fullscreen():
     if window.isFullScreen():
         window.showNormal()
     else:
         window.showFullScreen()
+
+def next_page():
+    index = window.stackedWidget.currentIndex()
+    count = window.stackedWidget.count()
+    window.stackedWidget.setCurrentIndex((index + 1) % count)
+
+def prev_page():
+    index = window.stackedWidget.currentIndex()
+    count = window.stackedWidget.count()
+    window.stackedWidget.setCurrentIndex((index - 1) % count)
+
+
+QtGui.QShortcut(QtGui.QKeySequence("Ctrl+K"), window, activated=next_page) #flip through pages
+QtGui.QShortcut(QtGui.QKeySequence("Ctrl+J"), window, activated=prev_page)
         
 QtGui.QShortcut(QtGui.QKeySequence("Ctrl+M"), window, activated=window.showMinimized)
 QtGui.QShortcut(QtGui.QKeySequence("Ctrl+F"), window, activated=toggle_fullscreen)
@@ -65,3 +66,5 @@ window.show()
 window.showFullScreen()
 app.exec()
         
+'''
+
