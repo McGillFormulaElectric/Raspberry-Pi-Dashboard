@@ -32,9 +32,9 @@ def transfer_function(raw_value):
     return real_value
 
 def frontbrake_resize(window, height):
-    height = int(height)
     print("The height here is:",height)
-    height = min(700, height)
+    height = int(3.71*height)
+    height = min(371, height)
     bar= window.frontbrakebar
     bottom = bar.y() + bar.height()
     bar.setFixedHeight(height)
