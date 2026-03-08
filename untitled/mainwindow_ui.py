@@ -16,9 +16,10 @@ from PySide6.QtGui import (QAction, QBrush, QColor, QConicalGradient,
     QIcon, QImage, QKeySequence, QLinearGradient,
     QPainter, QPalette, QPixmap, QRadialGradient,
     QTransform)
-from PySide6.QtWidgets import (QAbstractScrollArea, QApplication, QHeaderView, QLabel,
-    QMainWindow, QPlainTextEdit, QSizePolicy, QStackedWidget,
-    QStatusBar, QTableWidget, QTableWidgetItem, QWidget)
+from PySide6.QtWidgets import (QAbstractItemView, QAbstractScrollArea, QApplication, QHeaderView,
+    QLabel, QMainWindow, QPlainTextEdit, QSizePolicy,
+    QStackedWidget, QStatusBar, QTableWidget, QTableWidgetItem,
+    QWidget)
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -162,6 +163,148 @@ class Ui_MainWindow(object):
         self.cur_max_temp.setFont(font2)
         self.cur_max_temp.setStyleSheet(u"color:rgb(255, 255, 255);")
         self.stackedWidget.addWidget(self.page_4)
+        self.page_5 = QWidget()
+        self.page_5.setObjectName(u"page_5")
+        self.front_rear_temp_table = QTableWidget(self.page_5)
+        if (self.front_rear_temp_table.columnCount() < 5):
+            self.front_rear_temp_table.setColumnCount(5)
+        if (self.front_rear_temp_table.rowCount() < 4):
+            self.front_rear_temp_table.setRowCount(4)
+        __qtablewidgetitem = QTableWidgetItem()
+        self.front_rear_temp_table.setItem(0, 1, __qtablewidgetitem)
+        __qtablewidgetitem1 = QTableWidgetItem()
+        self.front_rear_temp_table.setItem(0, 2, __qtablewidgetitem1)
+        __qtablewidgetitem2 = QTableWidgetItem()
+        self.front_rear_temp_table.setItem(0, 3, __qtablewidgetitem2)
+        __qtablewidgetitem3 = QTableWidgetItem()
+        self.front_rear_temp_table.setItem(0, 4, __qtablewidgetitem3)
+        __qtablewidgetitem4 = QTableWidgetItem()
+        self.front_rear_temp_table.setItem(1, 0, __qtablewidgetitem4)
+        __qtablewidgetitem5 = QTableWidgetItem()
+        self.front_rear_temp_table.setItem(1, 1, __qtablewidgetitem5)
+        __qtablewidgetitem6 = QTableWidgetItem()
+        self.front_rear_temp_table.setItem(1, 2, __qtablewidgetitem6)
+        __qtablewidgetitem7 = QTableWidgetItem()
+        self.front_rear_temp_table.setItem(1, 3, __qtablewidgetitem7)
+        __qtablewidgetitem8 = QTableWidgetItem()
+        self.front_rear_temp_table.setItem(1, 4, __qtablewidgetitem8)
+        __qtablewidgetitem9 = QTableWidgetItem()
+        self.front_rear_temp_table.setItem(2, 0, __qtablewidgetitem9)
+        __qtablewidgetitem10 = QTableWidgetItem()
+        self.front_rear_temp_table.setItem(2, 1, __qtablewidgetitem10)
+        __qtablewidgetitem11 = QTableWidgetItem()
+        self.front_rear_temp_table.setItem(2, 2, __qtablewidgetitem11)
+        __qtablewidgetitem12 = QTableWidgetItem()
+        self.front_rear_temp_table.setItem(2, 3, __qtablewidgetitem12)
+        __qtablewidgetitem13 = QTableWidgetItem()
+        self.front_rear_temp_table.setItem(2, 4, __qtablewidgetitem13)
+        __qtablewidgetitem14 = QTableWidgetItem()
+        self.front_rear_temp_table.setItem(3, 0, __qtablewidgetitem14)
+        __qtablewidgetitem15 = QTableWidgetItem()
+        self.front_rear_temp_table.setItem(3, 1, __qtablewidgetitem15)
+        __qtablewidgetitem16 = QTableWidgetItem()
+        self.front_rear_temp_table.setItem(3, 2, __qtablewidgetitem16)
+        __qtablewidgetitem17 = QTableWidgetItem()
+        self.front_rear_temp_table.setItem(3, 3, __qtablewidgetitem17)
+        __qtablewidgetitem18 = QTableWidgetItem()
+        self.front_rear_temp_table.setItem(3, 4, __qtablewidgetitem18)
+        self.front_rear_temp_table.setObjectName(u"front_rear_temp_table")
+        self.front_rear_temp_table.setGeometry(QRect(110, 10, 511, 221))
+        font3 = QFont()
+        font3.setPointSize(15)
+        self.front_rear_temp_table.setFont(font3)
+        self.front_rear_temp_table.setStyleSheet(u"color:rgb(255, 255, 255)")
+        self.front_rear_temp_table.setSizeAdjustPolicy(QAbstractScrollArea.SizeAdjustPolicy.AdjustToContentsOnFirstShow)
+        self.front_rear_temp_table.setHorizontalScrollMode(QAbstractItemView.ScrollMode.ScrollPerItem)
+        self.front_rear_temp_table.setWordWrap(True)
+        self.front_rear_temp_table.setRowCount(4)
+        self.front_rear_temp_table.setColumnCount(5)
+        self.front_rear_temp_table.horizontalHeader().setVisible(False)
+        self.front_rear_temp_table.horizontalHeader().setCascadingSectionResizes(True)
+        self.front_rear_temp_table.horizontalHeader().setDefaultSectionSize(100)
+        self.front_rear_temp_table.horizontalHeader().setHighlightSections(True)
+        self.front_rear_temp_table.horizontalHeader().setProperty(u"showSortIndicator", False)
+        self.front_rear_temp_table.horizontalHeader().setStretchLastSection(True)
+        self.front_rear_temp_table.verticalHeader().setVisible(False)
+        self.front_rear_temp_table.verticalHeader().setDefaultSectionSize(50)
+        self.front_rear_temp_table.verticalHeader().setHighlightSections(True)
+        self.front_rear_temp_table.verticalHeader().setProperty(u"showSortIndicator", False)
+        self.front_rear_temp_table.verticalHeader().setStretchLastSection(True)
+        self.motor_loop_temp_table = QTableWidget(self.page_5)
+        if (self.motor_loop_temp_table.columnCount() < 3):
+            self.motor_loop_temp_table.setColumnCount(3)
+        if (self.motor_loop_temp_table.rowCount() < 2):
+            self.motor_loop_temp_table.setRowCount(2)
+        __qtablewidgetitem19 = QTableWidgetItem()
+        self.motor_loop_temp_table.setItem(0, 0, __qtablewidgetitem19)
+        __qtablewidgetitem20 = QTableWidgetItem()
+        self.motor_loop_temp_table.setItem(0, 1, __qtablewidgetitem20)
+        __qtablewidgetitem21 = QTableWidgetItem()
+        self.motor_loop_temp_table.setItem(0, 2, __qtablewidgetitem21)
+        __qtablewidgetitem22 = QTableWidgetItem()
+        self.motor_loop_temp_table.setItem(1, 0, __qtablewidgetitem22)
+        __qtablewidgetitem23 = QTableWidgetItem()
+        self.motor_loop_temp_table.setItem(1, 1, __qtablewidgetitem23)
+        __qtablewidgetitem24 = QTableWidgetItem()
+        self.motor_loop_temp_table.setItem(1, 2, __qtablewidgetitem24)
+        self.motor_loop_temp_table.setObjectName(u"motor_loop_temp_table")
+        self.motor_loop_temp_table.setGeometry(QRect(0, 280, 321, 131))
+        self.motor_loop_temp_table.setFont(font3)
+        self.motor_loop_temp_table.setStyleSheet(u"color:rgb(255, 255, 255)")
+        self.motor_loop_temp_table.setSizeAdjustPolicy(QAbstractScrollArea.SizeAdjustPolicy.AdjustToContentsOnFirstShow)
+        self.motor_loop_temp_table.setHorizontalScrollMode(QAbstractItemView.ScrollMode.ScrollPerItem)
+        self.motor_loop_temp_table.setWordWrap(True)
+        self.motor_loop_temp_table.setRowCount(2)
+        self.motor_loop_temp_table.setColumnCount(3)
+        self.motor_loop_temp_table.horizontalHeader().setVisible(False)
+        self.motor_loop_temp_table.horizontalHeader().setCascadingSectionResizes(True)
+        self.motor_loop_temp_table.horizontalHeader().setDefaultSectionSize(100)
+        self.motor_loop_temp_table.horizontalHeader().setHighlightSections(True)
+        self.motor_loop_temp_table.horizontalHeader().setProperty(u"showSortIndicator", False)
+        self.motor_loop_temp_table.horizontalHeader().setStretchLastSection(True)
+        self.motor_loop_temp_table.verticalHeader().setVisible(False)
+        self.motor_loop_temp_table.verticalHeader().setDefaultSectionSize(50)
+        self.motor_loop_temp_table.verticalHeader().setHighlightSections(True)
+        self.motor_loop_temp_table.verticalHeader().setProperty(u"showSortIndicator", False)
+        self.motor_loop_temp_table.verticalHeader().setStretchLastSection(True)
+        self.inv_loop_temp_table = QTableWidget(self.page_5)
+        if (self.inv_loop_temp_table.columnCount() < 3):
+            self.inv_loop_temp_table.setColumnCount(3)
+        if (self.inv_loop_temp_table.rowCount() < 2):
+            self.inv_loop_temp_table.setRowCount(2)
+        __qtablewidgetitem25 = QTableWidgetItem()
+        self.inv_loop_temp_table.setItem(0, 0, __qtablewidgetitem25)
+        __qtablewidgetitem26 = QTableWidgetItem()
+        self.inv_loop_temp_table.setItem(0, 1, __qtablewidgetitem26)
+        __qtablewidgetitem27 = QTableWidgetItem()
+        self.inv_loop_temp_table.setItem(0, 2, __qtablewidgetitem27)
+        __qtablewidgetitem28 = QTableWidgetItem()
+        self.inv_loop_temp_table.setItem(1, 0, __qtablewidgetitem28)
+        __qtablewidgetitem29 = QTableWidgetItem()
+        self.inv_loop_temp_table.setItem(1, 1, __qtablewidgetitem29)
+        __qtablewidgetitem30 = QTableWidgetItem()
+        self.inv_loop_temp_table.setItem(1, 2, __qtablewidgetitem30)
+        self.inv_loop_temp_table.setObjectName(u"inv_loop_temp_table")
+        self.inv_loop_temp_table.setGeometry(QRect(400, 280, 321, 131))
+        self.inv_loop_temp_table.setFont(font3)
+        self.inv_loop_temp_table.setStyleSheet(u"color:rgb(255, 255, 255)")
+        self.inv_loop_temp_table.setSizeAdjustPolicy(QAbstractScrollArea.SizeAdjustPolicy.AdjustToContentsOnFirstShow)
+        self.inv_loop_temp_table.setHorizontalScrollMode(QAbstractItemView.ScrollMode.ScrollPerItem)
+        self.inv_loop_temp_table.setWordWrap(True)
+        self.inv_loop_temp_table.setRowCount(2)
+        self.inv_loop_temp_table.setColumnCount(3)
+        self.inv_loop_temp_table.horizontalHeader().setVisible(False)
+        self.inv_loop_temp_table.horizontalHeader().setCascadingSectionResizes(True)
+        self.inv_loop_temp_table.horizontalHeader().setDefaultSectionSize(100)
+        self.inv_loop_temp_table.horizontalHeader().setHighlightSections(True)
+        self.inv_loop_temp_table.horizontalHeader().setProperty(u"showSortIndicator", False)
+        self.inv_loop_temp_table.horizontalHeader().setStretchLastSection(True)
+        self.inv_loop_temp_table.verticalHeader().setVisible(False)
+        self.inv_loop_temp_table.verticalHeader().setDefaultSectionSize(50)
+        self.inv_loop_temp_table.verticalHeader().setHighlightSections(True)
+        self.inv_loop_temp_table.verticalHeader().setProperty(u"showSortIndicator", False)
+        self.inv_loop_temp_table.verticalHeader().setStretchLastSection(True)
+        self.stackedWidget.addWidget(self.page_5)
         self.page_2 = QWidget()
         self.page_2.setObjectName(u"page_2")
         self.CVT_table = QTableWidget(self.page_2)
@@ -169,37 +312,37 @@ class Ui_MainWindow(object):
             self.CVT_table.setColumnCount(2)
         if (self.CVT_table.rowCount() < 6):
             self.CVT_table.setRowCount(6)
-        __qtablewidgetitem = QTableWidgetItem()
-        self.CVT_table.setItem(0, 0, __qtablewidgetitem)
-        __qtablewidgetitem1 = QTableWidgetItem()
-        self.CVT_table.setItem(0, 1, __qtablewidgetitem1)
-        __qtablewidgetitem2 = QTableWidgetItem()
-        self.CVT_table.setItem(1, 0, __qtablewidgetitem2)
-        __qtablewidgetitem3 = QTableWidgetItem()
-        self.CVT_table.setItem(1, 1, __qtablewidgetitem3)
-        __qtablewidgetitem4 = QTableWidgetItem()
-        self.CVT_table.setItem(2, 0, __qtablewidgetitem4)
-        __qtablewidgetitem5 = QTableWidgetItem()
-        self.CVT_table.setItem(2, 1, __qtablewidgetitem5)
-        font3 = QFont()
-        font3.setPointSize(19)
-        __qtablewidgetitem6 = QTableWidgetItem()
-        __qtablewidgetitem6.setFont(font3);
-        self.CVT_table.setItem(3, 0, __qtablewidgetitem6)
-        __qtablewidgetitem7 = QTableWidgetItem()
-        self.CVT_table.setItem(3, 1, __qtablewidgetitem7)
-        __qtablewidgetitem8 = QTableWidgetItem()
-        self.CVT_table.setItem(4, 0, __qtablewidgetitem8)
-        __qtablewidgetitem9 = QTableWidgetItem()
-        self.CVT_table.setItem(4, 1, __qtablewidgetitem9)
-        __qtablewidgetitem10 = QTableWidgetItem()
-        self.CVT_table.setItem(5, 0, __qtablewidgetitem10)
-        __qtablewidgetitem11 = QTableWidgetItem()
-        self.CVT_table.setItem(5, 1, __qtablewidgetitem11)
+        __qtablewidgetitem31 = QTableWidgetItem()
+        self.CVT_table.setItem(0, 0, __qtablewidgetitem31)
+        __qtablewidgetitem32 = QTableWidgetItem()
+        self.CVT_table.setItem(0, 1, __qtablewidgetitem32)
+        __qtablewidgetitem33 = QTableWidgetItem()
+        self.CVT_table.setItem(1, 0, __qtablewidgetitem33)
+        __qtablewidgetitem34 = QTableWidgetItem()
+        self.CVT_table.setItem(1, 1, __qtablewidgetitem34)
+        __qtablewidgetitem35 = QTableWidgetItem()
+        self.CVT_table.setItem(2, 0, __qtablewidgetitem35)
+        __qtablewidgetitem36 = QTableWidgetItem()
+        self.CVT_table.setItem(2, 1, __qtablewidgetitem36)
+        font4 = QFont()
+        font4.setPointSize(19)
+        __qtablewidgetitem37 = QTableWidgetItem()
+        __qtablewidgetitem37.setFont(font4);
+        self.CVT_table.setItem(3, 0, __qtablewidgetitem37)
+        __qtablewidgetitem38 = QTableWidgetItem()
+        self.CVT_table.setItem(3, 1, __qtablewidgetitem38)
+        __qtablewidgetitem39 = QTableWidgetItem()
+        self.CVT_table.setItem(4, 0, __qtablewidgetitem39)
+        __qtablewidgetitem40 = QTableWidgetItem()
+        self.CVT_table.setItem(4, 1, __qtablewidgetitem40)
+        __qtablewidgetitem41 = QTableWidgetItem()
+        self.CVT_table.setItem(5, 0, __qtablewidgetitem41)
+        __qtablewidgetitem42 = QTableWidgetItem()
+        self.CVT_table.setItem(5, 1, __qtablewidgetitem42)
         self.CVT_table.setObjectName(u"CVT_table")
         self.CVT_table.setEnabled(True)
         self.CVT_table.setGeometry(QRect(200, 100, 401, 321))
-        self.CVT_table.setFont(font3)
+        self.CVT_table.setFont(font4)
         self.CVT_table.setStyleSheet(u"\n"
 "color: rgb(255, 255, 255);\n"
 "")
@@ -232,14 +375,14 @@ class Ui_MainWindow(object):
         self.label_5 = QLabel(self.page_2)
         self.label_5.setObjectName(u"label_5")
         self.label_5.setGeometry(QRect(280, 0, 221, 41))
-        font4 = QFont()
-        font4.setPointSize(17)
-        self.label_5.setFont(font4)
+        font5 = QFont()
+        font5.setPointSize(17)
+        self.label_5.setFont(font5)
         self.label_5.setStyleSheet(u"color:rgb(255, 255, 255)")
         self.label_6 = QLabel(self.page_2)
         self.label_6.setObjectName(u"label_6")
         self.label_6.setGeometry(QRect(280, 50, 221, 41))
-        self.label_6.setFont(font4)
+        self.label_6.setFont(font5)
         self.label_6.setStyleSheet(u"color:rgb(255, 255, 255)")
         self.stackedWidget.addWidget(self.page_2)
         MainWindow.setCentralWidget(self.centralwidget)
@@ -249,7 +392,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.stackedWidget.setCurrentIndex(2)
+        self.stackedWidget.setCurrentIndex(3)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
@@ -284,33 +427,106 @@ class Ui_MainWindow(object):
         self.running_temp.setText(QCoreApplication.translate("MainWindow", u"00.0 C", None))
         self.cur_max_temp.setText(QCoreApplication.translate("MainWindow", u"00.0 C", None))
 
-        __sortingEnabled = self.CVT_table.isSortingEnabled()
-        self.CVT_table.setSortingEnabled(False)
-        ___qtablewidgetitem = self.CVT_table.item(0, 0)
-        ___qtablewidgetitem.setText(QCoreApplication.translate("MainWindow", u"Current", None));
-        ___qtablewidgetitem1 = self.CVT_table.item(0, 1)
-        ___qtablewidgetitem1.setText(QCoreApplication.translate("MainWindow", u"0A", None));
-        ___qtablewidgetitem2 = self.CVT_table.item(1, 0)
-        ___qtablewidgetitem2.setText(QCoreApplication.translate("MainWindow", u"Voltage", None));
-        ___qtablewidgetitem3 = self.CVT_table.item(1, 1)
-        ___qtablewidgetitem3.setText(QCoreApplication.translate("MainWindow", u"0V", None));
-        ___qtablewidgetitem4 = self.CVT_table.item(2, 0)
-        ___qtablewidgetitem4.setText(QCoreApplication.translate("MainWindow", u"Min Cell Temp.", None));
-        ___qtablewidgetitem5 = self.CVT_table.item(2, 1)
+        __sortingEnabled = self.front_rear_temp_table.isSortingEnabled()
+        self.front_rear_temp_table.setSortingEnabled(False)
+        ___qtablewidgetitem = self.front_rear_temp_table.item(0, 1)
+        ___qtablewidgetitem.setText(QCoreApplication.translate("MainWindow", u"FL", None));
+        ___qtablewidgetitem1 = self.front_rear_temp_table.item(0, 2)
+        ___qtablewidgetitem1.setText(QCoreApplication.translate("MainWindow", u"FR", None));
+        ___qtablewidgetitem2 = self.front_rear_temp_table.item(0, 3)
+        ___qtablewidgetitem2.setText(QCoreApplication.translate("MainWindow", u"RL", None));
+        ___qtablewidgetitem3 = self.front_rear_temp_table.item(0, 4)
+        ___qtablewidgetitem3.setText(QCoreApplication.translate("MainWindow", u"RR", None));
+        ___qtablewidgetitem4 = self.front_rear_temp_table.item(1, 0)
+        ___qtablewidgetitem4.setText(QCoreApplication.translate("MainWindow", u"Motor", None));
+        ___qtablewidgetitem5 = self.front_rear_temp_table.item(1, 1)
         ___qtablewidgetitem5.setText(QCoreApplication.translate("MainWindow", u"0 C", None));
-        ___qtablewidgetitem6 = self.CVT_table.item(3, 0)
-        ___qtablewidgetitem6.setText(QCoreApplication.translate("MainWindow", u"Max Cell Temp.", None));
-        ___qtablewidgetitem7 = self.CVT_table.item(3, 1)
-        ___qtablewidgetitem7.setText(QCoreApplication.translate("MainWindow", u"0V", None));
-        ___qtablewidgetitem8 = self.CVT_table.item(4, 0)
-        ___qtablewidgetitem8.setText(QCoreApplication.translate("MainWindow", u"Min Cell Volt.", None));
-        ___qtablewidgetitem9 = self.CVT_table.item(4, 1)
-        ___qtablewidgetitem9.setText(QCoreApplication.translate("MainWindow", u"0V", None));
-        ___qtablewidgetitem10 = self.CVT_table.item(5, 0)
-        ___qtablewidgetitem10.setText(QCoreApplication.translate("MainWindow", u"Max Cell Volt.", None));
-        ___qtablewidgetitem11 = self.CVT_table.item(5, 1)
-        ___qtablewidgetitem11.setText(QCoreApplication.translate("MainWindow", u"0V", None));
-        self.CVT_table.setSortingEnabled(__sortingEnabled)
+        ___qtablewidgetitem6 = self.front_rear_temp_table.item(1, 2)
+        ___qtablewidgetitem6.setText(QCoreApplication.translate("MainWindow", u"0 C", None));
+        ___qtablewidgetitem7 = self.front_rear_temp_table.item(1, 3)
+        ___qtablewidgetitem7.setText(QCoreApplication.translate("MainWindow", u"0 C", None));
+        ___qtablewidgetitem8 = self.front_rear_temp_table.item(1, 4)
+        ___qtablewidgetitem8.setText(QCoreApplication.translate("MainWindow", u"0 C", None));
+        ___qtablewidgetitem9 = self.front_rear_temp_table.item(2, 0)
+        ___qtablewidgetitem9.setText(QCoreApplication.translate("MainWindow", u"IGBT", None));
+        ___qtablewidgetitem10 = self.front_rear_temp_table.item(2, 1)
+        ___qtablewidgetitem10.setText(QCoreApplication.translate("MainWindow", u"0 C", None));
+        ___qtablewidgetitem11 = self.front_rear_temp_table.item(2, 2)
+        ___qtablewidgetitem11.setText(QCoreApplication.translate("MainWindow", u"0 C", None));
+        ___qtablewidgetitem12 = self.front_rear_temp_table.item(2, 3)
+        ___qtablewidgetitem12.setText(QCoreApplication.translate("MainWindow", u"0 C", None));
+        ___qtablewidgetitem13 = self.front_rear_temp_table.item(2, 4)
+        ___qtablewidgetitem13.setText(QCoreApplication.translate("MainWindow", u"0 C", None));
+        ___qtablewidgetitem14 = self.front_rear_temp_table.item(3, 0)
+        ___qtablewidgetitem14.setText(QCoreApplication.translate("MainWindow", u"Cold Plate", None));
+        ___qtablewidgetitem15 = self.front_rear_temp_table.item(3, 1)
+        ___qtablewidgetitem15.setText(QCoreApplication.translate("MainWindow", u"0 C", None));
+        ___qtablewidgetitem16 = self.front_rear_temp_table.item(3, 2)
+        ___qtablewidgetitem16.setText(QCoreApplication.translate("MainWindow", u"0 C", None));
+        ___qtablewidgetitem17 = self.front_rear_temp_table.item(3, 3)
+        ___qtablewidgetitem17.setText(QCoreApplication.translate("MainWindow", u"0 C", None));
+        ___qtablewidgetitem18 = self.front_rear_temp_table.item(3, 4)
+        ___qtablewidgetitem18.setText(QCoreApplication.translate("MainWindow", u"0 C", None));
+        self.front_rear_temp_table.setSortingEnabled(__sortingEnabled)
+
+
+        __sortingEnabled1 = self.motor_loop_temp_table.isSortingEnabled()
+        self.motor_loop_temp_table.setSortingEnabled(False)
+        ___qtablewidgetitem19 = self.motor_loop_temp_table.item(0, 1)
+        ___qtablewidgetitem19.setText(QCoreApplication.translate("MainWindow", u"Start", None));
+        ___qtablewidgetitem20 = self.motor_loop_temp_table.item(0, 2)
+        ___qtablewidgetitem20.setText(QCoreApplication.translate("MainWindow", u"End", None));
+        ___qtablewidgetitem21 = self.motor_loop_temp_table.item(1, 0)
+        ___qtablewidgetitem21.setText(QCoreApplication.translate("MainWindow", u"Motor Loop", None));
+        ___qtablewidgetitem22 = self.motor_loop_temp_table.item(1, 1)
+        ___qtablewidgetitem22.setText(QCoreApplication.translate("MainWindow", u"0 C", None));
+        ___qtablewidgetitem23 = self.motor_loop_temp_table.item(1, 2)
+        ___qtablewidgetitem23.setText(QCoreApplication.translate("MainWindow", u"0 C", None));
+        self.motor_loop_temp_table.setSortingEnabled(__sortingEnabled1)
+
+
+        __sortingEnabled2 = self.inv_loop_temp_table.isSortingEnabled()
+        self.inv_loop_temp_table.setSortingEnabled(False)
+        ___qtablewidgetitem24 = self.inv_loop_temp_table.item(0, 1)
+        ___qtablewidgetitem24.setText(QCoreApplication.translate("MainWindow", u"Start", None));
+        ___qtablewidgetitem25 = self.inv_loop_temp_table.item(0, 2)
+        ___qtablewidgetitem25.setText(QCoreApplication.translate("MainWindow", u"End", None));
+        ___qtablewidgetitem26 = self.inv_loop_temp_table.item(1, 0)
+        ___qtablewidgetitem26.setText(QCoreApplication.translate("MainWindow", u"Inverter Loop", None));
+        ___qtablewidgetitem27 = self.inv_loop_temp_table.item(1, 1)
+        ___qtablewidgetitem27.setText(QCoreApplication.translate("MainWindow", u"0 C", None));
+        ___qtablewidgetitem28 = self.inv_loop_temp_table.item(1, 2)
+        ___qtablewidgetitem28.setText(QCoreApplication.translate("MainWindow", u"0 C", None));
+        self.inv_loop_temp_table.setSortingEnabled(__sortingEnabled2)
+
+
+        __sortingEnabled3 = self.CVT_table.isSortingEnabled()
+        self.CVT_table.setSortingEnabled(False)
+        ___qtablewidgetitem29 = self.CVT_table.item(0, 0)
+        ___qtablewidgetitem29.setText(QCoreApplication.translate("MainWindow", u"Current", None));
+        ___qtablewidgetitem30 = self.CVT_table.item(0, 1)
+        ___qtablewidgetitem30.setText(QCoreApplication.translate("MainWindow", u"0A", None));
+        ___qtablewidgetitem31 = self.CVT_table.item(1, 0)
+        ___qtablewidgetitem31.setText(QCoreApplication.translate("MainWindow", u"Voltage", None));
+        ___qtablewidgetitem32 = self.CVT_table.item(1, 1)
+        ___qtablewidgetitem32.setText(QCoreApplication.translate("MainWindow", u"0V", None));
+        ___qtablewidgetitem33 = self.CVT_table.item(2, 0)
+        ___qtablewidgetitem33.setText(QCoreApplication.translate("MainWindow", u"Min Cell Temp.", None));
+        ___qtablewidgetitem34 = self.CVT_table.item(2, 1)
+        ___qtablewidgetitem34.setText(QCoreApplication.translate("MainWindow", u"0 C", None));
+        ___qtablewidgetitem35 = self.CVT_table.item(3, 0)
+        ___qtablewidgetitem35.setText(QCoreApplication.translate("MainWindow", u"Max Cell Temp.", None));
+        ___qtablewidgetitem36 = self.CVT_table.item(3, 1)
+        ___qtablewidgetitem36.setText(QCoreApplication.translate("MainWindow", u"0V", None));
+        ___qtablewidgetitem37 = self.CVT_table.item(4, 0)
+        ___qtablewidgetitem37.setText(QCoreApplication.translate("MainWindow", u"Min Cell Volt.", None));
+        ___qtablewidgetitem38 = self.CVT_table.item(4, 1)
+        ___qtablewidgetitem38.setText(QCoreApplication.translate("MainWindow", u"0V", None));
+        ___qtablewidgetitem39 = self.CVT_table.item(5, 0)
+        ___qtablewidgetitem39.setText(QCoreApplication.translate("MainWindow", u"Max Cell Volt.", None));
+        ___qtablewidgetitem40 = self.CVT_table.item(5, 1)
+        ___qtablewidgetitem40.setText(QCoreApplication.translate("MainWindow", u"0V", None));
+        self.CVT_table.setSortingEnabled(__sortingEnabled3)
 
         self.label_5.setText(QCoreApplication.translate("MainWindow", u"Charging Status", None))
         self.label_6.setText(QCoreApplication.translate("MainWindow", u"Balancing Status", None))

@@ -4,10 +4,11 @@ from PySide6.QtCore import QTimer
 import serial
 
 ser = None
-
+pi_port = '/dev/serial0'
+test_port = 'COM4'
 def setup_serial():
     global ser
-    ser = serial.Serial(port='COM4',
+    ser = serial.Serial(port=test_port,
                         baudrate=115200,
                         timeout=0
             )
