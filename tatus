@@ -1,0 +1,159 @@
+[33mcommit 08099f55019282ea99e3cc7d00ee3561c9f8f934[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Aniruddha Joshi <aniruddha.jaguar@gmail.com>
+Date:   Tue Mar 3 14:17:53 2026 -0500
+
+    mm
+
+[33mcommit 4ddfbd24da445c1a75aaf20594ccaeb62faaee75[m
+Author: Aniruddha Joshi <aniruddha.jaguar@gmail.com>
+Date:   Tue Mar 3 14:17:43 2026 -0500
+
+    bbb
+
+[33mcommit e7db91bd373fda98b4310e3bac1763121b98afa9[m
+Merge: 24362bc f30ae7f
+Author: Aniruddha Joshi <aniruddha.jaguar@gmail.com>
+Date:   Tue Mar 3 14:10:27 2026 -0500
+
+    Merge branch 'main' of github.com:aniruddhajoshi876/Raspberry-Pi-Dashboard
+
+[33mcommit 24362bcba756345f9ee361a4308196ce7f366472[m
+Author: Aniruddha Joshi <aniruddha.jaguar@gmail.com>
+Date:   Tue Mar 3 14:09:23 2026 -0500
+
+    added rest of bars (no code yet)
+
+[33mcommit f30ae7f9719d00051e58372c23593e485c38e5ef[m
+Author: diviiniity <matpestel@gmail.com>
+Date:   Wed Feb 25 19:43:04 2026 -0500
+
+    nathan
+
+[33mcommit 833926737a796e02ef60dc83e7f386bb3267c375[m
+Author: diviiniity <matpestel@gmail.com>
+Date:   Wed Feb 25 18:57:33 2026 -0500
+
+    test
+
+[33mcommit 8a9e11fabc0ca40104cd978c9d78febd1c53390e[m
+Merge: 1bc0257 6456719
+Author: diviiniity <matpestel@gmail.com>
+Date:   Wed Feb 25 18:02:37 2026 -0500
+
+    Merge branch 'main' of https://github.com/McGillFormulaElectric/Raspberry-Pi-Dashboard
+
+[33mcommit 1bc025702c917c9a87efcc1007c33c40704c3e45[m
+Author: diviiniity <matpestel@gmail.com>
+Date:   Wed Feb 25 17:59:09 2026 -0500
+
+    hhhh
+
+[33mcommit 8a04639d18152f70f9448d44e2357b3a07871c24[m
+Author: diviiniity <matpestel@gmail.com>
+Date:   Mon Feb 23 19:05:40 2026 -0500
+
+    jj
+
+[33mcommit 6456719d8354931c67b880612c0f2b22570cd58b[m
+Author: Aniruddha Joshi <aniruddha.jaguar@gmail.com>
+Date:   Sun Feb 22 00:38:51 2026 -0500
+
+    now matches pi resolution & organized uart logic
+    also got rid of annoying cursor
+
+[33mcommit 5a9196b415b9da4c05b9cbde6f5698473daf5757[m
+Author: diviiniity <matpestel@gmail.com>
+Date:   Sat Feb 21 18:18:36 2026 -0500
+
+    serial port
+
+[33mcommit c79c9b214633ac1e1d3fa66acafc6475e7f04a5c[m
+Author: Aniruddha Joshi <aniruddha.jaguar@gmail.com>
+Date:   Wed Feb 18 20:20:06 2026 -0500
+
+    ss
+
+[33mcommit a365bdcfae493db0a19cd90ac4ad6cc864786bfc[m
+Author: Aniruddha Joshi <aniruddha.jaguar@gmail.com>
+Date:   Wed Feb 18 20:19:16 2026 -0500
+
+    ssss
+
+[33mcommit af83906e53421a0bb673105bf3b6d1750b74f858[m
+Merge: c49d17d 0552aca
+Author: Aniruddha Joshi <aniruddha.jaguar@gmail.com>
+Date:   Wed Feb 18 20:09:50 2026 -0500
+
+    Merge branch 'main' of github.com:aniruddhajoshi876/Raspberry-Pi-Dashboard
+
+[33mcommit c49d17d8c0b7dc0e2bf788c83233f1a2afb4fcc6[m
+Author: Aniruddha Joshi <aniruddha.jaguar@gmail.com>
+Date:   Wed Feb 18 20:09:35 2026 -0500
+
+    sum changes
+
+[33mcommit 0552acab7252337b9a32023489b8067e3a6eba9b[m
+Author: diviiniity <matpestel@gmail.com>
+Date:   Mon Feb 16 23:52:45 2026 -0500
+
+    Changed to run on the Pi
+
+[33mcommit fe69ba1244e152c875467dc09aa61c3affc355a1[m
+Author: Aniruddha Joshi <aniruddha.jaguar@gmail.com>
+Date:   Wed Feb 11 22:47:13 2026 -0500
+
+     frontbrake + uart complete
+
+[33mcommit 6ceba591efbf542d1bc5a175b6dc761ef9d45a3f[m
+Author: Aniruddha Joshi <aniruddha.jaguar@gmail.com>
+Date:   Tue Feb 10 01:40:39 2026 -0500
+
+    WINDOW OPACITY = 0 ???
+
+[33mcommit b3696e0e7f4a288bf7d255de630f9cf0ea747b42[m
+Author: Aniruddha Joshi <aniruddha.jaguar@gmail.com>
+Date:   Mon Feb 9 18:14:58 2026 -0500
+
+    fixed constructor
+
+[33mcommit e6744262d2a4dfc8cdfc3961e6bed89ed3d9c022[m
+Author: Aniruddha Joshi <aniruddha.jaguar@gmail.com>
+Date:   Mon Feb 9 18:12:43 2026 -0500
+
+    window not opening up
+
+[33mcommit 8b0d1312e4ad6f376d2254f3a2264e535bf6c888[m
+Author: Aniruddha Joshi <aniruddha.jaguar@gmail.com>
+Date:   Mon Feb 2 20:06:17 2026 -0500
+
+    trying to open window
+
+[33mcommit a0cfb710717f873f042b1f2164d97b633dbadcc2[m
+Author: Aniruddha Joshi <aniruddha.jaguar@gmail.com>
+Date:   Mon Feb 2 19:08:53 2026 -0500
+
+    pls work
+
+[33mcommit a847c9048e04b4052ba0c16a004f9b7446dc0f92[m
+Author: Aniruddha Joshi <aniruddha.jaguar@gmail.com>
+Date:   Mon Feb 2 17:32:10 2026 -0500
+
+    Update mainwindow.ui
+
+[33mcommit 03817cd8f737f57c2505e683b90193e51a542942[m
+Author: Aniruddha Joshi <aniruddha.jaguar@gmail.com>
+Date:   Thu Jan 29 20:40:39 2026 -0500
+
+    skeleton
+
+[33mcommit a2d61747c248ac82961ef5f6d90aef62eedc3129[m
+Author: Aniruddha Joshi <aniruddha.jaguar@gmail.com>
+Date:   Thu Jan 29 17:11:08 2026 -0500
+
+    Add main code for dashboard
+
+[33mcommit 31517da8e11edcd671660f4752a6b4400f51f361[m
+Author: Aniruddha Joshi <aniruddha.jaguar@gmail.com>
+Date:   Thu Jan 29 17:09:56 2026 -0500
+
+    Initial commit

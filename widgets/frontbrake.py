@@ -4,9 +4,12 @@ from PySide6.QtCore import QTimer
 import serial
 
 ser = None
-
+pi_port = '/dev/serial0'
+test_port = 'COM4'
 def setup_serial():
     global ser
+    ser = serial.Serial(port=pi_port,
+                        baudrate=115200,
     ser = serial.Serial(port='/dev/serial0',
                         baudrate=9600,
                         timeout=0
@@ -34,9 +37,9 @@ def transfer_function(raw_value):
     return real_value
 
 def frontbrake_resize(window, height):
-    height = int(height)
-    #print("The height here is:",height)
-    height = min(700, height)
+    print("The height here is:",height)
+    height = int(371*(height/100))
+    height = min(371, height)
     bar= window.frontbrakebar
     bottom = bar.y() + bar.height()
     bar.setFixedHeight(height)
