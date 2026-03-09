@@ -1,6 +1,6 @@
 import serial
 
-ser = serial.Serial("/dev/ttyAMA0",9600, timeout=0)
+ser = serial.Serial("/dev/serial0",9600, timeout=0)
 
 print('Listening...')
 
