@@ -9,8 +9,6 @@ test_port = 'COM4'
 def setup_serial():
     global ser
     ser = serial.Serial(port=pi_port,
-                        baudrate=115200,
-    ser = serial.Serial(port='/dev/serial0',
                         baudrate=9600,
                         timeout=0
             )
