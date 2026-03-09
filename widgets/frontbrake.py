@@ -8,7 +8,7 @@ pi_port = '/dev/serial0'
 test_port = 'COM4'
 def setup_serial():
     global ser
-    ser = serial.Serial(port=test_port,
+    ser = serial.Serial(port=pi_port,
                         baudrate=115200,
                         timeout=0
             )

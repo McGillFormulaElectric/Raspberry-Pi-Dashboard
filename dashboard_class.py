@@ -31,9 +31,6 @@ class Dashboard:
         self.timer.timeout.connect(self.update_uart)
         self.timer.start(5)
 
-        # Start animations
-        pulse_light(self.window)
-
         # Shortcuts
         self.setup_shortcuts()
 
