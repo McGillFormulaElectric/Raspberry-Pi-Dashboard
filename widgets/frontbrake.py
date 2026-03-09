@@ -8,9 +8,11 @@ ser = None
 def setup_serial():
     global ser
     ser = serial.Serial(port='/dev/serial0',
-                        baudrate=115200,
+                        baudrate=9600,
                         timeout=0
             )
+    ser.reset_input_buffer()
+    print("listening...")
 
 def uart_input(window):
     global ser
@@ -22,7 +24,7 @@ def uart_input(window):
         if len(raw) == 1:
             value = raw[0]
             print(value)
-            print("\n")
+            print("\r\n")
             frontbrake_resize(window, value)
 
 def transfer_function(raw_value):
@@ -33,7 +35,7 @@ def transfer_function(raw_value):
 
 def frontbrake_resize(window, height):
     height = int(height)
-    print("The height here is:",height)
+    #print("The height here is:",height)
     height = min(700, height)
     bar= window.frontbrakebar
     bottom = bar.y() + bar.height()
