@@ -8,9 +8,9 @@ pi_port = '/dev/serial0'
 test_port = 'COM4'
 def setup_serial():
     global ser
-    ser = serial.Serial(port=pi_port,
+    ser = serial.Serial(port='/dev/ttyAMA5',
                         baudrate=9600,
-                        timeout=0
+                        timeout=1
             )
     ser.reset_input_buffer()
     print("listening...")

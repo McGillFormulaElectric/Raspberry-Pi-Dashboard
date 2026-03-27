@@ -32,7 +32,7 @@ ui_file.open(QFile.ReadOnly)
 window = loader.load(ui_file)
 ui_file.close()
 #event loop -----begin --------
-
+print("hello")
 setup_serial()
 timer = QTimer()
 timer.timeout.connect(lambda:uart_input(window))
