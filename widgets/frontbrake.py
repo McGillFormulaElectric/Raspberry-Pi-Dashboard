@@ -7,9 +7,9 @@ ser = None
 
 def setup_serial():
     global ser
-    ser = serial.Serial(port='/dev/serial0',
-                        baudrate=115200,
-                        timeout=0
+    ser = serial.Serial(port='/dev/ttyAMA5',
+                        baudrate=9600,
+                        timeout=1
             )
 
 def uart_input(window):
