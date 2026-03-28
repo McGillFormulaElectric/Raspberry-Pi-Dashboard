@@ -9,7 +9,7 @@ test_port = 'COM4'
 def setup_serial():
     global ser
     ser = serial.Serial(port='/dev/ttyAMA5',
-                        baudrate=9600,
+                        baudrate=115200,
                         timeout=1
             )
     ser.reset_input_buffer()
