@@ -6,9 +6,10 @@ import serial
 ser = None
 pi_port = '/dev/serial0'
 test_port = 'COM4'
+uart5_port = '/dev/ttyAMA5'
 def setup_serial():
     global ser
-    ser = serial.Serial(port='/dev/ttyAMA5',
+    ser = serial.Serial(port=uart5_port,
                         baudrate=115200,
                         timeout=1
             )
@@ -27,12 +28,6 @@ def uart_input(window):
             print(value)
             print("\r\n")
             frontbrake_resize(window, value)
-
-def transfer_function(raw_value):
-    #mathhhhhhh
-    real_value=0
-
-    return real_value
 
 def frontbrake_resize(window, height):
     print("The height here is:",height)
