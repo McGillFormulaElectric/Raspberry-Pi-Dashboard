@@ -37,6 +37,9 @@ class Dashboard:
         # Hide cursor
         self.app.setOverrideCursor(QCursor(Qt.BlankCursor))
 
+        # Start on page 1 (throttle/brake)
+        self.window.stackedWidget.setCurrentIndex(0)
+
         # Show window
         self.window.show()
         self.window.showFullScreen()
