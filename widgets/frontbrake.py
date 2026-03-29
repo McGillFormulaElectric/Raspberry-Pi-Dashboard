@@ -36,8 +36,10 @@ def uart_input(window):
 
     chunk = ser.read(waiting).decode('ascii', errors='ignore')
     _rx_buf += chunk
+    print(f"[uart] raw: {repr(_rx_buf)}")
 
     matches = list(_PAIR_RE.finditer(_rx_buf))
+    print(f"[uart] matches: {[(m.group(1), m.group(2)) for m in matches]}")
     if not matches:
         # Keep buffer bounded to avoid unbounded growth on garbage data
         if len(_rx_buf) > 64:
