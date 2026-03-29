@@ -70,6 +70,8 @@ class Dashboard:
         QtGui.QShortcut(QtGui.QKeySequence("Ctrl+M"), self.window, activated=self.window.showMinimized)
         QtGui.QShortcut(QtGui.QKeySequence("Ctrl+F"), self.window, activated=self.toggle_fullscreen)
         QtGui.QShortcut(QtGui.QKeySequence("Ctrl+Q"), self.window, activated=QtWidgets.QApplication.quit)
+
+
 if __name__ == "__main__":
     dashboard = Dashboard()
     dashboard.run()

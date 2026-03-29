@@ -26,8 +26,8 @@
    <widget class="QStackedWidget" name="stackedWidget">
     <property name="geometry">
      <rect>
-      <x>30</x>
-      <y>10</y>
+      <x>20</x>
+      <y>20</y>
       <width>771</width>
       <height>441</height>
      </rect>
@@ -869,6 +869,468 @@
       </item>
      </widget>
     </widget>
+    <widget class="QWidget" name="page_6">
+     <widget class="QWidget" name="l1_light" native="true">
+      <property name="geometry">
+       <rect>
+        <x>300</x>
+        <y>0</y>
+        <width>41</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 14, 30);
+border-radius: 20px
+</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_14">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>400</y>
+        <width>91</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>7</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255)</string>
+      </property>
+      <property name="text">
+       <string>Can 1</string>
+      </property>
+     </widget>
+     <widget class="QTableWidget" name="inverte_code_table">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>340</x>
+        <y>110</y>
+        <width>391</width>
+        <height>281</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>19</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+color: rgb(255, 255, 255);
+</string>
+      </property>
+      <property name="verticalScrollBarPolicy">
+       <enum>Qt::ScrollBarPolicy::ScrollBarAlwaysOff</enum>
+      </property>
+      <property name="horizontalScrollBarPolicy">
+       <enum>Qt::ScrollBarPolicy::ScrollBarAlwaysOff</enum>
+      </property>
+      <property name="sizeAdjustPolicy">
+       <enum>QAbstractScrollArea::SizeAdjustPolicy::AdjustToContentsOnFirstShow</enum>
+      </property>
+      <property name="rowCount">
+       <number>5</number>
+      </property>
+      <property name="columnCount">
+       <number>2</number>
+      </property>
+      <attribute name="horizontalHeaderVisible">
+       <bool>false</bool>
+      </attribute>
+      <attribute name="horizontalHeaderCascadingSectionResizes">
+       <bool>true</bool>
+      </attribute>
+      <attribute name="horizontalHeaderDefaultSectionSize">
+       <number>250</number>
+      </attribute>
+      <attribute name="horizontalHeaderHighlightSections">
+       <bool>true</bool>
+      </attribute>
+      <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
+       <bool>false</bool>
+      </attribute>
+      <attribute name="horizontalHeaderStretchLastSection">
+       <bool>true</bool>
+      </attribute>
+      <attribute name="verticalHeaderVisible">
+       <bool>false</bool>
+      </attribute>
+      <attribute name="verticalHeaderDefaultSectionSize">
+       <number>50</number>
+      </attribute>
+      <attribute name="verticalHeaderStretchLastSection">
+       <bool>false</bool>
+      </attribute>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <column/>
+      <column/>
+      <item row="0" column="0">
+       <property name="text">
+        <string>Inverter</string>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>29</pointsize>
+        </font>
+       </property>
+       <property name="background">
+        <brush brushstyle="NoBrush">
+         <color alpha="255">
+          <red>0</red>
+          <green>0</green>
+          <blue>255</blue>
+         </color>
+        </brush>
+       </property>
+       <property name="foreground">
+        <brush brushstyle="NoBrush">
+         <color alpha="255">
+          <red>0</red>
+          <green>0</green>
+          <blue>255</blue>
+         </color>
+        </brush>
+       </property>
+      </item>
+      <item row="0" column="1">
+       <property name="text">
+        <string>Code</string>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>29</pointsize>
+        </font>
+       </property>
+       <property name="foreground">
+        <brush brushstyle="NoBrush">
+         <color alpha="255">
+          <red>0</red>
+          <green>0</green>
+          <blue>255</blue>
+         </color>
+        </brush>
+       </property>
+      </item>
+      <item row="1" column="0">
+       <property name="text">
+        <string>Inverter 1</string>
+       </property>
+      </item>
+      <item row="1" column="1">
+       <property name="text">
+        <string>0</string>
+       </property>
+      </item>
+      <item row="2" column="0">
+       <property name="text">
+        <string>Inverter 2</string>
+       </property>
+      </item>
+      <item row="2" column="1">
+       <property name="text">
+        <string>0</string>
+       </property>
+      </item>
+      <item row="3" column="0">
+       <property name="text">
+        <string>Inverter 3</string>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>19</pointsize>
+        </font>
+       </property>
+      </item>
+      <item row="3" column="1">
+       <property name="text">
+        <string>0</string>
+       </property>
+      </item>
+      <item row="4" column="0">
+       <property name="text">
+        <string>Inverter 4</string>
+       </property>
+      </item>
+      <item row="4" column="1">
+       <property name="text">
+        <string>0</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QWidget" name="can1_util_bar_1" native="true">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>30</y>
+        <width>41</width>
+        <height>371</height>
+       </rect>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>100</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color:rgb(19, 255, 7)</string>
+      </property>
+     </widget>
+     <widget class="QWidget" name="l2_light" native="true">
+      <property name="geometry">
+       <rect>
+        <x>420</x>
+        <y>0</y>
+        <width>41</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 14, 30);
+border-radius: 20px
+</string>
+      </property>
+     </widget>
+     <widget class="QWidget" name="l3_light" native="true">
+      <property name="geometry">
+       <rect>
+        <x>540</x>
+        <y>0</y>
+        <width>41</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 14, 30);
+border-radius: 20px
+</string>
+      </property>
+     </widget>
+     <widget class="QWidget" name="l4_light" native="true">
+      <property name="geometry">
+       <rect>
+        <x>660</x>
+        <y>0</y>
+        <width>41</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 14, 30);
+border-radius: 20px
+</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_15">
+      <property name="geometry">
+       <rect>
+        <x>530</x>
+        <y>50</y>
+        <width>91</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255)</string>
+      </property>
+      <property name="text">
+       <string>L3 error</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_16">
+      <property name="geometry">
+       <rect>
+        <x>650</x>
+        <y>50</y>
+        <width>91</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255)</string>
+      </property>
+      <property name="text">
+       <string>L4 error</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_17">
+      <property name="geometry">
+       <rect>
+        <x>410</x>
+        <y>50</y>
+        <width>91</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255)</string>
+      </property>
+      <property name="text">
+       <string>L2 error</string>
+      </property>
+     </widget>
+     <widget class="QWidget" name="can1_util_bar_2" native="true">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>30</y>
+        <width>41</width>
+        <height>371</height>
+       </rect>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>100</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color:rgb(19, 255, 7)</string>
+      </property>
+     </widget>
+     <widget class="QWidget" name="can1_util_bar_3" native="true">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>140</x>
+        <y>30</y>
+        <width>41</width>
+        <height>371</height>
+       </rect>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>100</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color:rgb(19, 255, 7)</string>
+      </property>
+     </widget>
+     <widget class="QWidget" name="can1_util_bar_4" native="true">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>210</x>
+        <y>30</y>
+        <width>41</width>
+        <height>371</height>
+       </rect>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>100</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color:rgb(19, 255, 7)</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_18">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>400</y>
+        <width>91</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>7</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255)</string>
+      </property>
+      <property name="text">
+       <string>Can 1</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_19">
+      <property name="geometry">
+       <rect>
+        <x>140</x>
+        <y>400</y>
+        <width>91</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>7</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255)</string>
+      </property>
+      <property name="text">
+       <string>Can 1</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_19_2">
+      <property name="geometry">
+       <rect>
+        <x>210</x>
+        <y>400</y>
+        <width>91</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>7</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255)</string>
+      </property>
+      <property name="text">
+       <string>Can 1</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_21">
+      <property name="geometry">
+       <rect>
+        <x>300</x>
+        <y>50</y>
+        <width>91</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255)</string>
+      </property>
+      <property name="text">
+       <string>L1 error</string>
+      </property>
+     </widget>
+    </widget>
     <widget class="QWidget" name="page_2">
      <widget class="QTableWidget" name="CVT_table">
       <property name="enabled">
@@ -1078,6 +1540,1429 @@ border-radius: 20px
       </property>
       <property name="text">
        <string>Balancing Status</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_7">
+     <widget class="QLabel" name="label_throttle_title">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>5</y>
+        <width>771</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255); font-weight: bold;</string>
+      </property>
+      <property name="text">
+       <string>Throttle Percentage</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QWidget" name="throttle_bar_bg" native="true">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>28</y>
+        <width>581</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(8, 255, 8)</string>
+      </property>
+     </widget>
+     <widget class="QWidget" name="throttle_bar_fill" native="true">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>28</y>
+        <width>0</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(0, 255, 0);</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_vx">
+      <property name="geometry">
+       <rect>
+        <x>8</x>
+        <y>58</y>
+        <width>257</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255); font-weight: bold;</string>
+      </property>
+      <property name="text">
+       <string>Vx</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="vx_value">
+      <property name="geometry">
+       <rect>
+        <x>8</x>
+        <y>78</y>
+        <width>257</width>
+        <height>50</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>30</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>00 km/h</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_front_brake">
+      <property name="geometry">
+       <rect>
+        <x>265</x>
+        <y>58</y>
+        <width>257</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255); font-weight: bold;</string>
+      </property>
+      <property name="text">
+       <string>Front Brake Pressure</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="front_brake_value">
+      <property name="geometry">
+       <rect>
+        <x>265</x>
+        <y>78</y>
+        <width>257</width>
+        <height>50</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>30</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>00.0 bar</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_rear_brake">
+      <property name="geometry">
+       <rect>
+        <x>522</x>
+        <y>58</y>
+        <width>249</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255); font-weight: bold;</string>
+      </property>
+      <property name="text">
+       <string>Rear Brake Pressure</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="rear_brake_value">
+      <property name="geometry">
+       <rect>
+        <x>522</x>
+        <y>78</y>
+        <width>249</width>
+        <height>50</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>30</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>00.0 bar</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_imd_res">
+      <property name="geometry">
+       <rect>
+        <x>8</x>
+        <y>138</y>
+        <width>257</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255); font-weight: bold;</string>
+      </property>
+      <property name="text">
+       <string>IMD RES</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="imd_res_value">
+      <property name="geometry">
+       <rect>
+        <x>8</x>
+        <y>158</y>
+        <width>257</width>
+        <height>50</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>30</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>000 kΩ</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_total_volt">
+      <property name="geometry">
+       <rect>
+        <x>265</x>
+        <y>138</y>
+        <width>257</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255); font-weight: bold;</string>
+      </property>
+      <property name="text">
+       <string>TOTAL VOLT</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="total_volt_value">
+      <property name="geometry">
+       <rect>
+        <x>265</x>
+        <y>158</y>
+        <width>257</width>
+        <height>50</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>30</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>000 V</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_fl_voltage">
+      <property name="geometry">
+       <rect>
+        <x>522</x>
+        <y>138</y>
+        <width>249</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255); font-weight: bold;</string>
+      </property>
+      <property name="text">
+       <string>FL Voltage</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="fl_voltage_value">
+      <property name="geometry">
+       <rect>
+        <x>522</x>
+        <y>158</y>
+        <width>249</width>
+        <height>50</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>30</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>000 V</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_fl_error">
+      <property name="geometry">
+       <rect>
+        <x>8</x>
+        <y>218</y>
+        <width>257</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255); font-weight: bold;</string>
+      </property>
+      <property name="text">
+       <string>FL Error Info</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="fl_error_value">
+      <property name="geometry">
+       <rect>
+        <x>8</x>
+        <y>238</y>
+        <width>257</width>
+        <height>50</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>30</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>0000</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_rl_temp_inv">
+      <property name="geometry">
+       <rect>
+        <x>265</x>
+        <y>218</y>
+        <width>257</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255); font-weight: bold;</string>
+      </property>
+      <property name="text">
+       <string>RL Temp Inverter</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="rl_temp_inv_value">
+      <property name="geometry">
+       <rect>
+        <x>265</x>
+        <y>238</y>
+        <width>257</width>
+        <height>50</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>30</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>00.0 °C</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_rl_temp_motor">
+      <property name="geometry">
+       <rect>
+        <x>522</x>
+        <y>218</y>
+        <width>249</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255); font-weight: bold;</string>
+      </property>
+      <property name="text">
+       <string>RL Temp Motor</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="rl_temp_motor_value">
+      <property name="geometry">
+       <rect>
+        <x>522</x>
+        <y>238</y>
+        <width>249</width>
+        <height>50</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>30</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>00.0 °C</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_rr_error">
+      <property name="geometry">
+       <rect>
+        <x>8</x>
+        <y>298</y>
+        <width>257</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255); font-weight: bold;</string>
+      </property>
+      <property name="text">
+       <string>RR Error Info</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="rr_error_value">
+      <property name="geometry">
+       <rect>
+        <x>8</x>
+        <y>318</y>
+        <width>257</width>
+        <height>50</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>30</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>0000</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_rl_temp_igbt">
+      <property name="geometry">
+       <rect>
+        <x>265</x>
+        <y>298</y>
+        <width>257</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255); font-weight: bold;</string>
+      </property>
+      <property name="text">
+       <string>RL Temp IGBT</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="rl_temp_igbt_value">
+      <property name="geometry">
+       <rect>
+        <x>265</x>
+        <y>318</y>
+        <width>257</width>
+        <height>50</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>30</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>00.0 °C</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_min_volt">
+      <property name="geometry">
+       <rect>
+        <x>522</x>
+        <y>298</y>
+        <width>249</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255); font-weight: bold;</string>
+      </property>
+      <property name="text">
+       <string>Min Volt</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="min_volt_value">
+      <property name="geometry">
+       <rect>
+        <x>522</x>
+        <y>318</y>
+        <width>249</width>
+        <height>50</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>30</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>0.00 V</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_8">
+     <widget class="QTableWidget" name="fl_table">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>220</width>
+        <height>121</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+        <italic>true</italic>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255); border: 1px solid rgba(255,255,255,150);</string>
+      </property>
+      <property name="verticalScrollBarPolicy">
+       <enum>Qt::ScrollBarPolicy::ScrollBarAlwaysOff</enum>
+      </property>
+      <property name="horizontalScrollBarPolicy">
+       <enum>Qt::ScrollBarPolicy::ScrollBarAlwaysOff</enum>
+      </property>
+      <property name="rowCount">
+       <number>4</number>
+      </property>
+      <property name="columnCount">
+       <number>2</number>
+      </property>
+      <attribute name="horizontalHeaderVisible">
+       <bool>false</bool>
+      </attribute>
+      <attribute name="horizontalHeaderDefaultSectionSize">
+       <number>130</number>
+      </attribute>
+      <attribute name="horizontalHeaderStretchLastSection">
+       <bool>true</bool>
+      </attribute>
+      <attribute name="verticalHeaderVisible">
+       <bool>false</bool>
+      </attribute>
+      <attribute name="verticalHeaderDefaultSectionSize">
+       <number>30</number>
+      </attribute>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <column/>
+      <column/>
+      <item row="0" column="0">
+       <property name="text">
+        <string>Wheel Speed</string>
+       </property>
+      </item>
+      <item row="0" column="1">
+       <property name="text">
+        <string>0000</string>
+       </property>
+      </item>
+      <item row="1" column="0">
+       <property name="text">
+        <string>Torque</string>
+       </property>
+      </item>
+      <item row="1" column="1">
+       <property name="text">
+        <string>0.0</string>
+       </property>
+      </item>
+      <item row="2" column="0">
+       <property name="text">
+        <string>Rot Pot</string>
+       </property>
+      </item>
+      <item row="2" column="1">
+       <property name="text">
+        <string>00.0</string>
+       </property>
+      </item>
+      <item row="3" column="0">
+       <property name="text">
+        <string>Brake Temp</string>
+       </property>
+      </item>
+      <item row="3" column="1">
+       <property name="text">
+        <string>00.0</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QTableWidget" name="fr_table">
+      <property name="geometry">
+       <rect>
+        <x>541</x>
+        <y>10</y>
+        <width>220</width>
+        <height>131</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+        <italic>true</italic>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255); border: 1px solid rgba(255,255,255,150);</string>
+      </property>
+      <property name="verticalScrollBarPolicy">
+       <enum>Qt::ScrollBarPolicy::ScrollBarAlwaysOff</enum>
+      </property>
+      <property name="horizontalScrollBarPolicy">
+       <enum>Qt::ScrollBarPolicy::ScrollBarAlwaysOff</enum>
+      </property>
+      <property name="rowCount">
+       <number>4</number>
+      </property>
+      <property name="columnCount">
+       <number>2</number>
+      </property>
+      <attribute name="horizontalHeaderVisible">
+       <bool>false</bool>
+      </attribute>
+      <attribute name="horizontalHeaderDefaultSectionSize">
+       <number>130</number>
+      </attribute>
+      <attribute name="horizontalHeaderStretchLastSection">
+       <bool>true</bool>
+      </attribute>
+      <attribute name="verticalHeaderVisible">
+       <bool>false</bool>
+      </attribute>
+      <attribute name="verticalHeaderDefaultSectionSize">
+       <number>30</number>
+      </attribute>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <column/>
+      <column/>
+      <item row="0" column="0">
+       <property name="text">
+        <string>Wheel Speed</string>
+       </property>
+      </item>
+      <item row="0" column="1">
+       <property name="text">
+        <string>0000</string>
+       </property>
+      </item>
+      <item row="1" column="0">
+       <property name="text">
+        <string>Torque</string>
+       </property>
+      </item>
+      <item row="1" column="1">
+       <property name="text">
+        <string>0.0</string>
+       </property>
+      </item>
+      <item row="2" column="0">
+       <property name="text">
+        <string>Rot Pot</string>
+       </property>
+      </item>
+      <item row="2" column="1">
+       <property name="text">
+        <string>00.0</string>
+       </property>
+      </item>
+      <item row="3" column="0">
+       <property name="text">
+        <string>Brake Temp</string>
+       </property>
+      </item>
+      <item row="3" column="1">
+       <property name="text">
+        <string>00.0</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QTableWidget" name="rl_table">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>310</y>
+        <width>220</width>
+        <height>121</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+        <italic>true</italic>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255); border: 1px solid rgba(255,255,255,150);</string>
+      </property>
+      <property name="verticalScrollBarPolicy">
+       <enum>Qt::ScrollBarPolicy::ScrollBarAlwaysOff</enum>
+      </property>
+      <property name="horizontalScrollBarPolicy">
+       <enum>Qt::ScrollBarPolicy::ScrollBarAlwaysOff</enum>
+      </property>
+      <property name="rowCount">
+       <number>4</number>
+      </property>
+      <property name="columnCount">
+       <number>2</number>
+      </property>
+      <attribute name="horizontalHeaderVisible">
+       <bool>false</bool>
+      </attribute>
+      <attribute name="horizontalHeaderDefaultSectionSize">
+       <number>130</number>
+      </attribute>
+      <attribute name="horizontalHeaderStretchLastSection">
+       <bool>true</bool>
+      </attribute>
+      <attribute name="verticalHeaderVisible">
+       <bool>false</bool>
+      </attribute>
+      <attribute name="verticalHeaderDefaultSectionSize">
+       <number>30</number>
+      </attribute>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <column/>
+      <column/>
+      <item row="0" column="0">
+       <property name="text">
+        <string>Wheel Speed</string>
+       </property>
+      </item>
+      <item row="0" column="1">
+       <property name="text">
+        <string>0000</string>
+       </property>
+      </item>
+      <item row="1" column="0">
+       <property name="text">
+        <string>Torque</string>
+       </property>
+      </item>
+      <item row="1" column="1">
+       <property name="text">
+        <string>0.0</string>
+       </property>
+      </item>
+      <item row="2" column="0">
+       <property name="text">
+        <string>Rot Pot</string>
+       </property>
+      </item>
+      <item row="2" column="1">
+       <property name="text">
+        <string>00.0</string>
+       </property>
+      </item>
+      <item row="3" column="0">
+       <property name="text">
+        <string>Brake Temp</string>
+       </property>
+      </item>
+      <item row="3" column="1">
+       <property name="text">
+        <string>00.0</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QTableWidget" name="rr_table">
+      <property name="geometry">
+       <rect>
+        <x>540</x>
+        <y>310</y>
+        <width>220</width>
+        <height>121</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+        <italic>true</italic>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255); border: 1px solid rgba(255,255,255,150);</string>
+      </property>
+      <property name="verticalScrollBarPolicy">
+       <enum>Qt::ScrollBarPolicy::ScrollBarAlwaysOff</enum>
+      </property>
+      <property name="horizontalScrollBarPolicy">
+       <enum>Qt::ScrollBarPolicy::ScrollBarAlwaysOff</enum>
+      </property>
+      <property name="rowCount">
+       <number>4</number>
+      </property>
+      <property name="columnCount">
+       <number>2</number>
+      </property>
+      <attribute name="horizontalHeaderVisible">
+       <bool>false</bool>
+      </attribute>
+      <attribute name="horizontalHeaderDefaultSectionSize">
+       <number>130</number>
+      </attribute>
+      <attribute name="horizontalHeaderStretchLastSection">
+       <bool>true</bool>
+      </attribute>
+      <attribute name="verticalHeaderVisible">
+       <bool>false</bool>
+      </attribute>
+      <attribute name="verticalHeaderDefaultSectionSize">
+       <number>30</number>
+      </attribute>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <column/>
+      <column/>
+      <item row="0" column="0">
+       <property name="text">
+        <string>Wheel Speed</string>
+       </property>
+      </item>
+      <item row="0" column="1">
+       <property name="text">
+        <string>0000</string>
+       </property>
+      </item>
+      <item row="1" column="0">
+       <property name="text">
+        <string>Torque</string>
+       </property>
+      </item>
+      <item row="1" column="1">
+       <property name="text">
+        <string>0.0</string>
+       </property>
+      </item>
+      <item row="2" column="0">
+       <property name="text">
+        <string>Rot Pot</string>
+       </property>
+      </item>
+      <item row="2" column="1">
+       <property name="text">
+        <string>00.0</string>
+       </property>
+      </item>
+      <item row="3" column="0">
+       <property name="text">
+        <string>Brake Temp</string>
+       </property>
+      </item>
+      <item row="3" column="1">
+       <property name="text">
+        <string>00.0</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QWidget" name="car_svg_widget" native="true">
+      <property name="geometry">
+       <rect>
+        <x>255</x>
+        <y>5</y>
+        <width>261</width>
+        <height>431</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: transparent;</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_9">
+     <property name="styleSheet">
+      <string notr="true">
+        QWidget#page_9 {
+            background-color: rgb(15, 15, 15);
+        }
+        QLabel {
+            color: rgb(255, 255, 255);
+            font-family: Arial, sans-serif;
+        }
+      </string>
+     </property>
+     <widget class="QWidget" name="led_cell_volt" native="true">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>24</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 0, 0); 
+border-radius: 12px; </string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lbl_cell_volt_alarm">
+      <property name="geometry">
+       <rect>
+        <x>45</x>
+        <y>15</y>
+        <width>200</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Cell Voltage Alarm</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lbl_coolant_temp_alarm">
+      <property name="geometry">
+       <rect>
+        <x>45</x>
+        <y>45</y>
+        <width>311</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Coolant Temperature Alarm</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lbl_coolant_flow_alarm">
+      <property name="geometry">
+       <rect>
+        <x>45</x>
+        <y>75</y>
+        <width>200</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Coolant Flow Alarm</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lbl_cell_temp_alarm">
+      <property name="geometry">
+       <rect>
+        <x>520</x>
+        <y>15</y>
+        <width>200</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Cell Temperature Alarm</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
+      </property>
+     </widget>
+     <widget class="QWidget" name="led_cell_temp" native="true">
+      <property name="geometry">
+       <rect>
+        <x>730</x>
+        <y>15</y>
+        <width>24</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 0, 0); 
+border-radius: 12px; </string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lbl_hv_batt_ok">
+      <property name="geometry">
+       <rect>
+        <x>520</x>
+        <y>45</y>
+        <width>200</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>HV Batt Ok</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
+      </property>
+     </widget>
+     <widget class="QWidget" name="led_hv_batt_ok" native="true">
+      <property name="geometry">
+       <rect>
+        <x>730</x>
+        <y>45</y>
+        <width>24</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 0, 0); 
+border-radius: 12px; </string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lbl_can_ok">
+      <property name="geometry">
+       <rect>
+        <x>520</x>
+        <y>75</y>
+        <width>200</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>CAN Ok</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
+      </property>
+     </widget>
+     <widget class="QWidget" name="led_can_ok" native="true">
+      <property name="geometry">
+       <rect>
+        <x>730</x>
+        <y>75</y>
+        <width>24</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 0, 0); 
+border-radius: 12px; </string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="val_speed">
+      <property name="geometry">
+       <rect>
+        <x>229</x>
+        <y>80</y>
+        <width>221</width>
+        <height>150</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>120</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>00</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lbl_kmh">
+      <property name="geometry">
+       <rect>
+        <x>460</x>
+        <y>140</y>
+        <width>201</width>
+        <height>70</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>45</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>km/h</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="val_soc">
+      <property name="geometry">
+       <rect>
+        <x>169</x>
+        <y>240</y>
+        <width>181</width>
+        <height>50</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>40</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>000 %</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lbl_soc">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>295</y>
+        <width>160</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>14</pointsize>
+        <italic>true</italic>
+       </font>
+      </property>
+      <property name="text">
+       <string>SOC</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="val_inv_volt">
+      <property name="geometry">
+       <rect>
+        <x>390</x>
+        <y>240</y>
+        <width>181</width>
+        <height>50</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>40</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>000 V</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lbl_inv_volt">
+      <property name="geometry">
+       <rect>
+        <x>390</x>
+        <y>295</y>
+        <width>160</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>14</pointsize>
+        <italic>true</italic>
+       </font>
+      </property>
+      <property name="text">
+       <string>Inverter</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lbl_min_cell">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>329</y>
+        <width>180</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>14</pointsize>
+        <italic>true</italic>
+       </font>
+      </property>
+      <property name="text">
+       <string>Minimum
+Cell Voltage</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="val_min_cell">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>385</y>
+        <width>180</width>
+        <height>45</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>35</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>0.00 V</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lbl_max_igbt">
+      <property name="geometry">
+       <rect>
+        <x>200</x>
+        <y>329</y>
+        <width>180</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>14</pointsize>
+        <italic>true</italic>
+       </font>
+      </property>
+      <property name="text">
+       <string>Max
+IGBT Temp</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="val_max_igbt">
+      <property name="geometry">
+       <rect>
+        <x>200</x>
+        <y>385</y>
+        <width>180</width>
+        <height>45</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>35</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>00.0 C</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lbl_max_inv">
+      <property name="geometry">
+       <rect>
+        <x>390</x>
+        <y>329</y>
+        <width>180</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>14</pointsize>
+        <italic>true</italic>
+       </font>
+      </property>
+      <property name="text">
+       <string>Max
+Inverter Temp</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="val_max_inv">
+      <property name="geometry">
+       <rect>
+        <x>390</x>
+        <y>385</y>
+        <width>180</width>
+        <height>45</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>35</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>00.0 C</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lbl_max_motor">
+      <property name="geometry">
+       <rect>
+        <x>580</x>
+        <y>329</y>
+        <width>180</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>14</pointsize>
+        <italic>true</italic>
+       </font>
+      </property>
+      <property name="text">
+       <string>Max
+Motor Temp</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="val_max_motor">
+      <property name="geometry">
+       <rect>
+        <x>580</x>
+        <y>385</y>
+        <width>180</width>
+        <height>45</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>35</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>00.0 C</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QWidget" name="led_cell_volt_2" native="true">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>40</y>
+        <width>24</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 0, 0); 
+border-radius: 12px; </string>
+      </property>
+     </widget>
+     <widget class="QWidget" name="led_cell_volt_3" native="true">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>70</y>
+        <width>24</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 0, 0); 
+border-radius: 12px; </string>
       </property>
      </widget>
     </widget>
