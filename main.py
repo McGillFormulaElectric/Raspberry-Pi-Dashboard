@@ -3,7 +3,7 @@ from PySide6.QtWidgets import QFrame, QApplication, QMainWindow, QWidget
 from PySide6.QtGui import QPainter, QColor, QCursor
 from PySide6.QtCore import Qt, QFile, QTimer
 from PySide6.QtUiTools import QUiLoader
-from widgets.frontbrake import setup_serial, uart_input, frontbrake_resize
+from widgets.frontbrake import setup_serial, uart_input
 import random
 from widgets.page_2 import pulse_light
 from dashboard_class import Dashboard
