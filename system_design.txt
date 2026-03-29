@@ -128,7 +128,7 @@ flowchart:
 │ call general UI      │  │ grey out widget      │
 │ method based on type │  │ if applicable        │
 │ - resize_bar         │  │                      │
-│ - blink_led          │  │                      │
+│ - toggle_led          │  │                      │
 │ - fill_table         │  │                      │
 │ - write_text         │  │                      │
 └──────────┬───────────┘  └──────────┬───────────┘
