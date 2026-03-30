@@ -49,9 +49,8 @@ final project structure:
 project/
     main.py
     dashboard/
-        dashboard_class.py
-        dynamic_logic.py
-        uart_update.py
+        dashboard_class.py <-- self.uart_update()
+        dynamic_logic.py 
     uart_logic/
         uart_reader.py
         uart_parser.py

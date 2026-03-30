@@ -4,7 +4,7 @@ from PySide6.QtGui import QCursor
 from PySide6.QtCore import Qt, QFile, QTimer
 from PySide6.QtUiTools import QUiLoader
 
-from widgets.frontbrake import setup_serial, uart_input
+from widgets.uart_logic import setup_serial, uart_input
 from widgets.page_2 import pulse_light
 
 
@@ -45,6 +45,9 @@ class Dashboard:
 
     def update_uart(self):
         uart_input(self.window)
+    
+    def uart_store(self, data):
+        pass
 
     def toggle_fullscreen(self):
         if self.window.isFullScreen():
