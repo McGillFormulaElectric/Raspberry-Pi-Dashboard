@@ -40,7 +40,7 @@ data loss:
 
 
 
-multithreading:
+thread locking:
 -uart is writing and reading from a dictionary, possibly at the same time
 -1 write thread and one read thread
 -use thread locking

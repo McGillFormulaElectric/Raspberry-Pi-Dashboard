@@ -6,6 +6,7 @@ from PySide6.QtUiTools import QUiLoader
 
 from widgets.uart_logic import setup_serial, uart_input
 from widgets.page_2 import pulse_light
+from images.image_loader import load_page_image
 
 
 class Dashboard:
@@ -23,8 +24,19 @@ class Dashboard:
         self.window = loader.load(ui_file)
         ui_file.close()
 
+        # Load static page images (if matching QLabel names exist in the .ui).
+        #self.load_startup_images()
+
+        # Current page
+        self.current_page = self.window.stackedWidget.currentIndex()
+
         # Setup serial
         setup_serial()
+
+        #UART
+        self.uart_data = {} #{class_names: value}
+        self.id = {} #{id: class_name}
+        self.pages = {} #page_num: [bars,led,...]
 
         # Timer for UART
         self.timer = QTimer()
@@ -40,13 +52,16 @@ class Dashboard:
         # Show window
         self.window.show()
         self.window.showFullScreen()
+
+        #dictionnary
     def run(self):
         self.app.exec()
 
     def update_uart(self):
         uart_input(self.window)
     
-    def uart_store(self, data):
+    def uart_update(self):
+        '''update the values on the given page by looping through the list'''
         pass
 
     def toggle_fullscreen(self):
@@ -74,7 +89,18 @@ class Dashboard:
         QtGui.QShortcut(QtGui.QKeySequence("Ctrl+F"), self.window, activated=self.toggle_fullscreen)
         QtGui.QShortcut(QtGui.QKeySequence("Ctrl+Q"), self.window, activated=QtWidgets.QApplication.quit)
 
+    def load_startup_images(self):
+        """
+        Auto-load one image into one specific page only.
 
-if __name__ == "__main__":
-    dashboard = Dashboard()
-    dashboard.run()
+        Default behavior:
+        - loads images/page_1.jpg
+        - into QLabel named 'pageImageLabel' on page_1
+        """
+        target_page = 1
+        # Put your image file inside the images/ folder, then set its name below.
+        # Example: image_file = "team_logo.png"
+        image_file = "logo.png"
+        # Safe no-op when the page/label/image doesn't exist yet.
+        load_page_image(self.window, target_page, "label_13", image_file)
+

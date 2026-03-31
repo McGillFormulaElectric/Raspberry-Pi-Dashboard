@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
  <class>MainWindow</class>
  <widget class="QMainWindow" name="MainWindow">
@@ -33,83 +33,65 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>8</number>
+     <number>5</number>
     </property>
     <widget class="QWidget" name="page_1">
-     <widget class="QWidget" name="speedbar" native="true">
-      <property name="enabled">
-       <bool>true</bool>
-      </property>
+     <widget class="QWidget" name="accentStripe" native="true">
       <property name="geometry">
        <rect>
-        <x>310</x>
-        <y>30</y>
-        <width>81</width>
-        <height>371</height>
+        <x>0</x>
+        <y>0</y>
+        <width>4</width>
+        <height>22</height>
        </rect>
       </property>
-      <property name="maximumSize">
-       <size>
-        <width>100</width>
-        <height>16777215</height>
-       </size>
-      </property>
       <property name="styleSheet">
-       <string notr="true">background-color:rgb(255, 41, 3)</string>
+       <string notr="true">background-color: rgb(232, 0, 45);</string>
       </property>
      </widget>
-     <widget class="QLabel" name="label_4">
+     <widget class="QLabel" name="titleLabel">
       <property name="geometry">
        <rect>
-        <x>670</x>
-        <y>410</y>
-        <width>91</width>
-        <height>31</height>
+        <x>12</x>
+        <y>0</y>
+        <width>300</width>
+        <height>22</height>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">color: rgb(255, 255, 255)</string>
+       <string notr="true">color: rgb(255, 255, 255); font-family: &quot;Courier New&quot;; font-size: 9px; background-color: transparent;</string>
       </property>
       <property name="text">
-       <string>Throttle</string>
+       <string>TELEMETRY - INPUT TRACE</string>
       </property>
      </widget>
-     <widget class="QLabel" name="label_3">
+     <widget class="QFrame" name="headerLine">
       <property name="geometry">
        <rect>
-        <x>310</x>
-        <y>410</y>
-        <width>91</width>
-        <height>31</height>
+        <x>0</x>
+        <y>26</y>
+        <width>771</width>
+        <height>1</height>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">color: rgb(255, 255, 255)</string>
+       <string notr="true">background-color: rgb(26, 26, 26);</string>
       </property>
-      <property name="text">
-       <string>Speed</string>
+      <property name="frameShape">
+       <enum>QFrame::Shape::HLine</enum>
       </property>
      </widget>
-     <widget class="QWidget" name="throttlebar" native="true">
-      <property name="enabled">
-       <bool>true</bool>
-      </property>
+     <widget class="QWidget" name="frontBrakeTrack" native="true">
       <property name="geometry">
        <rect>
-        <x>670</x>
-        <y>30</y>
-        <width>81</width>
-        <height>371</height>
+        <x>0</x>
+        <y>68</y>
+        <width>145</width>
+        <height>310</height>
        </rect>
       </property>
-      <property name="maximumSize">
-       <size>
-        <width>100</width>
-        <height>16777215</height>
-       </size>
-      </property>
       <property name="styleSheet">
-       <string notr="true">background-color:rgb(7, 255, 3)</string>
+       <string notr="true">background-color: rgb(10, 10, 10); border: 1px solid rgb(28, 28, 28);</string>
       </property>
      </widget>
      <widget class="QWidget" name="frontbrakebar" native="true">
@@ -118,52 +100,65 @@
       </property>
       <property name="geometry">
        <rect>
-        <x>0</x>
-        <y>30</y>
-        <width>81</width>
-        <height>371</height>
+        <x>1</x>
+        <y>223</y>
+        <width>143</width>
+        <height>155</height>
        </rect>
       </property>
-      <property name="maximumSize">
-       <size>
-        <width>100</width>
-        <height>16777215</height>
-       </size>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(86, 138, 219);</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="frontBrakeValueTop">
+      <property name="geometry">
+       <rect>
+        <x>52</x>
+        <y>44</y>
+        <width>50</width>
+        <height>18</height>
+       </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color:rgb(58, 143, 255)</string>
+       <string notr="true">color: rgb(86, 138, 219); font-family: &quot;Courier New&quot;; font-size: 10px; background-color: transparent;</string>
+      </property>
+      <property name="text">
+       <string>0%</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignCenter</set>
       </property>
      </widget>
      <widget class="QLabel" name="label">
       <property name="geometry">
        <rect>
-        <x>0</x>
-        <y>410</y>
+        <x>27</x>
+        <y>392</y>
         <width>91</width>
-        <height>31</height>
+        <height>22</height>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">color: rgb(255, 255, 255)</string>
+       <string notr="true">color: rgb(255, 255, 255); font-family: &quot;Courier New&quot;; font-size: 8px; background-color: transparent;</string>
       </property>
       <property name="text">
-       <string>Front Brake</string>
+       <string>FRONT BRAKE</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignCenter</set>
       </property>
      </widget>
-     <widget class="QLabel" name="label_2">
+     <widget class="QWidget" name="rearBrakeTrack" native="true">
       <property name="geometry">
        <rect>
-        <x>110</x>
-        <y>410</y>
-        <width>91</width>
-        <height>31</height>
+        <x>145</x>
+        <y>68</y>
+        <width>145</width>
+        <height>310</height>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">color: rgb(255, 255, 255)</string>
-      </property>
-      <property name="text">
-       <string>Rear Brake</string>
+       <string notr="true">background-color: rgb(10, 10, 10); border: 1px solid rgb(28, 28, 28); border-left: none;</string>
       </property>
      </widget>
      <widget class="QWidget" name="rearbrakebar" native="true">
@@ -172,44 +167,381 @@
       </property>
       <property name="geometry">
        <rect>
-        <x>120</x>
-        <y>30</y>
-        <width>81</width>
-        <height>371</height>
+        <x>146</x>
+        <y>274</y>
+        <width>143</width>
+        <height>104</height>
        </rect>
       </property>
-      <property name="maximumSize">
-       <size>
-        <width>100</width>
-        <height>16777215</height>
-       </size>
-      </property>
       <property name="styleSheet">
-       <string notr="true">background-color:rgb(58, 143, 255)</string>
+       <string notr="true">background-color: rgb(58, 101, 176);</string>
       </property>
      </widget>
-     <widget class="QPlainTextEdit" name="plainTextEdit">
+     <widget class="QLabel" name="rearBrakeValueTop">
+      <property name="geometry">
+       <rect>
+        <x>197</x>
+        <y>44</y>
+        <width>50</width>
+        <height>18</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(58, 101, 176); font-family: &quot;Courier New&quot;; font-size: 10px; background-color: transparent;</string>
+      </property>
+      <property name="text">
+       <string>0%</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_2">
+      <property name="geometry">
+       <rect>
+        <x>172</x>
+        <y>392</y>
+        <width>91</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255); font-family: &quot;Courier New&quot;; font-size: 8px; background-color: transparent;</string>
+      </property>
+      <property name="text">
+       <string>REAR BRAKE</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QWidget" name="speedTrack" native="true">
+      <property name="geometry">
+       <rect>
+        <x>302</x>
+        <y>68</y>
+        <width>145</width>
+        <height>310</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(10, 10, 10); border: 1px solid rgb(28, 28, 28);</string>
+      </property>
+     </widget>
+     <widget class="QWidget" name="speedbar" native="true">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>303</x>
+        <y>172</y>
+        <width>143</width>
+        <height>206</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(232, 0, 45);</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="speedValueTop">
+      <property name="geometry">
+       <rect>
+        <x>355</x>
+        <y>44</y>
+        <width>40</width>
+        <height>18</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(232, 0, 45); font-family: &quot;Courier New&quot;; font-size: 10px; background-color: transparent;</string>
+      </property>
+      <property name="text">
+       <string>0</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_3">
+      <property name="geometry">
+       <rect>
+        <x>330</x>
+        <y>392</y>
+        <width>91</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255); font-family: &quot;Courier New&quot;; font-size: 8px; background-color: transparent;</string>
+      </property>
+      <property name="text">
+       <string>SPEED</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QWidget" name="throttleTrack" native="true">
+      <property name="geometry">
+       <rect>
+        <x>459</x>
+        <y>68</y>
+        <width>145</width>
+        <height>310</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(10, 10, 10); border: 1px solid rgb(28, 28, 28);</string>
+      </property>
+     </widget>
+     <widget class="QWidget" name="throttlebar" native="true">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
       <property name="geometry">
        <rect>
         <x>460</x>
-        <y>130</y>
-        <width>104</width>
-        <height>261</height>
+        <y>138</y>
+        <width>143</width>
+        <height>240</height>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">color:rgb(255, 255, 255)</string>
+       <string notr="true">background-color: rgb(111, 154, 33);</string>
       </property>
-      <property name="plainText">
-       <string>Stats for the car:
-
-
-.
-.
-.
-.
-.
-</string>
+     </widget>
+     <widget class="QLabel" name="throttleValueTop">
+      <property name="geometry">
+       <rect>
+        <x>512</x>
+        <y>44</y>
+        <width>40</width>
+        <height>18</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(111, 154, 33); font-family: &quot;Courier New&quot;; font-size: 10px; background-color: transparent;</string>
+      </property>
+      <property name="text">
+       <string>0%</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_4">
+      <property name="geometry">
+       <rect>
+        <x>486</x>
+        <y>392</y>
+        <width>91</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255); font-family: &quot;Courier New&quot;; font-size: 8px; background-color: transparent;</string>
+      </property>
+      <property name="text">
+       <string>THROTTLE</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QWidget" name="statsPanel" native="true">
+      <property name="geometry">
+       <rect>
+        <x>608</x>
+        <y>242</y>
+        <width>168</width>
+        <height>136</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(13, 13, 13); border: 1px solid rgb(26, 26, 26); border-radius: 2px;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="statFBLabel">
+      <property name="geometry">
+       <rect>
+        <x>620</x>
+        <y>252</y>
+        <width>130</width>
+        <height>12</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255); font-family: &quot;Courier New&quot;; font-size: 9px; background-color: transparent;</string>
+      </property>
+      <property name="text">
+       <string>FRONT BRAKE</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="statFBVal">
+      <property name="geometry">
+       <rect>
+        <x>620</x>
+        <y>267</y>
+        <width>130</width>
+        <height>14</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(86, 138, 219); font-family: &quot;Courier New&quot;; font-size: 11px; background-color: transparent;</string>
+      </property>
+      <property name="text">
+       <string>-- %</string>
+      </property>
+     </widget>
+     <widget class="QFrame" name="statLine1">
+      <property name="geometry">
+       <rect>
+        <x>620</x>
+        <y>288</y>
+        <width>130</width>
+        <height>1</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(26, 26, 26);</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Shape::HLine</enum>
+      </property>
+     </widget>
+     <widget class="QLabel" name="statRBLabel">
+      <property name="geometry">
+       <rect>
+        <x>620</x>
+        <y>294</y>
+        <width>130</width>
+        <height>12</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255); font-family: &quot;Courier New&quot;; font-size: 9px; background-color: transparent;</string>
+      </property>
+      <property name="text">
+       <string>REAR BRAKE</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="statRBVal">
+      <property name="geometry">
+       <rect>
+        <x>620</x>
+        <y>309</y>
+        <width>130</width>
+        <height>14</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(58, 101, 176); font-family: &quot;Courier New&quot;; font-size: 11px; background-color: transparent;</string>
+      </property>
+      <property name="text">
+       <string>-- %</string>
+      </property>
+     </widget>
+     <widget class="QFrame" name="statLine2">
+      <property name="geometry">
+       <rect>
+        <x>620</x>
+        <y>330</y>
+        <width>130</width>
+        <height>1</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(26, 26, 26);</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Shape::HLine</enum>
+      </property>
+     </widget>
+     <widget class="QLabel" name="statSPLabel">
+      <property name="geometry">
+       <rect>
+        <x>620</x>
+        <y>336</y>
+        <width>68</width>
+        <height>12</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255); font-family: &quot;Courier New&quot;; font-size: 9px; background-color: transparent;</string>
+      </property>
+      <property name="text">
+       <string>SPEED</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="statSPVal">
+      <property name="geometry">
+       <rect>
+        <x>688</x>
+        <y>336</y>
+        <width>62</width>
+        <height>12</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(232, 0, 45); font-family: &quot;Courier New&quot;; font-size: 10px; background-color: transparent;</string>
+      </property>
+      <property name="text">
+       <string>-- km/h</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="statTHLabel">
+      <property name="geometry">
+       <rect>
+        <x>620</x>
+        <y>352</y>
+        <width>68</width>
+        <height>12</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255); font-family: &quot;Courier New&quot;; font-size: 9px; background-color: transparent;</string>
+      </property>
+      <property name="text">
+       <string>THROTTLE</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="statTHVal">
+      <property name="geometry">
+       <rect>
+        <x>688</x>
+        <y>352</y>
+        <width>62</width>
+        <height>12</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(111, 154, 33); font-family: &quot;Courier New&quot;; font-size: 10px; background-color: transparent;</string>
+      </property>
+      <property name="text">
+       <string>-- %</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_13">
+      <property name="geometry">
+       <rect>
+        <x>610</x>
+        <y>20</y>
+        <width>151</width>
+        <height>101</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-image: url(:/logo.png);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>untitled/logo.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
       </property>
      </widget>
     </widget>
@@ -1332,217 +1664,264 @@ border-radius: 20px
      </widget>
     </widget>
     <widget class="QWidget" name="page_2">
-     <widget class="QTableWidget" name="CVT_table">
-      <property name="enabled">
-       <bool>true</bool>
-      </property>
+     <property name="styleSheet">
+      <string notr="true">
+QWidget#page_2 {
+    background-color: #0a0a0a;
+}
+QLabel#bms_title {
+    color: #f0f0f0;
+    font-family: "Courier New";
+    font-size: 16px;
+    font-weight: bold;
+    background-color: transparent;
+}
+QLabel#bms_subtitle {
+    color: #555555;
+    font-family: "Courier New";
+    font-size: 16px;
+    background-color: transparent;
+}
+QLabel#dotCharging, QLabel#dotBalancing {
+    color: #E24B4A;
+    font-size: 16px;
+    background-color: transparent;
+}
+QLabel#statusChargingLabel, QLabel#statusBalancingLabel {
+    color: #aaaaaa;
+    font-family: "Courier New";
+    font-size: 16px;
+    background-color: transparent;
+}
+QLabel#badgeCharging, QLabel#badgeBalancing {
+    background-color: rgba(226, 75, 74, 40);
+    color: #E24B4A;
+    font-family: "Courier New";
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    border: 1px solid rgba(226, 75, 74, 80);
+}
+QFrame#bms_divider {
+    background-color: rgba(255, 255, 255, 25);
+}
+QFrame#bmsCard1, QFrame#bmsCard2,
+QFrame#bmsCard3, QFrame#bmsCard4,
+QFrame#bmsCard5, QFrame#bmsCard6 {
+    background-color: #161616;
+    border: 1px solid rgba(255, 255, 255, 30);
+    border-radius: 8px;
+}
+QLabel#lblCurrent, QLabel#lblVoltage,
+QLabel#lblMinTemp, QLabel#lblMaxTemp,
+QLabel#lblMinVolt, QLabel#lblMaxVolt {
+    color: #555555;
+    font-family: "Courier New";
+    font-size: 12px;
+    background-color: transparent;
+}
+QLabel#valCurrent, QLabel#valVoltage,
+QLabel#valMinTemp, QLabel#valMaxTemp,
+QLabel#valMinVolt, QLabel#valMaxVolt {
+    color: #f0f0f0;
+    font-family: "Courier New";
+    font-size: 26px;
+    font-weight: bold;
+    background-color: transparent;
+}
+      </string>
+     </property>
+
+     <!-- Title -->
+     <widget class="QLabel" name="bms_title">
       <property name="geometry">
-       <rect>
-        <x>200</x>
-        <y>100</y>
-        <width>401</width>
-        <height>321</height>
-       </rect>
+       <rect><x>190</x><y>16</y><width>280</width><height>28</height></rect>
       </property>
-      <property name="font">
-       <font>
-        <pointsize>19</pointsize>
-       </font>
+      <property name="text"><string>Battery Management</string></property>
+     </widget>
+
+     <widget class="QLabel" name="bms_subtitle">
+      <property name="geometry">
+       <rect><x>478</x><y>16</y><width>140</width><height>28</height></rect>
+      </property>
+      <property name="text"><string>BMS Monitor</string></property>
+     </widget>
+
+     <!-- Divider under title -->
+     <widget class="QFrame" name="bms_title_line">
+      <property name="geometry">
+       <rect><x>190</x><y>48</y><width>390</width><height>1</height></rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">
-color: rgb(255, 255, 255);
-</string>
+       <string notr="true">background-color: rgb(26, 26, 26);</string>
       </property>
-      <property name="verticalScrollBarPolicy">
-       <enum>Qt::ScrollBarPolicy::ScrollBarAlwaysOff</enum>
-      </property>
-      <property name="horizontalScrollBarPolicy">
-       <enum>Qt::ScrollBarPolicy::ScrollBarAlwaysOff</enum>
-      </property>
-      <property name="sizeAdjustPolicy">
-       <enum>QAbstractScrollArea::SizeAdjustPolicy::AdjustToContentsOnFirstShow</enum>
-      </property>
-      <property name="rowCount">
-       <number>6</number>
-      </property>
-      <property name="columnCount">
-       <number>2</number>
-      </property>
-      <attribute name="horizontalHeaderVisible">
-       <bool>false</bool>
-      </attribute>
-      <attribute name="horizontalHeaderCascadingSectionResizes">
-       <bool>true</bool>
-      </attribute>
-      <attribute name="horizontalHeaderDefaultSectionSize">
-       <number>250</number>
-      </attribute>
-      <attribute name="horizontalHeaderHighlightSections">
-       <bool>true</bool>
-      </attribute>
-      <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
-       <bool>false</bool>
-      </attribute>
-      <attribute name="horizontalHeaderStretchLastSection">
-       <bool>true</bool>
-      </attribute>
-      <attribute name="verticalHeaderVisible">
-       <bool>false</bool>
-      </attribute>
-      <attribute name="verticalHeaderDefaultSectionSize">
-       <number>50</number>
-      </attribute>
-      <attribute name="verticalHeaderStretchLastSection">
-       <bool>false</bool>
-      </attribute>
-      <row/>
-      <row/>
-      <row/>
-      <row/>
-      <row/>
-      <row/>
-      <column/>
-      <column/>
-      <item row="0" column="0">
-       <property name="text">
-        <string>Current</string>
-       </property>
-      </item>
-      <item row="0" column="1">
-       <property name="text">
-        <string>0A</string>
-       </property>
-      </item>
-      <item row="1" column="0">
-       <property name="text">
-        <string>Voltage</string>
-       </property>
-      </item>
-      <item row="1" column="1">
-       <property name="text">
-        <string>0V</string>
-       </property>
-      </item>
-      <item row="2" column="0">
-       <property name="text">
-        <string>Min Cell Temp.</string>
-       </property>
-      </item>
-      <item row="2" column="1">
-       <property name="text">
-        <string>0 C</string>
-       </property>
-      </item>
-      <item row="3" column="0">
-       <property name="text">
-        <string>Max Cell Temp.</string>
-       </property>
-       <property name="font">
-        <font>
-         <pointsize>19</pointsize>
-        </font>
-       </property>
-      </item>
-      <item row="3" column="1">
-       <property name="text">
-        <string>0V</string>
-       </property>
-      </item>
-      <item row="4" column="0">
-       <property name="text">
-        <string>Min Cell Volt.</string>
-       </property>
-      </item>
-      <item row="4" column="1">
-       <property name="text">
-        <string>0V</string>
-       </property>
-      </item>
-      <item row="5" column="0">
-       <property name="text">
-        <string>Max Cell Volt.</string>
-       </property>
-      </item>
-      <item row="5" column="1">
-       <property name="text">
-        <string>0V</string>
-       </property>
-      </item>
+      <property name="frameShape"><enum>QFrame::Shape::HLine</enum></property>
      </widget>
-     <widget class="QWidget" name="charging_status_light" native="true">
+
+     <!-- Charging status row -->
+     <widget class="QLabel" name="dotCharging">
       <property name="geometry">
-       <rect>
-        <x>230</x>
-        <y>0</y>
-        <width>41</width>
-        <height>41</height>
-       </rect>
+       <rect><x>190</x><y>62</y><width>18</width><height>22</height></rect>
       </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 14, 30);
-border-radius: 20px
-</string>
-      </property>
+      <property name="text"><string>●</string></property>
      </widget>
-     <widget class="QWidget" name="balancing_status_light" native="true">
+     <widget class="QLabel" name="statusChargingLabel">
       <property name="geometry">
-       <rect>
-        <x>230</x>
-        <y>50</y>
-        <width>41</width>
-        <height>41</height>
-       </rect>
+       <rect><x>216</x><y>62</y><width>150</width><height>22</height></rect>
       </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 14, 30);
-border-radius: 20px
-</string>
-      </property>
+      <property name="text"><string>Charging</string></property>
      </widget>
-     <widget class="QLabel" name="label_5">
+     <widget class="QLabel" name="badgeCharging">
       <property name="geometry">
-       <rect>
-        <x>280</x>
-        <y>0</y>
-        <width>221</width>
-        <height>41</height>
-       </rect>
+       <rect><x>382</x><y>62</y><width>54</width><height>22</height></rect>
       </property>
-      <property name="font">
-       <font>
-        <pointsize>17</pointsize>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">color:rgb(255, 255, 255)</string>
-      </property>
-      <property name="text">
-       <string>Charging Status</string>
-      </property>
+      <property name="text"><string>Off</string></property>
+      <property name="alignment"><set>Qt::AlignmentFlag::AlignCenter</set></property>
      </widget>
-     <widget class="QLabel" name="label_6">
+
+     <!-- Balancing status row -->
+     <widget class="QLabel" name="dotBalancing">
       <property name="geometry">
-       <rect>
-        <x>280</x>
-        <y>50</y>
-        <width>221</width>
-        <height>41</height>
-       </rect>
+       <rect><x>190</x><y>92</y><width>18</width><height>22</height></rect>
       </property>
-      <property name="font">
-       <font>
-        <pointsize>17</pointsize>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">color:rgb(255, 255, 255)</string>
-      </property>
-      <property name="text">
-       <string>Balancing Status</string>
-      </property>
+      <property name="text"><string>●</string></property>
      </widget>
+     <widget class="QLabel" name="statusBalancingLabel">
+      <property name="geometry">
+       <rect><x>216</x><y>92</y><width>150</width><height>22</height></rect>
+      </property>
+      <property name="text"><string>Balancing</string></property>
+     </widget>
+     <widget class="QLabel" name="badgeBalancing">
+      <property name="geometry">
+       <rect><x>382</x><y>92</y><width>54</width><height>22</height></rect>
+      </property>
+      <property name="text"><string>Off</string></property>
+      <property name="alignment"><set>Qt::AlignmentFlag::AlignCenter</set></property>
+     </widget>
+
+     <!-- Divider -->
+     <widget class="QFrame" name="bms_divider">
+      <property name="geometry">
+       <rect><x>110</x><y>124</y><width>550</width><height>1</height></rect>
+      </property>
+      <property name="frameShape"><enum>QFrame::Shape::HLine</enum></property>
+      <property name="frameShadow"><enum>QFrame::Shadow::Plain</enum></property>
+     </widget>
+
+     <!-- ROW 1: Current | Voltage -->
+     <widget class="QFrame" name="bmsCard1">
+      <property name="geometry">
+       <rect><x>110</x><y>160</y><width>170</width><height>110</height></rect>
+      </property>
+      <widget class="QLabel" name="lblCurrent">
+       <property name="geometry">
+        <rect><x>12</x><y>14</y><width>146</width><height>16</height></rect>
+       </property>
+       <property name="text"><string>CURRENT</string></property>
+      </widget>
+      <widget class="QLabel" name="valCurrent">
+       <property name="geometry">
+        <rect><x>12</x><y>42</y><width>146</width><height>38</height></rect>
+       </property>
+       <property name="text"><string>0 A</string></property>
+      </widget>
+     </widget>
+
+     <widget class="QFrame" name="bmsCard2">
+      <property name="geometry">
+       <rect><x>300</x><y>160</y><width>170</width><height>110</height></rect>
+      </property>
+      <widget class="QLabel" name="lblVoltage">
+       <property name="geometry">
+        <rect><x>12</x><y>14</y><width>146</width><height>16</height></rect>
+       </property>
+       <property name="text"><string>VOLTAGE</string></property>
+      </widget>
+      <widget class="QLabel" name="valVoltage">
+       <property name="geometry">
+        <rect><x>12</x><y>42</y><width>146</width><height>38</height></rect>
+       </property>
+       <property name="text"><string>0 V</string></property>
+      </widget>
+     </widget>
+
+     <!-- ROW 2: Min Cell Temp | Max Cell Temp -->
+     <widget class="QFrame" name="bmsCard3">
+      <property name="geometry">
+       <rect><x>490</x><y>160</y><width>170</width><height>110</height></rect>
+      </property>
+      <widget class="QLabel" name="lblMinTemp">
+       <property name="geometry">
+        <rect><x>12</x><y>14</y><width>146</width><height>16</height></rect>
+       </property>
+       <property name="text"><string>MIN CELL TEMP</string></property>
+      </widget>
+      <widget class="QLabel" name="valMinTemp">
+       <property name="geometry">
+        <rect><x>12</x><y>42</y><width>146</width><height>38</height></rect>
+       </property>
+       <property name="text"><string>0 °C</string></property>
+      </widget>
+     </widget>
+
+     <widget class="QFrame" name="bmsCard4">
+      <property name="geometry">
+       <rect><x>110</x><y>290</y><width>170</width><height>110</height></rect>
+      </property>
+      <widget class="QLabel" name="lblMaxTemp">
+       <property name="geometry">
+        <rect><x>12</x><y>14</y><width>146</width><height>16</height></rect>
+       </property>
+       <property name="text"><string>MAX CELL TEMP</string></property>
+      </widget>
+      <widget class="QLabel" name="valMaxTemp">
+       <property name="geometry">
+        <rect><x>12</x><y>42</y><width>146</width><height>38</height></rect>
+       </property>
+       <property name="text"><string>0 °C</string></property>
+      </widget>
+     </widget>
+
+     <!-- ROW 3: Min Cell Volt | Max Cell Volt -->
+     <widget class="QFrame" name="bmsCard5">
+      <property name="geometry">
+       <rect><x>300</x><y>290</y><width>170</width><height>110</height></rect>
+      </property>
+      <widget class="QLabel" name="lblMinVolt">
+       <property name="geometry">
+        <rect><x>12</x><y>14</y><width>146</width><height>16</height></rect>
+       </property>
+       <property name="text"><string>MIN CELL VOLT</string></property>
+      </widget>
+      <widget class="QLabel" name="valMinVolt">
+       <property name="geometry">
+        <rect><x>12</x><y>42</y><width>146</width><height>38</height></rect>
+       </property>
+       <property name="text"><string>0 V</string></property>
+      </widget>
+     </widget>
+
+     <widget class="QFrame" name="bmsCard6">
+      <property name="geometry">
+       <rect><x>490</x><y>290</y><width>170</width><height>110</height></rect>
+      </property>
+      <widget class="QLabel" name="lblMaxVolt">
+       <property name="geometry">
+        <rect><x>12</x><y>14</y><width>146</width><height>16</height></rect>
+       </property>
+       <property name="text"><string>MAX CELL VOLT</string></property>
+      </widget>
+      <widget class="QLabel" name="valMaxVolt">
+       <property name="geometry">
+        <rect><x>12</x><y>42</y><width>146</width><height>38</height></rect>
+       </property>
+       <property name="text"><string>0 V</string></property>
+      </widget>
+     </widget>
+
     </widget>
+
     <widget class="QWidget" name="page_7">
      <widget class="QLabel" name="label_throttle_title">
       <property name="geometry">
@@ -1738,7 +2117,7 @@ border-radius: 20px
        <string notr="true">color: rgb(255, 255, 255);</string>
       </property>
       <property name="text">
-       <string>000 kΩ</string>
+       <string>000 kOhm</string>
       </property>
      </widget>
      <widget class="QLabel" name="label_total_volt">
@@ -1890,7 +2269,7 @@ border-radius: 20px
        <string notr="true">color: rgb(255, 255, 255);</string>
       </property>
       <property name="text">
-       <string>00.0 °C</string>
+       <string>00.0 C</string>
       </property>
      </widget>
      <widget class="QLabel" name="label_rl_temp_motor">
@@ -1928,7 +2307,7 @@ border-radius: 20px
        <string notr="true">color: rgb(255, 255, 255);</string>
       </property>
       <property name="text">
-       <string>00.0 °C</string>
+       <string>00.0 C</string>
       </property>
      </widget>
      <widget class="QLabel" name="label_rr_error">
@@ -2004,7 +2383,7 @@ border-radius: 20px
        <string notr="true">color: rgb(255, 255, 255);</string>
       </property>
       <property name="text">
-       <string>00.0 °C</string>
+       <string>00.0 C</string>
       </property>
      </widget>
      <widget class="QLabel" name="label_min_volt">
