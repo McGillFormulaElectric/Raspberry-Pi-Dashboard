@@ -16,10 +16,9 @@ from PySide6.QtGui import (QAction, QBrush, QColor, QConicalGradient,
     QIcon, QImage, QKeySequence, QLinearGradient,
     QPainter, QPalette, QPixmap, QRadialGradient,
     QTransform)
-from PySide6.QtWidgets import (QAbstractItemView, QAbstractScrollArea, QApplication, QFrame,
-    QHeaderView, QLabel, QMainWindow, QSizePolicy,
-    QStackedWidget, QStatusBar, QTableWidget, QTableWidgetItem,
-    QWidget)
+from PySide6.QtWidgets import (QApplication, QFrame, QHeaderView, QLabel,
+    QMainWindow, QProgressBar, QSizePolicy, QStackedWidget,
+    QStatusBar, QTableWidget, QTableWidgetItem, QWidget)
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -62,32 +61,32 @@ class Ui_MainWindow(object):
         self.frontbrakebar.setStyleSheet(u"background-color: rgb(86, 138, 219);")
         self.frontBrakeValueTop = QLabel(self.page_1)
         self.frontBrakeValueTop.setObjectName(u"frontBrakeValueTop")
-        self.frontBrakeValueTop.setGeometry(QRect(52, 44, 50, 18))
-        self.frontBrakeValueTop.setStyleSheet(u"color: rgb(86, 138, 219); font-family: \"Courier New\"; font-size: 10px; background-color: transparent;")
+        self.frontBrakeValueTop.setGeometry(QRect(33, 38, 80, 26))
+        self.frontBrakeValueTop.setStyleSheet(u"color: rgb(86, 138, 219); font-family: \"Courier New\"; font-size: 18px; font-weight: bold; background-color: transparent;")
         self.frontBrakeValueTop.setAlignment(Qt.AlignmentFlag.AlignCenter)
         self.label = QLabel(self.page_1)
         self.label.setObjectName(u"label")
-        self.label.setGeometry(QRect(27, 392, 91, 22))
-        self.label.setStyleSheet(u"color: rgb(255, 255, 255); font-family: \"Courier New\"; font-size: 8px; background-color: transparent;")
+        self.label.setGeometry(QRect(12, 390, 120, 28))
+        self.label.setStyleSheet(u"color: rgb(255, 255, 255); font-family: \"Courier New\"; font-size: 13px; font-weight: bold; background-color: transparent;")
         self.label.setAlignment(Qt.AlignmentFlag.AlignCenter)
         self.rearBrakeTrack = QWidget(self.page_1)
         self.rearBrakeTrack.setObjectName(u"rearBrakeTrack")
-        self.rearBrakeTrack.setGeometry(QRect(145, 68, 145, 310))
-        self.rearBrakeTrack.setStyleSheet(u"background-color: rgb(10, 10, 10); border: 1px solid rgb(28, 28, 28); border-left: none;")
+        self.rearBrakeTrack.setGeometry(QRect(151, 68, 145, 310))
+        self.rearBrakeTrack.setStyleSheet(u"background-color: rgb(10, 10, 10); border: 1px solid rgb(28, 28, 28);")
         self.rearbrakebar = QWidget(self.page_1)
         self.rearbrakebar.setObjectName(u"rearbrakebar")
         self.rearbrakebar.setEnabled(True)
-        self.rearbrakebar.setGeometry(QRect(146, 274, 143, 104))
+        self.rearbrakebar.setGeometry(QRect(152, 274, 143, 104))
         self.rearbrakebar.setStyleSheet(u"background-color: rgb(58, 101, 176);")
         self.rearBrakeValueTop = QLabel(self.page_1)
         self.rearBrakeValueTop.setObjectName(u"rearBrakeValueTop")
-        self.rearBrakeValueTop.setGeometry(QRect(197, 44, 50, 18))
-        self.rearBrakeValueTop.setStyleSheet(u"color: rgb(58, 101, 176); font-family: \"Courier New\"; font-size: 10px; background-color: transparent;")
+        self.rearBrakeValueTop.setGeometry(QRect(184, 38, 80, 26))
+        self.rearBrakeValueTop.setStyleSheet(u"color: rgb(58, 101, 176); font-family: \"Courier New\"; font-size: 18px; font-weight: bold; background-color: transparent;")
         self.rearBrakeValueTop.setAlignment(Qt.AlignmentFlag.AlignCenter)
         self.label_2 = QLabel(self.page_1)
         self.label_2.setObjectName(u"label_2")
-        self.label_2.setGeometry(QRect(172, 392, 91, 22))
-        self.label_2.setStyleSheet(u"color: rgb(255, 255, 255); font-family: \"Courier New\"; font-size: 8px; background-color: transparent;")
+        self.label_2.setGeometry(QRect(164, 390, 120, 28))
+        self.label_2.setStyleSheet(u"color: rgb(255, 255, 255); font-family: \"Courier New\"; font-size: 13px; font-weight: bold; background-color: transparent;")
         self.label_2.setAlignment(Qt.AlignmentFlag.AlignCenter)
         self.speedTrack = QWidget(self.page_1)
         self.speedTrack.setObjectName(u"speedTrack")
@@ -100,13 +99,13 @@ class Ui_MainWindow(object):
         self.speedbar.setStyleSheet(u"background-color: rgb(232, 0, 45);")
         self.speedValueTop = QLabel(self.page_1)
         self.speedValueTop.setObjectName(u"speedValueTop")
-        self.speedValueTop.setGeometry(QRect(355, 44, 40, 18))
-        self.speedValueTop.setStyleSheet(u"color: rgb(232, 0, 45); font-family: \"Courier New\"; font-size: 10px; background-color: transparent;")
+        self.speedValueTop.setGeometry(QRect(335, 38, 80, 26))
+        self.speedValueTop.setStyleSheet(u"color: rgb(232, 0, 45); font-family: \"Courier New\"; font-size: 18px; font-weight: bold; background-color: transparent;")
         self.speedValueTop.setAlignment(Qt.AlignmentFlag.AlignCenter)
         self.label_3 = QLabel(self.page_1)
         self.label_3.setObjectName(u"label_3")
-        self.label_3.setGeometry(QRect(330, 392, 91, 22))
-        self.label_3.setStyleSheet(u"color: rgb(255, 255, 255); font-family: \"Courier New\"; font-size: 8px; background-color: transparent;")
+        self.label_3.setGeometry(QRect(315, 390, 120, 28))
+        self.label_3.setStyleSheet(u"color: rgb(255, 255, 255); font-family: \"Courier New\"; font-size: 13px; font-weight: bold; background-color: transparent;")
         self.label_3.setAlignment(Qt.AlignmentFlag.AlignCenter)
         self.throttleTrack = QWidget(self.page_1)
         self.throttleTrack.setObjectName(u"throttleTrack")
@@ -119,60 +118,60 @@ class Ui_MainWindow(object):
         self.throttlebar.setStyleSheet(u"background-color: rgb(111, 154, 33);")
         self.throttleValueTop = QLabel(self.page_1)
         self.throttleValueTop.setObjectName(u"throttleValueTop")
-        self.throttleValueTop.setGeometry(QRect(512, 44, 40, 18))
-        self.throttleValueTop.setStyleSheet(u"color: rgb(111, 154, 33); font-family: \"Courier New\"; font-size: 10px; background-color: transparent;")
+        self.throttleValueTop.setGeometry(QRect(492, 38, 80, 26))
+        self.throttleValueTop.setStyleSheet(u"color: rgb(111, 154, 33); font-family: \"Courier New\"; font-size: 18px; font-weight: bold; background-color: transparent;")
         self.throttleValueTop.setAlignment(Qt.AlignmentFlag.AlignCenter)
         self.label_4 = QLabel(self.page_1)
         self.label_4.setObjectName(u"label_4")
-        self.label_4.setGeometry(QRect(486, 392, 91, 22))
-        self.label_4.setStyleSheet(u"color: rgb(255, 255, 255); font-family: \"Courier New\"; font-size: 8px; background-color: transparent;")
+        self.label_4.setGeometry(QRect(466, 390, 120, 28))
+        self.label_4.setStyleSheet(u"color: rgb(255, 255, 255); font-family: \"Courier New\"; font-size: 13px; font-weight: bold; background-color: transparent;")
         self.label_4.setAlignment(Qt.AlignmentFlag.AlignCenter)
         self.statsPanel = QWidget(self.page_1)
         self.statsPanel.setObjectName(u"statsPanel")
-        self.statsPanel.setGeometry(QRect(608, 242, 168, 136))
+        self.statsPanel.setGeometry(QRect(612, 128, 148, 250))
         self.statsPanel.setStyleSheet(u"background-color: rgb(13, 13, 13); border: 1px solid rgb(26, 26, 26); border-radius: 2px;")
         self.statFBLabel = QLabel(self.page_1)
         self.statFBLabel.setObjectName(u"statFBLabel")
-        self.statFBLabel.setGeometry(QRect(620, 252, 130, 12))
-        self.statFBLabel.setStyleSheet(u"color: rgb(255, 255, 255); font-family: \"Courier New\"; font-size: 9px; background-color: transparent;")
+        self.statFBLabel.setGeometry(QRect(612, 140, 136, 18))
+        self.statFBLabel.setStyleSheet(u"color: rgb(255, 255, 255); font-family: \"Courier New\"; font-size: 12px; font-weight: bold; background-color: transparent;")
         self.statFBVal = QLabel(self.page_1)
         self.statFBVal.setObjectName(u"statFBVal")
-        self.statFBVal.setGeometry(QRect(620, 267, 130, 14))
-        self.statFBVal.setStyleSheet(u"color: rgb(86, 138, 219); font-family: \"Courier New\"; font-size: 11px; background-color: transparent;")
+        self.statFBVal.setGeometry(QRect(612, 162, 136, 32))
+        self.statFBVal.setStyleSheet(u"color: rgb(86, 138, 219); font-family: \"Courier New\"; font-size: 22px; font-weight: bold; background-color: transparent;")
         self.statLine1 = QFrame(self.page_1)
         self.statLine1.setObjectName(u"statLine1")
-        self.statLine1.setGeometry(QRect(620, 288, 130, 1))
+        self.statLine1.setGeometry(QRect(612, 200, 136, 1))
         self.statLine1.setStyleSheet(u"background-color: rgb(26, 26, 26);")
         self.statLine1.setFrameShape(QFrame.Shape.HLine)
         self.statRBLabel = QLabel(self.page_1)
         self.statRBLabel.setObjectName(u"statRBLabel")
-        self.statRBLabel.setGeometry(QRect(620, 294, 130, 12))
-        self.statRBLabel.setStyleSheet(u"color: rgb(255, 255, 255); font-family: \"Courier New\"; font-size: 9px; background-color: transparent;")
+        self.statRBLabel.setGeometry(QRect(612, 212, 136, 18))
+        self.statRBLabel.setStyleSheet(u"color: rgb(255, 255, 255); font-family: \"Courier New\"; font-size: 12px; font-weight: bold; background-color: transparent;")
         self.statRBVal = QLabel(self.page_1)
         self.statRBVal.setObjectName(u"statRBVal")
-        self.statRBVal.setGeometry(QRect(620, 309, 130, 14))
-        self.statRBVal.setStyleSheet(u"color: rgb(58, 101, 176); font-family: \"Courier New\"; font-size: 11px; background-color: transparent;")
+        self.statRBVal.setGeometry(QRect(612, 234, 136, 32))
+        self.statRBVal.setStyleSheet(u"color: rgb(58, 101, 176); font-family: \"Courier New\"; font-size: 22px; font-weight: bold; background-color: transparent;")
         self.statLine2 = QFrame(self.page_1)
         self.statLine2.setObjectName(u"statLine2")
-        self.statLine2.setGeometry(QRect(620, 330, 130, 1))
+        self.statLine2.setGeometry(QRect(612, 274, 136, 1))
         self.statLine2.setStyleSheet(u"background-color: rgb(26, 26, 26);")
         self.statLine2.setFrameShape(QFrame.Shape.HLine)
         self.statSPLabel = QLabel(self.page_1)
         self.statSPLabel.setObjectName(u"statSPLabel")
-        self.statSPLabel.setGeometry(QRect(620, 336, 68, 12))
-        self.statSPLabel.setStyleSheet(u"color: rgb(255, 255, 255); font-family: \"Courier New\"; font-size: 9px; background-color: transparent;")
+        self.statSPLabel.setGeometry(QRect(612, 286, 80, 18))
+        self.statSPLabel.setStyleSheet(u"color: rgb(255, 255, 255); font-family: \"Courier New\"; font-size: 12px; font-weight: bold; background-color: transparent;")
         self.statSPVal = QLabel(self.page_1)
         self.statSPVal.setObjectName(u"statSPVal")
-        self.statSPVal.setGeometry(QRect(688, 336, 62, 12))
-        self.statSPVal.setStyleSheet(u"color: rgb(232, 0, 45); font-family: \"Courier New\"; font-size: 10px; background-color: transparent;")
+        self.statSPVal.setGeometry(QRect(612, 308, 136, 24))
+        self.statSPVal.setStyleSheet(u"color: rgb(232, 0, 45); font-family: \"Courier New\"; font-size: 18px; font-weight: bold; background-color: transparent;")
         self.statTHLabel = QLabel(self.page_1)
         self.statTHLabel.setObjectName(u"statTHLabel")
-        self.statTHLabel.setGeometry(QRect(620, 352, 68, 12))
-        self.statTHLabel.setStyleSheet(u"color: rgb(255, 255, 255); font-family: \"Courier New\"; font-size: 9px; background-color: transparent;")
+        self.statTHLabel.setGeometry(QRect(612, 332, 80, 18))
+        self.statTHLabel.setStyleSheet(u"color: rgb(255, 255, 255); font-family: \"Courier New\"; font-size: 12px; font-weight: bold; background-color: transparent;")
         self.statTHVal = QLabel(self.page_1)
         self.statTHVal.setObjectName(u"statTHVal")
-        self.statTHVal.setGeometry(QRect(688, 352, 62, 12))
-        self.statTHVal.setStyleSheet(u"color: rgb(111, 154, 33); font-family: \"Courier New\"; font-size: 10px; background-color: transparent;")
+        self.statTHVal.setGeometry(QRect(612, 352, 136, 24))
+        self.statTHVal.setStyleSheet(u"color: rgb(111, 154, 33); font-family: \"Courier New\"; font-size: 18px; font-weight: bold; background-color: transparent;")
         self.label_13 = QLabel(self.page_1)
         self.label_13.setObjectName(u"label_13")
         self.label_13.setGeometry(QRect(610, 20, 151, 101))
@@ -182,376 +181,755 @@ class Ui_MainWindow(object):
         self.stackedWidget.addWidget(self.page_1)
         self.page_3 = QWidget()
         self.page_3.setObjectName(u"page_3")
-        self.label_7 = QLabel(self.page_3)
-        self.label_7.setObjectName(u"label_7")
-        self.label_7.setGeometry(QRect(220, 30, 331, 91))
-        font = QFont()
-        font.setPointSize(40)
-        self.label_7.setFont(font)
-        self.label_7.setStyleSheet(u"color:rgb(255, 255, 255)")
-        self.pack_total_volt = QLabel(self.page_3)
-        self.pack_total_volt.setObjectName(u"pack_total_volt")
-        self.pack_total_volt.setGeometry(QRect(290, 110, 231, 91))
-        self.pack_total_volt.setFont(font)
-        self.pack_total_volt.setStyleSheet(u"color:rgb(255, 255, 255)")
-        self.label_9 = QLabel(self.page_3)
-        self.label_9.setObjectName(u"label_9")
-        self.label_9.setGeometry(QRect(290, 250, 171, 81))
-        self.label_9.setFont(font)
-        self.label_9.setStyleSheet(u"color:rgb(255, 255, 255)")
-        self.cell_volt = QLabel(self.page_3)
-        self.cell_volt.setObjectName(u"cell_volt")
-        self.cell_volt.setGeometry(QRect(280, 340, 181, 61))
-        self.cell_volt.setFont(font)
-        self.cell_volt.setStyleSheet(u"color:rgb(255, 255, 255)")
+        self.page_3.setStyleSheet(u"\n"
+"    QWidget#page_3 {\n"
+"      background-color: #000000;\n"
+"    }\n"
+"    QWidget#batteryMonitorPage {\n"
+"      background-color: #000000;\n"
+"    }\n"
+"    QFrame#packCard, QFrame#cellCard {\n"
+"      background-color: #111111;\n"
+"      border: 1px solid rgba(255,255,255,0.12);\n"
+"      border-radius: 12px;\n"
+"    }\n"
+"    QLabel#headerTitle {\n"
+"      color: #ffffff;\n"
+"      font-family: Courier New;\n"
+"      font-size: 11px;\n"
+"      letter-spacing: 3px;\n"
+"    }\n"
+"    QLabel#packLabel, QLabel#cellLabel {\n"
+"      color: #ffffff;\n"
+"      font-family: Courier New;\n"
+"      font-size: 11px;\n"
+"      letter-spacing: 2px;\n"
+"    }\n"
+"    QLabel#packValue, QLabel#cellValue {\n"
+"      color: #1D9E75;\n"
+"      font-family: Courier New;\n"
+"      font-size: 64px;\n"
+"      font-weight: 500;\n"
+"    }\n"
+"    QLabel#packUnit, QLabel#cellUnit {\n"
+"      color: rgba(255,255,255,0.5);\n"
+"      font-family: Courier New;\n"
+"      font-size: 20px;\n"
+"    }\n"
+"    QLabel#packBadge, QLabel#"
+                        "cellBadge {\n"
+"      color: #1D9E75;\n"
+"      background-color: rgba(29,158,117,0.15);\n"
+"      font-family: Courier New;\n"
+"      font-size: 10px;\n"
+"      letter-spacing: 2px;\n"
+"      border-radius: 4px;\n"
+"      padding: 3px 8px;\n"
+"    }\n"
+"    QLabel#packMin, QLabel#packMax, QLabel#cellMin, QLabel#cellMax {\n"
+"      color: #ffffff;\n"
+"      font-family: Courier New;\n"
+"      font-size: 11px;\n"
+"    }\n"
+"    QProgressBar#packBar, QProgressBar#cellBar {\n"
+"      background-color: rgba(255,255,255,0.1);\n"
+"      border: none;\n"
+"      border-radius: 3px;\n"
+"      height: 5px;\n"
+"      text-align: center;\n"
+"    }\n"
+"    QProgressBar#packBar::chunk, QProgressBar#cellBar::chunk {\n"
+"      background-color: #1D9E75;\n"
+"      border-radius: 3px;\n"
+"    }\n"
+"    QLabel#footer {\n"
+"      color: #ffffff;\n"
+"      font-family: Courier New;\n"
+"      font-size: 10px;\n"
+"      letter-spacing: 3px;\n"
+"    }\n"
+"    QFrame#headerLine {\n"
+"      color: rgba(255,255,255,0.15);\n"
+"    }\n"
+""
+                        "      ")
+        self.batteryMonitorPage = QWidget(self.page_3)
+        self.batteryMonitorPage.setObjectName(u"batteryMonitorPage")
+        self.batteryMonitorPage.setGeometry(QRect(125, 0, 520, 441))
+        self.statusDot = QLabel(self.batteryMonitorPage)
+        self.statusDot.setObjectName(u"statusDot")
+        self.statusDot.setGeometry(QRect(32, 18, 9, 9))
+        self.statusDot.setStyleSheet(u"background-color: #1D9E75; border-radius: 4px;")
+        self.headerLineLeft = QFrame(self.batteryMonitorPage)
+        self.headerLineLeft.setObjectName(u"headerLineLeft")
+        self.headerLineLeft.setGeometry(QRect(48, 21, 145, 1))
+        self.headerLineLeft.setStyleSheet(u"color: rgba(255,255,255,0.15);")
+        self.headerLineLeft.setFrameShape(QFrame.Shape.HLine)
+        self.headerTitle = QLabel(self.batteryMonitorPage)
+        self.headerTitle.setObjectName(u"headerTitle")
+        self.headerTitle.setGeometry(QRect(175, 10, 170, 24))
+        self.headerTitle.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.headerLineRight = QFrame(self.batteryMonitorPage)
+        self.headerLineRight.setObjectName(u"headerLineRight")
+        self.headerLineRight.setGeometry(QRect(337, 21, 151, 1))
+        self.headerLineRight.setStyleSheet(u"color: rgba(255,255,255,0.15);")
+        self.headerLineRight.setFrameShape(QFrame.Shape.HLine)
+        self.packCard = QFrame(self.batteryMonitorPage)
+        self.packCard.setObjectName(u"packCard")
+        self.packCard.setGeometry(QRect(32, 60, 456, 160))
+        self.packLabel = QLabel(self.packCard)
+        self.packLabel.setObjectName(u"packLabel")
+        self.packLabel.setGeometry(QRect(20, 20, 120, 18))
+        self.packBadge = QLabel(self.packCard)
+        self.packBadge.setObjectName(u"packBadge")
+        self.packBadge.setGeometry(QRect(338, 18, 88, 20))
+        self.packBadge.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.packValue = QLabel(self.packCard)
+        self.packValue.setObjectName(u"packValue")
+        self.packValue.setGeometry(QRect(35, 55, 150, 60))
+        self.packValue.setAlignment(Qt.AlignmentFlag.AlignBottom|Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft)
+        self.packUnit = QLabel(self.packCard)
+        self.packUnit.setObjectName(u"packUnit")
+        self.packUnit.setGeometry(QRect(190, 86, 20, 30))
+        self.packBar = QProgressBar(self.packCard)
+        self.packBar.setObjectName(u"packBar")
+        self.packBar.setGeometry(QRect(37, 118, 382, 5))
+        self.packBar.setValue(68)
+        self.packBar.setTextVisible(False)
+        self.packMin = QLabel(self.packCard)
+        self.packMin.setObjectName(u"packMin")
+        self.packMin.setGeometry(QRect(34, 132, 100, 18))
+        self.packMax = QLabel(self.packCard)
+        self.packMax.setObjectName(u"packMax")
+        self.packMax.setGeometry(QRect(321, 132, 100, 18))
+        self.cellCard = QFrame(self.batteryMonitorPage)
+        self.cellCard.setObjectName(u"cellCard")
+        self.cellCard.setGeometry(QRect(32, 246, 456, 160))
+        self.cellLabel = QLabel(self.cellCard)
+        self.cellLabel.setObjectName(u"cellLabel")
+        self.cellLabel.setGeometry(QRect(20, 20, 140, 18))
+        self.cellBadge = QLabel(self.cellCard)
+        self.cellBadge.setObjectName(u"cellBadge")
+        self.cellBadge.setGeometry(QRect(324, 18, 102, 20))
+        self.cellBadge.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.cellValue = QLabel(self.cellCard)
+        self.cellValue.setObjectName(u"cellValue")
+        self.cellValue.setGeometry(QRect(35, 55, 150, 60))
+        self.cellValue.setAlignment(Qt.AlignmentFlag.AlignBottom|Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft)
+        self.cellUnit = QLabel(self.cellCard)
+        self.cellUnit.setObjectName(u"cellUnit")
+        self.cellUnit.setGeometry(QRect(190, 86, 20, 30))
+        self.cellBar = QProgressBar(self.cellCard)
+        self.cellBar.setObjectName(u"cellBar")
+        self.cellBar.setGeometry(QRect(37, 118, 382, 5))
+        self.cellBar.setValue(68)
+        self.cellBar.setTextVisible(False)
+        self.cellMin = QLabel(self.cellCard)
+        self.cellMin.setObjectName(u"cellMin")
+        self.cellMin.setGeometry(QRect(34, 132, 90, 18))
+        self.cellMax = QLabel(self.cellCard)
+        self.cellMax.setObjectName(u"cellMax")
+        self.cellMax.setGeometry(QRect(327, 132, 93, 18))
+        self.footer = QLabel(self.batteryMonitorPage)
+        self.footer.setObjectName(u"footer")
+        self.footer.setGeometry(QRect(130, 414, 260, 18))
+        self.footer.setAlignment(Qt.AlignmentFlag.AlignCenter)
         self.stackedWidget.addWidget(self.page_3)
         self.page_4 = QWidget()
         self.page_4.setObjectName(u"page_4")
-        self.widget = QWidget(self.page_4)
-        self.widget.setObjectName(u"widget")
-        self.widget.setGeometry(QRect(386, 10, 16, 421))
-        self.widget.setStyleSheet(u"background-color:rgb(255, 255, 255)")
-        self.widget_2 = QWidget(self.page_4)
-        self.widget_2.setObjectName(u"widget_2")
-        self.widget_2.setGeometry(QRect(10, 211, 741, 16))
-        self.widget_2.setStyleSheet(u"background-color:rgb(255, 255, 255)")
-        self.label_8 = QLabel(self.page_4)
+        self.page_4.setStyleSheet(u"\n"
+"QWidget#page_4 {\n"
+"    background-color: #0a0c10;\n"
+"}\n"
+"QFrame#frameTopLeft, QFrame#frameTopRight,\n"
+"QFrame#frameBottomLeft, QFrame#frameBottomRight {\n"
+"    background-color: #0d1117;\n"
+"    border: 1px solid #1e2530;\n"
+"}\n"
+"QLabel#label_8, QLabel#label_10,\n"
+"QLabel#label_11, QLabel#label_12 {\n"
+"    color: #ffffff;\n"
+"    font-family: \"Rajdhani\";\n"
+"    font-size: 15px;\n"
+"    font-weight: 600;\n"
+"    letter-spacing: 2px;\n"
+"    background: transparent;\n"
+"    border: none;\n"
+"}\n"
+"QLabel#running_perc, QLabel#gated_percent,\n"
+"QLabel#running_temp, QLabel#cur_max_temp {\n"
+"    color: #ffffff;\n"
+"    font-family: \"Share Tech Mono\";\n"
+"    font-size: 56px;\n"
+"    background: transparent;\n"
+"    border: none;\n"
+"}\n"
+"QLabel#labelUnit1, QLabel#labelUnit2,\n"
+"QLabel#labelUnit3, QLabel#labelUnit4 {\n"
+"    color: #ffffff;\n"
+"    font-family: \"Rajdhani\";\n"
+"    font-size: 18px;\n"
+"    background: transparent;\n"
+"    border: none;\n"
+"}\n"
+"QLabel#labelCorner1, QLabel#l"
+                        "abelCorner2,\n"
+"QLabel#labelCorner3, QLabel#labelCorner4 {\n"
+"    color: #ffffff;\n"
+"    font-family: \"Share Tech Mono\";\n"
+"    font-size: 12px;\n"
+"    background: transparent;\n"
+"    border: none;\n"
+"}\n"
+"QLabel#labelDot1, QLabel#labelDot2 {\n"
+"    color: #ff6b35;\n"
+"    font-size: 16px;\n"
+"    background: transparent;\n"
+"    border: none;\n"
+"}\n"
+"QLabel#labelDot3, QLabel#labelDot4 {\n"
+"    color: #55d86a;\n"
+"    font-size: 16px;\n"
+"    background: transparent;\n"
+"    border: none;\n"
+"}\n"
+"      ")
+        self.frameTopLeft = QFrame(self.page_4)
+        self.frameTopLeft.setObjectName(u"frameTopLeft")
+        self.frameTopLeft.setGeometry(QRect(0, 0, 386, 221))
+        self.frameTopLeft.setFrameShape(QFrame.Shape.StyledPanel)
+        self.labelDot1 = QLabel(self.frameTopLeft)
+        self.labelDot1.setObjectName(u"labelDot1")
+        self.labelDot1.setGeometry(QRect(18, 16, 14, 18))
+        self.label_8 = QLabel(self.frameTopLeft)
         self.label_8.setObjectName(u"label_8")
-        self.label_8.setGeometry(QRect(90, 0, 171, 61))
-        font1 = QFont()
-        font1.setPointSize(25)
-        self.label_8.setFont(font1)
-        self.label_8.setStyleSheet(u"color:rgb(255, 255, 255)")
-        self.label_10 = QLabel(self.page_4)
-        self.label_10.setObjectName(u"label_10")
-        self.label_10.setGeometry(QRect(530, 10, 191, 41))
-        self.label_10.setFont(font1)
-        self.label_10.setStyleSheet(u"color:rgb(255, 255, 255)")
-        self.label_11 = QLabel(self.page_4)
-        self.label_11.setObjectName(u"label_11")
-        self.label_11.setGeometry(QRect(90, 230, 171, 61))
-        self.label_11.setFont(font1)
-        self.label_11.setStyleSheet(u"color:rgb(255, 255, 255)")
-        self.label_12 = QLabel(self.page_4)
-        self.label_12.setObjectName(u"label_12")
-        self.label_12.setGeometry(QRect(410, 240, 361, 51))
-        self.label_12.setFont(font1)
-        self.label_12.setStyleSheet(u"color:rgb(255, 255, 255)")
-        self.running_perc = QLabel(self.page_4)
+        self.label_8.setGeometry(QRect(38, 15, 160, 22))
+        self.labelCorner1 = QLabel(self.frameTopLeft)
+        self.labelCorner1.setObjectName(u"labelCorner1")
+        self.labelCorner1.setGeometry(QRect(332, 14, 34, 20))
+        self.labelCorner1.setAlignment(Qt.AlignmentFlag.AlignRight|Qt.AlignmentFlag.AlignTrailing|Qt.AlignmentFlag.AlignVCenter)
+        self.running_perc = QLabel(self.frameTopLeft)
         self.running_perc.setObjectName(u"running_perc")
-        self.running_perc.setGeometry(QRect(90, 100, 171, 51))
-        font2 = QFont()
-        font2.setPointSize(35)
-        self.running_perc.setFont(font2)
-        self.running_perc.setStyleSheet(u"color:rgb(255, 255, 255);")
-        self.gated_percent = QLabel(self.page_4)
+        self.running_perc.setGeometry(QRect(0, 68, 386, 66))
+        self.running_perc.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.labelUnit1 = QLabel(self.frameTopLeft)
+        self.labelUnit1.setObjectName(u"labelUnit1")
+        self.labelUnit1.setGeometry(QRect(0, 132, 386, 28))
+        self.labelUnit1.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.frameTopRight = QFrame(self.page_4)
+        self.frameTopRight.setObjectName(u"frameTopRight")
+        self.frameTopRight.setGeometry(QRect(385, 0, 386, 221))
+        self.frameTopRight.setFrameShape(QFrame.Shape.StyledPanel)
+        self.labelDot2 = QLabel(self.frameTopRight)
+        self.labelDot2.setObjectName(u"labelDot2")
+        self.labelDot2.setGeometry(QRect(18, 16, 14, 18))
+        self.label_10 = QLabel(self.frameTopRight)
+        self.label_10.setObjectName(u"label_10")
+        self.label_10.setGeometry(QRect(38, 15, 160, 22))
+        self.labelCorner2 = QLabel(self.frameTopRight)
+        self.labelCorner2.setObjectName(u"labelCorner2")
+        self.labelCorner2.setGeometry(QRect(332, 14, 34, 20))
+        self.labelCorner2.setAlignment(Qt.AlignmentFlag.AlignRight|Qt.AlignmentFlag.AlignTrailing|Qt.AlignmentFlag.AlignVCenter)
+        self.gated_percent = QLabel(self.frameTopRight)
         self.gated_percent.setObjectName(u"gated_percent")
-        self.gated_percent.setGeometry(QRect(510, 90, 171, 51))
-        self.gated_percent.setFont(font2)
-        self.gated_percent.setStyleSheet(u"color:rgb(255, 255, 255);")
-        self.running_temp = QLabel(self.page_4)
+        self.gated_percent.setGeometry(QRect(0, 68, 386, 66))
+        self.gated_percent.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.labelUnit2 = QLabel(self.frameTopRight)
+        self.labelUnit2.setObjectName(u"labelUnit2")
+        self.labelUnit2.setGeometry(QRect(0, 132, 386, 28))
+        self.labelUnit2.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.frameBottomLeft = QFrame(self.page_4)
+        self.frameBottomLeft.setObjectName(u"frameBottomLeft")
+        self.frameBottomLeft.setGeometry(QRect(0, 220, 386, 221))
+        self.frameBottomLeft.setFrameShape(QFrame.Shape.StyledPanel)
+        self.labelDot3 = QLabel(self.frameBottomLeft)
+        self.labelDot3.setObjectName(u"labelDot3")
+        self.labelDot3.setGeometry(QRect(18, 16, 14, 18))
+        self.label_11 = QLabel(self.frameBottomLeft)
+        self.label_11.setObjectName(u"label_11")
+        self.label_11.setGeometry(QRect(38, 15, 160, 22))
+        self.labelCorner3 = QLabel(self.frameBottomLeft)
+        self.labelCorner3.setObjectName(u"labelCorner3")
+        self.labelCorner3.setGeometry(QRect(338, 14, 28, 20))
+        self.labelCorner3.setAlignment(Qt.AlignmentFlag.AlignRight|Qt.AlignmentFlag.AlignTrailing|Qt.AlignmentFlag.AlignVCenter)
+        self.running_temp = QLabel(self.frameBottomLeft)
         self.running_temp.setObjectName(u"running_temp")
-        self.running_temp.setGeometry(QRect(90, 330, 171, 51))
-        self.running_temp.setFont(font2)
-        self.running_temp.setStyleSheet(u"color:rgb(255, 255, 255);")
-        self.cur_max_temp = QLabel(self.page_4)
+        self.running_temp.setGeometry(QRect(0, 68, 386, 66))
+        self.running_temp.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.labelUnit3 = QLabel(self.frameBottomLeft)
+        self.labelUnit3.setObjectName(u"labelUnit3")
+        self.labelUnit3.setGeometry(QRect(0, 132, 386, 28))
+        self.labelUnit3.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.frameBottomRight = QFrame(self.page_4)
+        self.frameBottomRight.setObjectName(u"frameBottomRight")
+        self.frameBottomRight.setGeometry(QRect(385, 220, 386, 221))
+        self.frameBottomRight.setFrameShape(QFrame.Shape.StyledPanel)
+        self.labelDot4 = QLabel(self.frameBottomRight)
+        self.labelDot4.setObjectName(u"labelDot4")
+        self.labelDot4.setGeometry(QRect(18, 16, 14, 18))
+        self.label_12 = QLabel(self.frameBottomRight)
+        self.label_12.setObjectName(u"label_12")
+        self.label_12.setGeometry(QRect(38, 15, 170, 22))
+        self.labelCorner4 = QLabel(self.frameBottomRight)
+        self.labelCorner4.setObjectName(u"labelCorner4")
+        self.labelCorner4.setGeometry(QRect(338, 14, 28, 20))
+        self.labelCorner4.setAlignment(Qt.AlignmentFlag.AlignRight|Qt.AlignmentFlag.AlignTrailing|Qt.AlignmentFlag.AlignVCenter)
+        self.cur_max_temp = QLabel(self.frameBottomRight)
         self.cur_max_temp.setObjectName(u"cur_max_temp")
-        self.cur_max_temp.setGeometry(QRect(500, 330, 171, 51))
-        self.cur_max_temp.setFont(font2)
-        self.cur_max_temp.setStyleSheet(u"color:rgb(255, 255, 255);")
+        self.cur_max_temp.setGeometry(QRect(0, 68, 386, 66))
+        self.cur_max_temp.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.labelUnit4 = QLabel(self.frameBottomRight)
+        self.labelUnit4.setObjectName(u"labelUnit4")
+        self.labelUnit4.setGeometry(QRect(0, 132, 386, 28))
+        self.labelUnit4.setAlignment(Qt.AlignmentFlag.AlignCenter)
         self.stackedWidget.addWidget(self.page_4)
         self.page_5 = QWidget()
         self.page_5.setObjectName(u"page_5")
-        self.front_rear_temp_table = QTableWidget(self.page_5)
-        if (self.front_rear_temp_table.columnCount() < 5):
-            self.front_rear_temp_table.setColumnCount(5)
-        if (self.front_rear_temp_table.rowCount() < 4):
-            self.front_rear_temp_table.setRowCount(4)
-        __qtablewidgetitem = QTableWidgetItem()
-        self.front_rear_temp_table.setItem(0, 1, __qtablewidgetitem)
-        __qtablewidgetitem1 = QTableWidgetItem()
-        self.front_rear_temp_table.setItem(0, 2, __qtablewidgetitem1)
-        __qtablewidgetitem2 = QTableWidgetItem()
-        self.front_rear_temp_table.setItem(0, 3, __qtablewidgetitem2)
-        __qtablewidgetitem3 = QTableWidgetItem()
-        self.front_rear_temp_table.setItem(0, 4, __qtablewidgetitem3)
-        __qtablewidgetitem4 = QTableWidgetItem()
-        self.front_rear_temp_table.setItem(1, 0, __qtablewidgetitem4)
-        __qtablewidgetitem5 = QTableWidgetItem()
-        self.front_rear_temp_table.setItem(1, 1, __qtablewidgetitem5)
-        __qtablewidgetitem6 = QTableWidgetItem()
-        self.front_rear_temp_table.setItem(1, 2, __qtablewidgetitem6)
-        __qtablewidgetitem7 = QTableWidgetItem()
-        self.front_rear_temp_table.setItem(1, 3, __qtablewidgetitem7)
-        __qtablewidgetitem8 = QTableWidgetItem()
-        self.front_rear_temp_table.setItem(1, 4, __qtablewidgetitem8)
-        __qtablewidgetitem9 = QTableWidgetItem()
-        self.front_rear_temp_table.setItem(2, 0, __qtablewidgetitem9)
-        __qtablewidgetitem10 = QTableWidgetItem()
-        self.front_rear_temp_table.setItem(2, 1, __qtablewidgetitem10)
-        __qtablewidgetitem11 = QTableWidgetItem()
-        self.front_rear_temp_table.setItem(2, 2, __qtablewidgetitem11)
-        __qtablewidgetitem12 = QTableWidgetItem()
-        self.front_rear_temp_table.setItem(2, 3, __qtablewidgetitem12)
-        __qtablewidgetitem13 = QTableWidgetItem()
-        self.front_rear_temp_table.setItem(2, 4, __qtablewidgetitem13)
-        __qtablewidgetitem14 = QTableWidgetItem()
-        self.front_rear_temp_table.setItem(3, 0, __qtablewidgetitem14)
-        __qtablewidgetitem15 = QTableWidgetItem()
-        self.front_rear_temp_table.setItem(3, 1, __qtablewidgetitem15)
-        __qtablewidgetitem16 = QTableWidgetItem()
-        self.front_rear_temp_table.setItem(3, 2, __qtablewidgetitem16)
-        __qtablewidgetitem17 = QTableWidgetItem()
-        self.front_rear_temp_table.setItem(3, 3, __qtablewidgetitem17)
-        __qtablewidgetitem18 = QTableWidgetItem()
-        self.front_rear_temp_table.setItem(3, 4, __qtablewidgetitem18)
-        self.front_rear_temp_table.setObjectName(u"front_rear_temp_table")
-        self.front_rear_temp_table.setGeometry(QRect(110, 10, 511, 221))
-        font3 = QFont()
-        font3.setPointSize(15)
-        self.front_rear_temp_table.setFont(font3)
-        self.front_rear_temp_table.setStyleSheet(u"color:rgb(255, 255, 255)")
-        self.front_rear_temp_table.setSizeAdjustPolicy(QAbstractScrollArea.SizeAdjustPolicy.AdjustToContentsOnFirstShow)
-        self.front_rear_temp_table.setHorizontalScrollMode(QAbstractItemView.ScrollMode.ScrollPerItem)
-        self.front_rear_temp_table.setWordWrap(True)
-        self.front_rear_temp_table.setRowCount(4)
-        self.front_rear_temp_table.setColumnCount(5)
-        self.front_rear_temp_table.horizontalHeader().setVisible(False)
-        self.front_rear_temp_table.horizontalHeader().setCascadingSectionResizes(True)
-        self.front_rear_temp_table.horizontalHeader().setDefaultSectionSize(100)
-        self.front_rear_temp_table.horizontalHeader().setHighlightSections(True)
-        self.front_rear_temp_table.horizontalHeader().setProperty(u"showSortIndicator", False)
-        self.front_rear_temp_table.horizontalHeader().setStretchLastSection(True)
-        self.front_rear_temp_table.verticalHeader().setVisible(False)
-        self.front_rear_temp_table.verticalHeader().setDefaultSectionSize(50)
-        self.front_rear_temp_table.verticalHeader().setHighlightSections(True)
-        self.front_rear_temp_table.verticalHeader().setProperty(u"showSortIndicator", False)
-        self.front_rear_temp_table.verticalHeader().setStretchLastSection(True)
-        self.motor_loop_temp_table = QTableWidget(self.page_5)
-        if (self.motor_loop_temp_table.columnCount() < 3):
-            self.motor_loop_temp_table.setColumnCount(3)
-        if (self.motor_loop_temp_table.rowCount() < 2):
-            self.motor_loop_temp_table.setRowCount(2)
-        __qtablewidgetitem19 = QTableWidgetItem()
-        self.motor_loop_temp_table.setItem(0, 0, __qtablewidgetitem19)
-        __qtablewidgetitem20 = QTableWidgetItem()
-        self.motor_loop_temp_table.setItem(0, 1, __qtablewidgetitem20)
-        __qtablewidgetitem21 = QTableWidgetItem()
-        self.motor_loop_temp_table.setItem(0, 2, __qtablewidgetitem21)
-        __qtablewidgetitem22 = QTableWidgetItem()
-        self.motor_loop_temp_table.setItem(1, 0, __qtablewidgetitem22)
-        __qtablewidgetitem23 = QTableWidgetItem()
-        self.motor_loop_temp_table.setItem(1, 1, __qtablewidgetitem23)
-        __qtablewidgetitem24 = QTableWidgetItem()
-        self.motor_loop_temp_table.setItem(1, 2, __qtablewidgetitem24)
-        self.motor_loop_temp_table.setObjectName(u"motor_loop_temp_table")
-        self.motor_loop_temp_table.setGeometry(QRect(0, 280, 321, 131))
-        self.motor_loop_temp_table.setFont(font3)
-        self.motor_loop_temp_table.setStyleSheet(u"color:rgb(255, 255, 255)")
-        self.motor_loop_temp_table.setSizeAdjustPolicy(QAbstractScrollArea.SizeAdjustPolicy.AdjustToContentsOnFirstShow)
-        self.motor_loop_temp_table.setHorizontalScrollMode(QAbstractItemView.ScrollMode.ScrollPerItem)
-        self.motor_loop_temp_table.setWordWrap(True)
-        self.motor_loop_temp_table.setRowCount(2)
-        self.motor_loop_temp_table.setColumnCount(3)
-        self.motor_loop_temp_table.horizontalHeader().setVisible(False)
-        self.motor_loop_temp_table.horizontalHeader().setCascadingSectionResizes(True)
-        self.motor_loop_temp_table.horizontalHeader().setDefaultSectionSize(100)
-        self.motor_loop_temp_table.horizontalHeader().setHighlightSections(True)
-        self.motor_loop_temp_table.horizontalHeader().setProperty(u"showSortIndicator", False)
-        self.motor_loop_temp_table.horizontalHeader().setStretchLastSection(True)
-        self.motor_loop_temp_table.verticalHeader().setVisible(False)
-        self.motor_loop_temp_table.verticalHeader().setDefaultSectionSize(50)
-        self.motor_loop_temp_table.verticalHeader().setHighlightSections(True)
-        self.motor_loop_temp_table.verticalHeader().setProperty(u"showSortIndicator", False)
-        self.motor_loop_temp_table.verticalHeader().setStretchLastSection(True)
-        self.inv_loop_temp_table = QTableWidget(self.page_5)
-        if (self.inv_loop_temp_table.columnCount() < 3):
-            self.inv_loop_temp_table.setColumnCount(3)
-        if (self.inv_loop_temp_table.rowCount() < 2):
-            self.inv_loop_temp_table.setRowCount(2)
-        __qtablewidgetitem25 = QTableWidgetItem()
-        self.inv_loop_temp_table.setItem(0, 0, __qtablewidgetitem25)
-        __qtablewidgetitem26 = QTableWidgetItem()
-        self.inv_loop_temp_table.setItem(0, 1, __qtablewidgetitem26)
-        __qtablewidgetitem27 = QTableWidgetItem()
-        self.inv_loop_temp_table.setItem(0, 2, __qtablewidgetitem27)
-        __qtablewidgetitem28 = QTableWidgetItem()
-        self.inv_loop_temp_table.setItem(1, 0, __qtablewidgetitem28)
-        __qtablewidgetitem29 = QTableWidgetItem()
-        self.inv_loop_temp_table.setItem(1, 1, __qtablewidgetitem29)
-        __qtablewidgetitem30 = QTableWidgetItem()
-        self.inv_loop_temp_table.setItem(1, 2, __qtablewidgetitem30)
-        self.inv_loop_temp_table.setObjectName(u"inv_loop_temp_table")
-        self.inv_loop_temp_table.setGeometry(QRect(400, 280, 321, 131))
-        self.inv_loop_temp_table.setFont(font3)
-        self.inv_loop_temp_table.setStyleSheet(u"color:rgb(255, 255, 255)")
-        self.inv_loop_temp_table.setSizeAdjustPolicy(QAbstractScrollArea.SizeAdjustPolicy.AdjustToContentsOnFirstShow)
-        self.inv_loop_temp_table.setHorizontalScrollMode(QAbstractItemView.ScrollMode.ScrollPerItem)
-        self.inv_loop_temp_table.setWordWrap(True)
-        self.inv_loop_temp_table.setRowCount(2)
-        self.inv_loop_temp_table.setColumnCount(3)
-        self.inv_loop_temp_table.horizontalHeader().setVisible(False)
-        self.inv_loop_temp_table.horizontalHeader().setCascadingSectionResizes(True)
-        self.inv_loop_temp_table.horizontalHeader().setDefaultSectionSize(100)
-        self.inv_loop_temp_table.horizontalHeader().setHighlightSections(True)
-        self.inv_loop_temp_table.horizontalHeader().setProperty(u"showSortIndicator", False)
-        self.inv_loop_temp_table.horizontalHeader().setStretchLastSection(True)
-        self.inv_loop_temp_table.verticalHeader().setVisible(False)
-        self.inv_loop_temp_table.verticalHeader().setDefaultSectionSize(50)
-        self.inv_loop_temp_table.verticalHeader().setHighlightSections(True)
-        self.inv_loop_temp_table.verticalHeader().setProperty(u"showSortIndicator", False)
-        self.inv_loop_temp_table.verticalHeader().setStretchLastSection(True)
+        self.page_5.setStyleSheet(u"QWidget#page_5 {\n"
+"    background-color: #05070a;\n"
+"}\n"
+"QFrame#thermalTopCard, QFrame#motorLoopCard, QFrame#inverterLoopCard {\n"
+"    background-color: #0d1117;\n"
+"    border: 1px solid #1f2937;\n"
+"    border-radius: 14px;\n"
+"}\n"
+"QLabel#thermalSectionTitle {\n"
+"    color: #d1d5db;\n"
+"    font-family: \"Segoe UI\";\n"
+"    font-size: 18px;\n"
+"    font-weight: 700;\n"
+"    letter-spacing: 1px;\n"
+"    background: transparent;\n"
+"    border: none;\n"
+"}\n"
+"QLabel#thermalSectionDot {\n"
+"    color: #22c55e;\n"
+"    font-family: \"Segoe UI\";\n"
+"    font-size: 18px;\n"
+"    font-weight: 700;\n"
+"    background: transparent;\n"
+"    border: none;\n"
+"}\n"
+"QLabel#componentHeader, QLabel#motorLabel, QLabel#igbtLabel, QLabel#coldPlateLabel {\n"
+"    color: #ffffff;\n"
+"    font-family: \"Segoe UI\";\n"
+"    font-size: 15px;\n"
+"    font-weight: 600;\n"
+"    background: transparent;\n"
+"    border: none;\n"
+"}\n"
+"QLabel#flHeader, QLabel#frHeader, QLabel#rlHeader, QLabel#rrHeader {\n"
+"    color: #60a"
+                        "5fa;\n"
+"    font-family: \"Segoe UI\";\n"
+"    font-size: 15px;\n"
+"    font-weight: 700;\n"
+"    background: transparent;\n"
+"    border: none;\n"
+"}\n"
+"QLabel#motorFLValue, QLabel#motorFRValue, QLabel#motorRLValue, QLabel#motorRRValue,\n"
+"QLabel#igbtFLValue, QLabel#igbtFRValue, QLabel#igbtRLValue, QLabel#igbtRRValue,\n"
+"QLabel#coldPlateFLValue, QLabel#coldPlateFRValue, QLabel#coldPlateRLValue, QLabel#coldPlateRRValue {\n"
+"    color: #ffffff;\n"
+"    font-family: \"Segoe UI\";\n"
+"    font-size: 15px;\n"
+"    font-weight: 700;\n"
+"    background: transparent;\n"
+"    border: none;\n"
+"}\n"
+"QLabel#motorLoopTitle, QLabel#inverterLoopTitle {\n"
+"    color: #ffffff;\n"
+"    font-family: \"Segoe UI\";\n"
+"    font-size: 16px;\n"
+"    font-weight: 700;\n"
+"    background: transparent;\n"
+"    border: none;\n"
+"}\n"
+"QLabel#motorLoopStartLabel, QLabel#motorLoopEndLabel,\n"
+"QLabel#inverterLoopStartLabel, QLabel#inverterLoopEndLabel {\n"
+"    color: #ffffff;\n"
+"    font-family: \"Segoe UI\";\n"
+"    font-size:"
+                        " 14px;\n"
+"    font-weight: 600;\n"
+"    background: transparent;\n"
+"    border: none;\n"
+"}\n"
+"QLabel#motorLoopStartValue, QLabel#motorLoopEndValue,\n"
+"QLabel#inverterLoopStartValue, QLabel#inverterLoopEndValue {\n"
+"    color: #ffffff;\n"
+"    font-family: \"Segoe UI\";\n"
+"    font-size: 22px;\n"
+"    font-weight: 700;\n"
+"    background: transparent;\n"
+"    border: none;\n"
+"}\n"
+"QFrame#thermalDivider1, QFrame#thermalDivider2, QFrame#thermalDivider3 {\n"
+"    background-color: #1f2937;\n"
+"    min-height: 1px;\n"
+"    max-height: 1px;\n"
+"    border: none;\n"
+"}")
+        self.thermalSectionDot = QLabel(self.page_5)
+        self.thermalSectionDot.setObjectName(u"thermalSectionDot")
+        self.thermalSectionDot.setGeometry(QRect(18, 16, 16, 24))
+        self.thermalSectionTitle = QLabel(self.page_5)
+        self.thermalSectionTitle.setObjectName(u"thermalSectionTitle")
+        self.thermalSectionTitle.setGeometry(QRect(0, 16, 771, 24))
+        self.thermalSectionTitle.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.thermalTopCard = QFrame(self.page_5)
+        self.thermalTopCard.setObjectName(u"thermalTopCard")
+        self.thermalTopCard.setGeometry(QRect(18, 54, 735, 208))
+        self.thermalTopCard.setFrameShape(QFrame.Shape.StyledPanel)
+        self.componentHeader = QLabel(self.thermalTopCard)
+        self.componentHeader.setObjectName(u"componentHeader")
+        self.componentHeader.setGeometry(QRect(18, 18, 170, 22))
+        self.flHeader = QLabel(self.thermalTopCard)
+        self.flHeader.setObjectName(u"flHeader")
+        self.flHeader.setGeometry(QRect(230, 18, 72, 22))
+        self.flHeader.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.frHeader = QLabel(self.thermalTopCard)
+        self.frHeader.setObjectName(u"frHeader")
+        self.frHeader.setGeometry(QRect(344, 18, 72, 22))
+        self.frHeader.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.rlHeader = QLabel(self.thermalTopCard)
+        self.rlHeader.setObjectName(u"rlHeader")
+        self.rlHeader.setGeometry(QRect(458, 18, 72, 22))
+        self.rlHeader.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.rrHeader = QLabel(self.thermalTopCard)
+        self.rrHeader.setObjectName(u"rrHeader")
+        self.rrHeader.setGeometry(QRect(572, 18, 72, 22))
+        self.rrHeader.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.thermalDivider1 = QFrame(self.thermalTopCard)
+        self.thermalDivider1.setObjectName(u"thermalDivider1")
+        self.thermalDivider1.setGeometry(QRect(18, 46, 699, 1))
+        self.thermalDivider1.setFrameShape(QFrame.Shape.NoFrame)
+        self.motorLabel = QLabel(self.thermalTopCard)
+        self.motorLabel.setObjectName(u"motorLabel")
+        self.motorLabel.setGeometry(QRect(18, 58, 170, 24))
+        self.motorFLValue = QLabel(self.thermalTopCard)
+        self.motorFLValue.setObjectName(u"motorFLValue")
+        self.motorFLValue.setGeometry(QRect(230, 58, 72, 24))
+        self.motorFLValue.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.motorFRValue = QLabel(self.thermalTopCard)
+        self.motorFRValue.setObjectName(u"motorFRValue")
+        self.motorFRValue.setGeometry(QRect(344, 58, 72, 24))
+        self.motorFRValue.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.motorRLValue = QLabel(self.thermalTopCard)
+        self.motorRLValue.setObjectName(u"motorRLValue")
+        self.motorRLValue.setGeometry(QRect(458, 58, 72, 24))
+        self.motorRLValue.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.motorRRValue = QLabel(self.thermalTopCard)
+        self.motorRRValue.setObjectName(u"motorRRValue")
+        self.motorRRValue.setGeometry(QRect(572, 58, 72, 24))
+        self.motorRRValue.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.thermalDivider2 = QFrame(self.thermalTopCard)
+        self.thermalDivider2.setObjectName(u"thermalDivider2")
+        self.thermalDivider2.setGeometry(QRect(18, 94, 699, 1))
+        self.thermalDivider2.setFrameShape(QFrame.Shape.NoFrame)
+        self.igbtLabel = QLabel(self.thermalTopCard)
+        self.igbtLabel.setObjectName(u"igbtLabel")
+        self.igbtLabel.setGeometry(QRect(18, 106, 170, 24))
+        self.igbtFLValue = QLabel(self.thermalTopCard)
+        self.igbtFLValue.setObjectName(u"igbtFLValue")
+        self.igbtFLValue.setGeometry(QRect(230, 106, 72, 24))
+        self.igbtFLValue.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.igbtFRValue = QLabel(self.thermalTopCard)
+        self.igbtFRValue.setObjectName(u"igbtFRValue")
+        self.igbtFRValue.setGeometry(QRect(344, 106, 72, 24))
+        self.igbtFRValue.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.igbtRLValue = QLabel(self.thermalTopCard)
+        self.igbtRLValue.setObjectName(u"igbtRLValue")
+        self.igbtRLValue.setGeometry(QRect(458, 106, 72, 24))
+        self.igbtRLValue.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.igbtRRValue = QLabel(self.thermalTopCard)
+        self.igbtRRValue.setObjectName(u"igbtRRValue")
+        self.igbtRRValue.setGeometry(QRect(572, 106, 72, 24))
+        self.igbtRRValue.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.thermalDivider3 = QFrame(self.thermalTopCard)
+        self.thermalDivider3.setObjectName(u"thermalDivider3")
+        self.thermalDivider3.setGeometry(QRect(18, 142, 699, 1))
+        self.thermalDivider3.setFrameShape(QFrame.Shape.NoFrame)
+        self.coldPlateLabel = QLabel(self.thermalTopCard)
+        self.coldPlateLabel.setObjectName(u"coldPlateLabel")
+        self.coldPlateLabel.setGeometry(QRect(18, 154, 170, 24))
+        self.coldPlateFLValue = QLabel(self.thermalTopCard)
+        self.coldPlateFLValue.setObjectName(u"coldPlateFLValue")
+        self.coldPlateFLValue.setGeometry(QRect(230, 154, 72, 24))
+        self.coldPlateFLValue.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.coldPlateFRValue = QLabel(self.thermalTopCard)
+        self.coldPlateFRValue.setObjectName(u"coldPlateFRValue")
+        self.coldPlateFRValue.setGeometry(QRect(344, 154, 72, 24))
+        self.coldPlateFRValue.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.coldPlateRLValue = QLabel(self.thermalTopCard)
+        self.coldPlateRLValue.setObjectName(u"coldPlateRLValue")
+        self.coldPlateRLValue.setGeometry(QRect(458, 154, 72, 24))
+        self.coldPlateRLValue.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.coldPlateRRValue = QLabel(self.thermalTopCard)
+        self.coldPlateRRValue.setObjectName(u"coldPlateRRValue")
+        self.coldPlateRRValue.setGeometry(QRect(572, 154, 72, 24))
+        self.coldPlateRRValue.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.motorLoopCard = QFrame(self.page_5)
+        self.motorLoopCard.setObjectName(u"motorLoopCard")
+        self.motorLoopCard.setGeometry(QRect(18, 279, 360, 128))
+        self.motorLoopCard.setFrameShape(QFrame.Shape.StyledPanel)
+        self.motorLoopTitle = QLabel(self.motorLoopCard)
+        self.motorLoopTitle.setObjectName(u"motorLoopTitle")
+        self.motorLoopTitle.setGeometry(QRect(16, 16, 150, 24))
+        self.motorLoopStartLabel = QLabel(self.motorLoopCard)
+        self.motorLoopStartLabel.setObjectName(u"motorLoopStartLabel")
+        self.motorLoopStartLabel.setGeometry(QRect(16, 44, 100, 20))
+        self.motorLoopEndLabel = QLabel(self.motorLoopCard)
+        self.motorLoopEndLabel.setObjectName(u"motorLoopEndLabel")
+        self.motorLoopEndLabel.setGeometry(QRect(168, 44, 100, 20))
+        self.motorLoopStartValue = QLabel(self.motorLoopCard)
+        self.motorLoopStartValue.setObjectName(u"motorLoopStartValue")
+        self.motorLoopStartValue.setGeometry(QRect(16, 66, 100, 28))
+        self.motorLoopEndValue = QLabel(self.motorLoopCard)
+        self.motorLoopEndValue.setObjectName(u"motorLoopEndValue")
+        self.motorLoopEndValue.setGeometry(QRect(168, 66, 100, 28))
+        self.inverterLoopCard = QFrame(self.page_5)
+        self.inverterLoopCard.setObjectName(u"inverterLoopCard")
+        self.inverterLoopCard.setGeometry(QRect(393, 279, 360, 128))
+        self.inverterLoopCard.setFrameShape(QFrame.Shape.StyledPanel)
+        self.inverterLoopTitle = QLabel(self.inverterLoopCard)
+        self.inverterLoopTitle.setObjectName(u"inverterLoopTitle")
+        self.inverterLoopTitle.setGeometry(QRect(16, 16, 170, 24))
+        self.inverterLoopStartLabel = QLabel(self.inverterLoopCard)
+        self.inverterLoopStartLabel.setObjectName(u"inverterLoopStartLabel")
+        self.inverterLoopStartLabel.setGeometry(QRect(16, 44, 100, 20))
+        self.inverterLoopEndLabel = QLabel(self.inverterLoopCard)
+        self.inverterLoopEndLabel.setObjectName(u"inverterLoopEndLabel")
+        self.inverterLoopEndLabel.setGeometry(QRect(168, 44, 100, 20))
+        self.inverterLoopStartValue = QLabel(self.inverterLoopCard)
+        self.inverterLoopStartValue.setObjectName(u"inverterLoopStartValue")
+        self.inverterLoopStartValue.setGeometry(QRect(16, 66, 100, 28))
+        self.inverterLoopEndValue = QLabel(self.inverterLoopCard)
+        self.inverterLoopEndValue.setObjectName(u"inverterLoopEndValue")
+        self.inverterLoopEndValue.setGeometry(QRect(168, 66, 100, 28))
         self.stackedWidget.addWidget(self.page_5)
         self.page_6 = QWidget()
         self.page_6.setObjectName(u"page_6")
-        self.l1_light = QWidget(self.page_6)
-        self.l1_light.setObjectName(u"l1_light")
-        self.l1_light.setGeometry(QRect(300, 0, 41, 41))
-        self.l1_light.setStyleSheet(u"background-color: rgb(255, 14, 30);\n"
-"border-radius: 20px\n"
-"")
-        self.label_14 = QLabel(self.page_6)
-        self.label_14.setObjectName(u"label_14")
-        self.label_14.setGeometry(QRect(0, 400, 91, 31))
-        font4 = QFont()
-        font4.setPointSize(7)
-        self.label_14.setFont(font4)
-        self.label_14.setStyleSheet(u"color: rgb(255, 255, 255)")
-        self.inverte_code_table = QTableWidget(self.page_6)
-        if (self.inverte_code_table.columnCount() < 2):
-            self.inverte_code_table.setColumnCount(2)
-        if (self.inverte_code_table.rowCount() < 5):
-            self.inverte_code_table.setRowCount(5)
-        brush = QBrush(QColor(0, 0, 255, 255))
-        brush.setStyle(Qt.BrushStyle.NoBrush)
-        brush1 = QBrush(QColor(0, 0, 255, 255))
-        brush1.setStyle(Qt.BrushStyle.NoBrush)
-        font5 = QFont()
-        font5.setPointSize(29)
-        __qtablewidgetitem31 = QTableWidgetItem()
-        __qtablewidgetitem31.setFont(font5);
-        __qtablewidgetitem31.setBackground(brush1);
-        __qtablewidgetitem31.setForeground(brush);
-        self.inverte_code_table.setItem(0, 0, __qtablewidgetitem31)
-        brush2 = QBrush(QColor(0, 0, 255, 255))
-        brush2.setStyle(Qt.BrushStyle.NoBrush)
-        __qtablewidgetitem32 = QTableWidgetItem()
-        __qtablewidgetitem32.setFont(font5);
-        __qtablewidgetitem32.setForeground(brush2);
-        self.inverte_code_table.setItem(0, 1, __qtablewidgetitem32)
-        __qtablewidgetitem33 = QTableWidgetItem()
-        self.inverte_code_table.setItem(1, 0, __qtablewidgetitem33)
-        __qtablewidgetitem34 = QTableWidgetItem()
-        self.inverte_code_table.setItem(1, 1, __qtablewidgetitem34)
-        __qtablewidgetitem35 = QTableWidgetItem()
-        self.inverte_code_table.setItem(2, 0, __qtablewidgetitem35)
-        __qtablewidgetitem36 = QTableWidgetItem()
-        self.inverte_code_table.setItem(2, 1, __qtablewidgetitem36)
-        font6 = QFont()
-        font6.setPointSize(19)
-        __qtablewidgetitem37 = QTableWidgetItem()
-        __qtablewidgetitem37.setFont(font6);
-        self.inverte_code_table.setItem(3, 0, __qtablewidgetitem37)
-        __qtablewidgetitem38 = QTableWidgetItem()
-        self.inverte_code_table.setItem(3, 1, __qtablewidgetitem38)
-        __qtablewidgetitem39 = QTableWidgetItem()
-        self.inverte_code_table.setItem(4, 0, __qtablewidgetitem39)
-        __qtablewidgetitem40 = QTableWidgetItem()
-        self.inverte_code_table.setItem(4, 1, __qtablewidgetitem40)
-        self.inverte_code_table.setObjectName(u"inverte_code_table")
-        self.inverte_code_table.setEnabled(True)
-        self.inverte_code_table.setGeometry(QRect(340, 110, 391, 281))
-        self.inverte_code_table.setFont(font6)
-        self.inverte_code_table.setStyleSheet(u"\n"
-"color: rgb(255, 255, 255);\n"
-"")
-        self.inverte_code_table.setVerticalScrollBarPolicy(Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
-        self.inverte_code_table.setHorizontalScrollBarPolicy(Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
-        self.inverte_code_table.setSizeAdjustPolicy(QAbstractScrollArea.SizeAdjustPolicy.AdjustToContentsOnFirstShow)
-        self.inverte_code_table.setRowCount(5)
-        self.inverte_code_table.setColumnCount(2)
-        self.inverte_code_table.horizontalHeader().setVisible(False)
-        self.inverte_code_table.horizontalHeader().setCascadingSectionResizes(True)
-        self.inverte_code_table.horizontalHeader().setDefaultSectionSize(250)
-        self.inverte_code_table.horizontalHeader().setHighlightSections(True)
-        self.inverte_code_table.horizontalHeader().setProperty(u"showSortIndicator", False)
-        self.inverte_code_table.horizontalHeader().setStretchLastSection(True)
-        self.inverte_code_table.verticalHeader().setVisible(False)
-        self.inverte_code_table.verticalHeader().setDefaultSectionSize(50)
-        self.inverte_code_table.verticalHeader().setStretchLastSection(False)
+        self.page_6.setStyleSheet(u"\n"
+"QWidget#page_6 {\n"
+"    background-color: #090909;\n"
+"}\n"
+"QLabel#page6Title {\n"
+"    color: #a2a2a6;\n"
+"    font-family: \"Segoe UI\";\n"
+"    font-size: 16px;\n"
+"    font-weight: 500;\n"
+"    letter-spacing: 2px;\n"
+"    background-color: transparent;\n"
+"}\n"
+"QWidget#can1_util_bar_1, QWidget#can1_util_bar_2, QWidget#can1_util_bar_3, QWidget#can1_util_bar_4 {\n"
+"    background-color: #10d96f;\n"
+"    border: 2px solid #29363d;\n"
+"    border-radius: 14px;\n"
+"}\n"
+"QLabel#barPercentStyle {\n"
+"    color: #09170f;\n"
+"    font-family: \"Segoe UI\";\n"
+"    font-size: 12px;\n"
+"    font-weight: 600;\n"
+"    background-color: transparent;\n"
+"}\n"
+"QLabel#canLabelStyle {\n"
+"    color: #dedee1;\n"
+"    font-family: \"Segoe UI\";\n"
+"    font-size: 11px;\n"
+"    font-weight: 600;\n"
+"    background-color: transparent;\n"
+"}\n"
+"QWidget#linkErrorsCard, QFrame#inverte_code_table {\n"
+"    background-color: #151515;\n"
+"    border: 1px solid #2b2d31;\n"
+"    border-radius: 14px;\n"
+"}\n"
+"QLabel#linkEr"
+                        "rorsTitle {\n"
+"    color: #9d9da1;\n"
+"    font-family: \"Segoe UI\";\n"
+"    font-size: 14px;\n"
+"    font-weight: 500;\n"
+"    letter-spacing: 1px;\n"
+"    background-color: transparent;\n"
+"}\n"
+"QWidget#l1_light, QWidget#l2_light, QWidget#l3_light, QWidget#l4_light {\n"
+"    background-color: #eb2e25;\n"
+"    border-radius: 15px;\n"
+"}\n"
+"QLabel#linkErrorText {\n"
+"    color: #dfdfe2;\n"
+"    font-family: \"Segoe UI\";\n"
+"    font-size: 11px;\n"
+"    font-weight: 500;\n"
+"    background-color: transparent;\n"
+"}\n"
+"QLabel#tableHeaderLabel {\n"
+"    color: #4e9eff;\n"
+"    font-family: \"Segoe UI\";\n"
+"    font-size: 13px;\n"
+"    font-weight: 500;\n"
+"    background-color: transparent;\n"
+"}\n"
+"QLabel#tableRowLabel {\n"
+"    color: #ebebed;\n"
+"    font-family: \"Segoe UI\";\n"
+"    font-size: 14px;\n"
+"    font-weight: 600;\n"
+"    background-color: transparent;\n"
+"}\n"
+"QLabel#tableRowValue {\n"
+"    color: #ebebed;\n"
+"    font-family: \"Segoe UI\";\n"
+"    font-size: 12px;\n"
+"    font-weight: 6"
+                        "00;\n"
+"    background-color: transparent;\n"
+"}\n"
+"QFrame#tableLine1, QFrame#tableLine2, QFrame#tableLine3 {\n"
+"    background-color: #24272d;\n"
+"    border: none;\n"
+"}\n"
+"      ")
+        self.page6Dot = QLabel(self.page_6)
+        self.page6Dot.setObjectName(u"page6Dot")
+        self.page6Dot.setGeometry(QRect(18, 16, 16, 22))
+        self.page6Dot.setStyleSheet(u"color: #22d67a; font-size: 22px; font-weight: 700; background-color: transparent;")
+        self.page6Dot.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.page6Title = QLabel(self.page_6)
+        self.page6Title.setObjectName(u"page6Title")
+        self.page6Title.setGeometry(QRect(44, 14, 230, 24))
         self.can1_util_bar_1 = QWidget(self.page_6)
         self.can1_util_bar_1.setObjectName(u"can1_util_bar_1")
-        self.can1_util_bar_1.setEnabled(True)
-        self.can1_util_bar_1.setGeometry(QRect(0, 30, 41, 371))
-        self.can1_util_bar_1.setMaximumSize(QSize(100, 16777215))
-        self.can1_util_bar_1.setStyleSheet(u"background-color:rgb(19, 255, 7)")
-        self.l2_light = QWidget(self.page_6)
-        self.l2_light.setObjectName(u"l2_light")
-        self.l2_light.setGeometry(QRect(420, 0, 41, 41))
-        self.l2_light.setStyleSheet(u"background-color: rgb(255, 14, 30);\n"
-"border-radius: 20px\n"
-"")
-        self.l3_light = QWidget(self.page_6)
-        self.l3_light.setObjectName(u"l3_light")
-        self.l3_light.setGeometry(QRect(540, 0, 41, 41))
-        self.l3_light.setStyleSheet(u"background-color: rgb(255, 14, 30);\n"
-"border-radius: 20px\n"
-"")
-        self.l4_light = QWidget(self.page_6)
-        self.l4_light.setObjectName(u"l4_light")
-        self.l4_light.setGeometry(QRect(660, 0, 41, 41))
-        self.l4_light.setStyleSheet(u"background-color: rgb(255, 14, 30);\n"
-"border-radius: 20px\n"
-"")
-        self.label_15 = QLabel(self.page_6)
-        self.label_15.setObjectName(u"label_15")
-        self.label_15.setGeometry(QRect(530, 50, 91, 31))
-        self.label_15.setStyleSheet(u"color: rgb(255, 255, 255)")
-        self.label_16 = QLabel(self.page_6)
-        self.label_16.setObjectName(u"label_16")
-        self.label_16.setGeometry(QRect(650, 50, 91, 31))
-        self.label_16.setStyleSheet(u"color: rgb(255, 255, 255)")
-        self.label_17 = QLabel(self.page_6)
-        self.label_17.setObjectName(u"label_17")
-        self.label_17.setGeometry(QRect(410, 50, 91, 31))
-        self.label_17.setStyleSheet(u"color: rgb(255, 255, 255)")
+        self.can1_util_bar_1.setGeometry(QRect(18, 74, 80, 220))
+        self.barPercentStyle = QLabel(self.can1_util_bar_1)
+        self.barPercentStyle.setObjectName(u"barPercentStyle")
+        self.barPercentStyle.setGeometry(QRect(0, 178, 80, 24))
+        self.barPercentStyle.setAlignment(Qt.AlignmentFlag.AlignCenter)
         self.can1_util_bar_2 = QWidget(self.page_6)
         self.can1_util_bar_2.setObjectName(u"can1_util_bar_2")
-        self.can1_util_bar_2.setEnabled(True)
-        self.can1_util_bar_2.setGeometry(QRect(70, 30, 41, 371))
-        self.can1_util_bar_2.setMaximumSize(QSize(100, 16777215))
-        self.can1_util_bar_2.setStyleSheet(u"background-color:rgb(19, 255, 7)")
+        self.can1_util_bar_2.setGeometry(QRect(112, 74, 80, 220))
+        self.barPercentStyle1 = QLabel(self.can1_util_bar_2)
+        self.barPercentStyle1.setObjectName(u"barPercentStyle1")
+        self.barPercentStyle1.setGeometry(QRect(0, 178, 80, 24))
+        self.barPercentStyle1.setAlignment(Qt.AlignmentFlag.AlignCenter)
         self.can1_util_bar_3 = QWidget(self.page_6)
         self.can1_util_bar_3.setObjectName(u"can1_util_bar_3")
-        self.can1_util_bar_3.setEnabled(True)
-        self.can1_util_bar_3.setGeometry(QRect(140, 30, 41, 371))
-        self.can1_util_bar_3.setMaximumSize(QSize(100, 16777215))
-        self.can1_util_bar_3.setStyleSheet(u"background-color:rgb(19, 255, 7)")
+        self.can1_util_bar_3.setGeometry(QRect(206, 74, 80, 220))
+        self.barPercentStyle2 = QLabel(self.can1_util_bar_3)
+        self.barPercentStyle2.setObjectName(u"barPercentStyle2")
+        self.barPercentStyle2.setGeometry(QRect(0, 178, 80, 24))
+        self.barPercentStyle2.setAlignment(Qt.AlignmentFlag.AlignCenter)
         self.can1_util_bar_4 = QWidget(self.page_6)
         self.can1_util_bar_4.setObjectName(u"can1_util_bar_4")
-        self.can1_util_bar_4.setEnabled(True)
-        self.can1_util_bar_4.setGeometry(QRect(210, 30, 41, 371))
-        self.can1_util_bar_4.setMaximumSize(QSize(100, 16777215))
-        self.can1_util_bar_4.setStyleSheet(u"background-color:rgb(19, 255, 7)")
-        self.label_18 = QLabel(self.page_6)
-        self.label_18.setObjectName(u"label_18")
-        self.label_18.setGeometry(QRect(70, 400, 91, 31))
-        self.label_18.setFont(font4)
-        self.label_18.setStyleSheet(u"color: rgb(255, 255, 255)")
-        self.label_19 = QLabel(self.page_6)
-        self.label_19.setObjectName(u"label_19")
-        self.label_19.setGeometry(QRect(140, 400, 91, 31))
-        self.label_19.setFont(font4)
-        self.label_19.setStyleSheet(u"color: rgb(255, 255, 255)")
-        self.label_19_2 = QLabel(self.page_6)
-        self.label_19_2.setObjectName(u"label_19_2")
-        self.label_19_2.setGeometry(QRect(210, 400, 91, 31))
-        self.label_19_2.setFont(font4)
-        self.label_19_2.setStyleSheet(u"color: rgb(255, 255, 255)")
-        self.label_21 = QLabel(self.page_6)
-        self.label_21.setObjectName(u"label_21")
-        self.label_21.setGeometry(QRect(300, 50, 91, 31))
-        self.label_21.setStyleSheet(u"color: rgb(255, 255, 255)")
+        self.can1_util_bar_4.setGeometry(QRect(300, 74, 80, 220))
+        self.barPercentStyle3 = QLabel(self.can1_util_bar_4)
+        self.barPercentStyle3.setObjectName(u"barPercentStyle3")
+        self.barPercentStyle3.setGeometry(QRect(0, 178, 80, 24))
+        self.barPercentStyle3.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.canLabelStyle = QLabel(self.page_6)
+        self.canLabelStyle.setObjectName(u"canLabelStyle")
+        self.canLabelStyle.setGeometry(QRect(31, 300, 54, 34))
+        self.canLabelStyle.setAlignment(Qt.AlignmentFlag.AlignHCenter|Qt.AlignmentFlag.AlignTop)
+        self.canLabelStyle1 = QLabel(self.page_6)
+        self.canLabelStyle1.setObjectName(u"canLabelStyle1")
+        self.canLabelStyle1.setGeometry(QRect(125, 300, 54, 34))
+        self.canLabelStyle1.setAlignment(Qt.AlignmentFlag.AlignHCenter|Qt.AlignmentFlag.AlignTop)
+        self.canLabelStyle2 = QLabel(self.page_6)
+        self.canLabelStyle2.setObjectName(u"canLabelStyle2")
+        self.canLabelStyle2.setGeometry(QRect(219, 300, 54, 34))
+        self.canLabelStyle2.setAlignment(Qt.AlignmentFlag.AlignHCenter|Qt.AlignmentFlag.AlignTop)
+        self.canLabelStyle3 = QLabel(self.page_6)
+        self.canLabelStyle3.setObjectName(u"canLabelStyle3")
+        self.canLabelStyle3.setGeometry(QRect(313, 300, 54, 34))
+        self.canLabelStyle3.setAlignment(Qt.AlignmentFlag.AlignHCenter|Qt.AlignmentFlag.AlignTop)
+        self.linkErrorsCard = QWidget(self.page_6)
+        self.linkErrorsCard.setObjectName(u"linkErrorsCard")
+        self.linkErrorsCard.setGeometry(QRect(18, 332, 734, 96))
+        self.linkErrorsTitle = QLabel(self.linkErrorsCard)
+        self.linkErrorsTitle.setObjectName(u"linkErrorsTitle")
+        self.linkErrorsTitle.setGeometry(QRect(16, 10, 150, 20))
+        self.l1_light = QWidget(self.linkErrorsCard)
+        self.l1_light.setObjectName(u"l1_light")
+        self.l1_light.setGeometry(QRect(65, 36, 30, 30))
+        self.l2_light = QWidget(self.linkErrorsCard)
+        self.l2_light.setObjectName(u"l2_light")
+        self.l2_light.setGeometry(QRect(256, 36, 30, 30))
+        self.l3_light = QWidget(self.linkErrorsCard)
+        self.l3_light.setObjectName(u"l3_light")
+        self.l3_light.setGeometry(QRect(447, 36, 30, 30))
+        self.l4_light = QWidget(self.linkErrorsCard)
+        self.l4_light.setObjectName(u"l4_light")
+        self.l4_light.setGeometry(QRect(638, 36, 30, 30))
+        self.linkErrorText = QLabel(self.linkErrorsCard)
+        self.linkErrorText.setObjectName(u"linkErrorText")
+        self.linkErrorText.setGeometry(QRect(59, 70, 42, 18))
+        self.linkErrorText.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.linkErrorText1 = QLabel(self.linkErrorsCard)
+        self.linkErrorText1.setObjectName(u"linkErrorText1")
+        self.linkErrorText1.setGeometry(QRect(250, 70, 42, 18))
+        self.linkErrorText1.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.linkErrorText2 = QLabel(self.linkErrorsCard)
+        self.linkErrorText2.setObjectName(u"linkErrorText2")
+        self.linkErrorText2.setGeometry(QRect(441, 70, 42, 18))
+        self.linkErrorText2.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.linkErrorText3 = QLabel(self.linkErrorsCard)
+        self.linkErrorText3.setObjectName(u"linkErrorText3")
+        self.linkErrorText3.setGeometry(QRect(632, 70, 42, 18))
+        self.linkErrorText3.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.inverte_code_table = QFrame(self.page_6)
+        self.inverte_code_table.setObjectName(u"inverte_code_table")
+        self.inverte_code_table.setGeometry(QRect(402, 74, 350, 220))
+        self.inverte_code_table.setFrameShape(QFrame.Shape.StyledPanel)
+        self.tableHeaderLabel = QLabel(self.inverte_code_table)
+        self.tableHeaderLabel.setObjectName(u"tableHeaderLabel")
+        self.tableHeaderLabel.setGeometry(QRect(20, 14, 100, 22))
+        self.tableHeaderLabel1 = QLabel(self.inverte_code_table)
+        self.tableHeaderLabel1.setObjectName(u"tableHeaderLabel1")
+        self.tableHeaderLabel1.setGeometry(QRect(265, 14, 65, 22))
+        self.tableHeaderLabel1.setAlignment(Qt.AlignmentFlag.AlignRight|Qt.AlignmentFlag.AlignTrailing|Qt.AlignmentFlag.AlignVCenter)
+        self.tableLine1 = QFrame(self.inverte_code_table)
+        self.tableLine1.setObjectName(u"tableLine1")
+        self.tableLine1.setGeometry(QRect(20, 44, 310, 1))
+        self.tableLine1.setFrameShape(QFrame.Shape.HLine)
+        self.tableRowLabel = QLabel(self.inverte_code_table)
+        self.tableRowLabel.setObjectName(u"tableRowLabel")
+        self.tableRowLabel.setGeometry(QRect(20, 58, 120, 20))
+        self.tableRowValue = QLabel(self.inverte_code_table)
+        self.tableRowValue.setObjectName(u"tableRowValue")
+        self.tableRowValue.setGeometry(QRect(282, 58, 48, 20))
+        self.tableRowValue.setAlignment(Qt.AlignmentFlag.AlignRight|Qt.AlignmentFlag.AlignTrailing|Qt.AlignmentFlag.AlignVCenter)
+        self.tableLine2 = QFrame(self.inverte_code_table)
+        self.tableLine2.setObjectName(u"tableLine2")
+        self.tableLine2.setGeometry(QRect(20, 90, 310, 1))
+        self.tableLine2.setFrameShape(QFrame.Shape.HLine)
+        self.tableRowLabel1 = QLabel(self.inverte_code_table)
+        self.tableRowLabel1.setObjectName(u"tableRowLabel1")
+        self.tableRowLabel1.setGeometry(QRect(20, 104, 120, 20))
+        self.tableRowValue1 = QLabel(self.inverte_code_table)
+        self.tableRowValue1.setObjectName(u"tableRowValue1")
+        self.tableRowValue1.setGeometry(QRect(282, 104, 48, 20))
+        self.tableRowValue1.setAlignment(Qt.AlignmentFlag.AlignRight|Qt.AlignmentFlag.AlignTrailing|Qt.AlignmentFlag.AlignVCenter)
+        self.tableLine3 = QFrame(self.inverte_code_table)
+        self.tableLine3.setObjectName(u"tableLine3")
+        self.tableLine3.setGeometry(QRect(20, 136, 310, 1))
+        self.tableLine3.setFrameShape(QFrame.Shape.HLine)
+        self.tableRowLabel2 = QLabel(self.inverte_code_table)
+        self.tableRowLabel2.setObjectName(u"tableRowLabel2")
+        self.tableRowLabel2.setGeometry(QRect(20, 150, 120, 20))
+        self.tableRowValue2 = QLabel(self.inverte_code_table)
+        self.tableRowValue2.setObjectName(u"tableRowValue2")
+        self.tableRowValue2.setGeometry(QRect(282, 150, 48, 20))
+        self.tableRowValue2.setAlignment(Qt.AlignmentFlag.AlignRight|Qt.AlignmentFlag.AlignTrailing|Qt.AlignmentFlag.AlignVCenter)
+        self.tableRowLabel3 = QLabel(self.inverte_code_table)
+        self.tableRowLabel3.setObjectName(u"tableRowLabel3")
+        self.tableRowLabel3.setGeometry(QRect(20, 186, 120, 20))
+        self.tableRowValue3 = QLabel(self.inverte_code_table)
+        self.tableRowValue3.setObjectName(u"tableRowValue3")
+        self.tableRowValue3.setGeometry(QRect(282, 186, 48, 20))
+        self.tableRowValue3.setAlignment(Qt.AlignmentFlag.AlignRight|Qt.AlignmentFlag.AlignTrailing|Qt.AlignmentFlag.AlignVCenter)
         self.stackedWidget.addWidget(self.page_6)
         self.page_2 = QWidget()
         self.page_2.setObjectName(u"page_2")
@@ -734,10 +1112,10 @@ class Ui_MainWindow(object):
         self.vx_value = QLabel(self.page_7)
         self.vx_value.setObjectName(u"vx_value")
         self.vx_value.setGeometry(QRect(8, 78, 257, 50))
-        font7 = QFont()
-        font7.setPointSize(30)
-        font7.setBold(True)
-        self.vx_value.setFont(font7)
+        font = QFont()
+        font.setPointSize(30)
+        font.setBold(True)
+        self.vx_value.setFont(font)
         self.vx_value.setStyleSheet(u"color: rgb(255, 255, 255);")
         self.label_front_brake = QLabel(self.page_7)
         self.label_front_brake.setObjectName(u"label_front_brake")
@@ -746,7 +1124,7 @@ class Ui_MainWindow(object):
         self.front_brake_value = QLabel(self.page_7)
         self.front_brake_value.setObjectName(u"front_brake_value")
         self.front_brake_value.setGeometry(QRect(265, 78, 257, 50))
-        self.front_brake_value.setFont(font7)
+        self.front_brake_value.setFont(font)
         self.front_brake_value.setStyleSheet(u"color: rgb(255, 255, 255);")
         self.label_rear_brake = QLabel(self.page_7)
         self.label_rear_brake.setObjectName(u"label_rear_brake")
@@ -755,7 +1133,7 @@ class Ui_MainWindow(object):
         self.rear_brake_value = QLabel(self.page_7)
         self.rear_brake_value.setObjectName(u"rear_brake_value")
         self.rear_brake_value.setGeometry(QRect(522, 78, 249, 50))
-        self.rear_brake_value.setFont(font7)
+        self.rear_brake_value.setFont(font)
         self.rear_brake_value.setStyleSheet(u"color: rgb(255, 255, 255);")
         self.label_imd_res = QLabel(self.page_7)
         self.label_imd_res.setObjectName(u"label_imd_res")
@@ -764,7 +1142,7 @@ class Ui_MainWindow(object):
         self.imd_res_value = QLabel(self.page_7)
         self.imd_res_value.setObjectName(u"imd_res_value")
         self.imd_res_value.setGeometry(QRect(8, 158, 257, 50))
-        self.imd_res_value.setFont(font7)
+        self.imd_res_value.setFont(font)
         self.imd_res_value.setStyleSheet(u"color: rgb(255, 255, 255);")
         self.label_total_volt = QLabel(self.page_7)
         self.label_total_volt.setObjectName(u"label_total_volt")
@@ -773,7 +1151,7 @@ class Ui_MainWindow(object):
         self.total_volt_value = QLabel(self.page_7)
         self.total_volt_value.setObjectName(u"total_volt_value")
         self.total_volt_value.setGeometry(QRect(265, 158, 257, 50))
-        self.total_volt_value.setFont(font7)
+        self.total_volt_value.setFont(font)
         self.total_volt_value.setStyleSheet(u"color: rgb(255, 255, 255);")
         self.label_fl_voltage = QLabel(self.page_7)
         self.label_fl_voltage.setObjectName(u"label_fl_voltage")
@@ -782,7 +1160,7 @@ class Ui_MainWindow(object):
         self.fl_voltage_value = QLabel(self.page_7)
         self.fl_voltage_value.setObjectName(u"fl_voltage_value")
         self.fl_voltage_value.setGeometry(QRect(522, 158, 249, 50))
-        self.fl_voltage_value.setFont(font7)
+        self.fl_voltage_value.setFont(font)
         self.fl_voltage_value.setStyleSheet(u"color: rgb(255, 255, 255);")
         self.label_fl_error = QLabel(self.page_7)
         self.label_fl_error.setObjectName(u"label_fl_error")
@@ -791,7 +1169,7 @@ class Ui_MainWindow(object):
         self.fl_error_value = QLabel(self.page_7)
         self.fl_error_value.setObjectName(u"fl_error_value")
         self.fl_error_value.setGeometry(QRect(8, 238, 257, 50))
-        self.fl_error_value.setFont(font7)
+        self.fl_error_value.setFont(font)
         self.fl_error_value.setStyleSheet(u"color: rgb(255, 255, 255);")
         self.label_rl_temp_inv = QLabel(self.page_7)
         self.label_rl_temp_inv.setObjectName(u"label_rl_temp_inv")
@@ -800,7 +1178,7 @@ class Ui_MainWindow(object):
         self.rl_temp_inv_value = QLabel(self.page_7)
         self.rl_temp_inv_value.setObjectName(u"rl_temp_inv_value")
         self.rl_temp_inv_value.setGeometry(QRect(265, 238, 257, 50))
-        self.rl_temp_inv_value.setFont(font7)
+        self.rl_temp_inv_value.setFont(font)
         self.rl_temp_inv_value.setStyleSheet(u"color: rgb(255, 255, 255);")
         self.label_rl_temp_motor = QLabel(self.page_7)
         self.label_rl_temp_motor.setObjectName(u"label_rl_temp_motor")
@@ -809,7 +1187,7 @@ class Ui_MainWindow(object):
         self.rl_temp_motor_value = QLabel(self.page_7)
         self.rl_temp_motor_value.setObjectName(u"rl_temp_motor_value")
         self.rl_temp_motor_value.setGeometry(QRect(522, 238, 249, 50))
-        self.rl_temp_motor_value.setFont(font7)
+        self.rl_temp_motor_value.setFont(font)
         self.rl_temp_motor_value.setStyleSheet(u"color: rgb(255, 255, 255);")
         self.label_rr_error = QLabel(self.page_7)
         self.label_rr_error.setObjectName(u"label_rr_error")
@@ -818,7 +1196,7 @@ class Ui_MainWindow(object):
         self.rr_error_value = QLabel(self.page_7)
         self.rr_error_value.setObjectName(u"rr_error_value")
         self.rr_error_value.setGeometry(QRect(8, 318, 257, 50))
-        self.rr_error_value.setFont(font7)
+        self.rr_error_value.setFont(font)
         self.rr_error_value.setStyleSheet(u"color: rgb(255, 255, 255);")
         self.label_rl_temp_igbt = QLabel(self.page_7)
         self.label_rl_temp_igbt.setObjectName(u"label_rl_temp_igbt")
@@ -827,7 +1205,7 @@ class Ui_MainWindow(object):
         self.rl_temp_igbt_value = QLabel(self.page_7)
         self.rl_temp_igbt_value.setObjectName(u"rl_temp_igbt_value")
         self.rl_temp_igbt_value.setGeometry(QRect(265, 318, 257, 50))
-        self.rl_temp_igbt_value.setFont(font7)
+        self.rl_temp_igbt_value.setFont(font)
         self.rl_temp_igbt_value.setStyleSheet(u"color: rgb(255, 255, 255);")
         self.label_min_volt = QLabel(self.page_7)
         self.label_min_volt.setObjectName(u"label_min_volt")
@@ -836,7 +1214,7 @@ class Ui_MainWindow(object):
         self.min_volt_value = QLabel(self.page_7)
         self.min_volt_value.setObjectName(u"min_volt_value")
         self.min_volt_value.setGeometry(QRect(522, 318, 249, 50))
-        self.min_volt_value.setFont(font7)
+        self.min_volt_value.setFont(font)
         self.min_volt_value.setStyleSheet(u"color: rgb(255, 255, 255);")
         self.stackedWidget.addWidget(self.page_7)
         self.page_8 = QWidget()
@@ -846,28 +1224,28 @@ class Ui_MainWindow(object):
             self.fl_table.setColumnCount(2)
         if (self.fl_table.rowCount() < 4):
             self.fl_table.setRowCount(4)
-        __qtablewidgetitem41 = QTableWidgetItem()
-        self.fl_table.setItem(0, 0, __qtablewidgetitem41)
-        __qtablewidgetitem42 = QTableWidgetItem()
-        self.fl_table.setItem(0, 1, __qtablewidgetitem42)
-        __qtablewidgetitem43 = QTableWidgetItem()
-        self.fl_table.setItem(1, 0, __qtablewidgetitem43)
-        __qtablewidgetitem44 = QTableWidgetItem()
-        self.fl_table.setItem(1, 1, __qtablewidgetitem44)
-        __qtablewidgetitem45 = QTableWidgetItem()
-        self.fl_table.setItem(2, 0, __qtablewidgetitem45)
-        __qtablewidgetitem46 = QTableWidgetItem()
-        self.fl_table.setItem(2, 1, __qtablewidgetitem46)
-        __qtablewidgetitem47 = QTableWidgetItem()
-        self.fl_table.setItem(3, 0, __qtablewidgetitem47)
-        __qtablewidgetitem48 = QTableWidgetItem()
-        self.fl_table.setItem(3, 1, __qtablewidgetitem48)
+        __qtablewidgetitem = QTableWidgetItem()
+        self.fl_table.setItem(0, 0, __qtablewidgetitem)
+        __qtablewidgetitem1 = QTableWidgetItem()
+        self.fl_table.setItem(0, 1, __qtablewidgetitem1)
+        __qtablewidgetitem2 = QTableWidgetItem()
+        self.fl_table.setItem(1, 0, __qtablewidgetitem2)
+        __qtablewidgetitem3 = QTableWidgetItem()
+        self.fl_table.setItem(1, 1, __qtablewidgetitem3)
+        __qtablewidgetitem4 = QTableWidgetItem()
+        self.fl_table.setItem(2, 0, __qtablewidgetitem4)
+        __qtablewidgetitem5 = QTableWidgetItem()
+        self.fl_table.setItem(2, 1, __qtablewidgetitem5)
+        __qtablewidgetitem6 = QTableWidgetItem()
+        self.fl_table.setItem(3, 0, __qtablewidgetitem6)
+        __qtablewidgetitem7 = QTableWidgetItem()
+        self.fl_table.setItem(3, 1, __qtablewidgetitem7)
         self.fl_table.setObjectName(u"fl_table")
         self.fl_table.setGeometry(QRect(10, 10, 220, 121))
-        font8 = QFont()
-        font8.setPointSize(11)
-        font8.setItalic(True)
-        self.fl_table.setFont(font8)
+        font1 = QFont()
+        font1.setPointSize(11)
+        font1.setItalic(True)
+        self.fl_table.setFont(font1)
         self.fl_table.setStyleSheet(u"color: rgb(255, 255, 255); border: 1px solid rgba(255,255,255,150);")
         self.fl_table.setVerticalScrollBarPolicy(Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
         self.fl_table.setHorizontalScrollBarPolicy(Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
@@ -883,25 +1261,25 @@ class Ui_MainWindow(object):
             self.fr_table.setColumnCount(2)
         if (self.fr_table.rowCount() < 4):
             self.fr_table.setRowCount(4)
-        __qtablewidgetitem49 = QTableWidgetItem()
-        self.fr_table.setItem(0, 0, __qtablewidgetitem49)
-        __qtablewidgetitem50 = QTableWidgetItem()
-        self.fr_table.setItem(0, 1, __qtablewidgetitem50)
-        __qtablewidgetitem51 = QTableWidgetItem()
-        self.fr_table.setItem(1, 0, __qtablewidgetitem51)
-        __qtablewidgetitem52 = QTableWidgetItem()
-        self.fr_table.setItem(1, 1, __qtablewidgetitem52)
-        __qtablewidgetitem53 = QTableWidgetItem()
-        self.fr_table.setItem(2, 0, __qtablewidgetitem53)
-        __qtablewidgetitem54 = QTableWidgetItem()
-        self.fr_table.setItem(2, 1, __qtablewidgetitem54)
-        __qtablewidgetitem55 = QTableWidgetItem()
-        self.fr_table.setItem(3, 0, __qtablewidgetitem55)
-        __qtablewidgetitem56 = QTableWidgetItem()
-        self.fr_table.setItem(3, 1, __qtablewidgetitem56)
+        __qtablewidgetitem8 = QTableWidgetItem()
+        self.fr_table.setItem(0, 0, __qtablewidgetitem8)
+        __qtablewidgetitem9 = QTableWidgetItem()
+        self.fr_table.setItem(0, 1, __qtablewidgetitem9)
+        __qtablewidgetitem10 = QTableWidgetItem()
+        self.fr_table.setItem(1, 0, __qtablewidgetitem10)
+        __qtablewidgetitem11 = QTableWidgetItem()
+        self.fr_table.setItem(1, 1, __qtablewidgetitem11)
+        __qtablewidgetitem12 = QTableWidgetItem()
+        self.fr_table.setItem(2, 0, __qtablewidgetitem12)
+        __qtablewidgetitem13 = QTableWidgetItem()
+        self.fr_table.setItem(2, 1, __qtablewidgetitem13)
+        __qtablewidgetitem14 = QTableWidgetItem()
+        self.fr_table.setItem(3, 0, __qtablewidgetitem14)
+        __qtablewidgetitem15 = QTableWidgetItem()
+        self.fr_table.setItem(3, 1, __qtablewidgetitem15)
         self.fr_table.setObjectName(u"fr_table")
         self.fr_table.setGeometry(QRect(541, 10, 220, 131))
-        self.fr_table.setFont(font8)
+        self.fr_table.setFont(font1)
         self.fr_table.setStyleSheet(u"color: rgb(255, 255, 255); border: 1px solid rgba(255,255,255,150);")
         self.fr_table.setVerticalScrollBarPolicy(Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
         self.fr_table.setHorizontalScrollBarPolicy(Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
@@ -917,25 +1295,25 @@ class Ui_MainWindow(object):
             self.rl_table.setColumnCount(2)
         if (self.rl_table.rowCount() < 4):
             self.rl_table.setRowCount(4)
-        __qtablewidgetitem57 = QTableWidgetItem()
-        self.rl_table.setItem(0, 0, __qtablewidgetitem57)
-        __qtablewidgetitem58 = QTableWidgetItem()
-        self.rl_table.setItem(0, 1, __qtablewidgetitem58)
-        __qtablewidgetitem59 = QTableWidgetItem()
-        self.rl_table.setItem(1, 0, __qtablewidgetitem59)
-        __qtablewidgetitem60 = QTableWidgetItem()
-        self.rl_table.setItem(1, 1, __qtablewidgetitem60)
-        __qtablewidgetitem61 = QTableWidgetItem()
-        self.rl_table.setItem(2, 0, __qtablewidgetitem61)
-        __qtablewidgetitem62 = QTableWidgetItem()
-        self.rl_table.setItem(2, 1, __qtablewidgetitem62)
-        __qtablewidgetitem63 = QTableWidgetItem()
-        self.rl_table.setItem(3, 0, __qtablewidgetitem63)
-        __qtablewidgetitem64 = QTableWidgetItem()
-        self.rl_table.setItem(3, 1, __qtablewidgetitem64)
+        __qtablewidgetitem16 = QTableWidgetItem()
+        self.rl_table.setItem(0, 0, __qtablewidgetitem16)
+        __qtablewidgetitem17 = QTableWidgetItem()
+        self.rl_table.setItem(0, 1, __qtablewidgetitem17)
+        __qtablewidgetitem18 = QTableWidgetItem()
+        self.rl_table.setItem(1, 0, __qtablewidgetitem18)
+        __qtablewidgetitem19 = QTableWidgetItem()
+        self.rl_table.setItem(1, 1, __qtablewidgetitem19)
+        __qtablewidgetitem20 = QTableWidgetItem()
+        self.rl_table.setItem(2, 0, __qtablewidgetitem20)
+        __qtablewidgetitem21 = QTableWidgetItem()
+        self.rl_table.setItem(2, 1, __qtablewidgetitem21)
+        __qtablewidgetitem22 = QTableWidgetItem()
+        self.rl_table.setItem(3, 0, __qtablewidgetitem22)
+        __qtablewidgetitem23 = QTableWidgetItem()
+        self.rl_table.setItem(3, 1, __qtablewidgetitem23)
         self.rl_table.setObjectName(u"rl_table")
         self.rl_table.setGeometry(QRect(10, 310, 220, 121))
-        self.rl_table.setFont(font8)
+        self.rl_table.setFont(font1)
         self.rl_table.setStyleSheet(u"color: rgb(255, 255, 255); border: 1px solid rgba(255,255,255,150);")
         self.rl_table.setVerticalScrollBarPolicy(Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
         self.rl_table.setHorizontalScrollBarPolicy(Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
@@ -951,25 +1329,25 @@ class Ui_MainWindow(object):
             self.rr_table.setColumnCount(2)
         if (self.rr_table.rowCount() < 4):
             self.rr_table.setRowCount(4)
-        __qtablewidgetitem65 = QTableWidgetItem()
-        self.rr_table.setItem(0, 0, __qtablewidgetitem65)
-        __qtablewidgetitem66 = QTableWidgetItem()
-        self.rr_table.setItem(0, 1, __qtablewidgetitem66)
-        __qtablewidgetitem67 = QTableWidgetItem()
-        self.rr_table.setItem(1, 0, __qtablewidgetitem67)
-        __qtablewidgetitem68 = QTableWidgetItem()
-        self.rr_table.setItem(1, 1, __qtablewidgetitem68)
-        __qtablewidgetitem69 = QTableWidgetItem()
-        self.rr_table.setItem(2, 0, __qtablewidgetitem69)
-        __qtablewidgetitem70 = QTableWidgetItem()
-        self.rr_table.setItem(2, 1, __qtablewidgetitem70)
-        __qtablewidgetitem71 = QTableWidgetItem()
-        self.rr_table.setItem(3, 0, __qtablewidgetitem71)
-        __qtablewidgetitem72 = QTableWidgetItem()
-        self.rr_table.setItem(3, 1, __qtablewidgetitem72)
+        __qtablewidgetitem24 = QTableWidgetItem()
+        self.rr_table.setItem(0, 0, __qtablewidgetitem24)
+        __qtablewidgetitem25 = QTableWidgetItem()
+        self.rr_table.setItem(0, 1, __qtablewidgetitem25)
+        __qtablewidgetitem26 = QTableWidgetItem()
+        self.rr_table.setItem(1, 0, __qtablewidgetitem26)
+        __qtablewidgetitem27 = QTableWidgetItem()
+        self.rr_table.setItem(1, 1, __qtablewidgetitem27)
+        __qtablewidgetitem28 = QTableWidgetItem()
+        self.rr_table.setItem(2, 0, __qtablewidgetitem28)
+        __qtablewidgetitem29 = QTableWidgetItem()
+        self.rr_table.setItem(2, 1, __qtablewidgetitem29)
+        __qtablewidgetitem30 = QTableWidgetItem()
+        self.rr_table.setItem(3, 0, __qtablewidgetitem30)
+        __qtablewidgetitem31 = QTableWidgetItem()
+        self.rr_table.setItem(3, 1, __qtablewidgetitem31)
         self.rr_table.setObjectName(u"rr_table")
         self.rr_table.setGeometry(QRect(540, 310, 220, 121))
-        self.rr_table.setFont(font8)
+        self.rr_table.setFont(font1)
         self.rr_table.setStyleSheet(u"color: rgb(255, 255, 255); border: 1px solid rgba(255,255,255,150);")
         self.rr_table.setVerticalScrollBarPolicy(Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
         self.rr_table.setHorizontalScrollBarPolicy(Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
@@ -1004,22 +1382,22 @@ class Ui_MainWindow(object):
         self.lbl_cell_volt_alarm = QLabel(self.page_9)
         self.lbl_cell_volt_alarm.setObjectName(u"lbl_cell_volt_alarm")
         self.lbl_cell_volt_alarm.setGeometry(QRect(45, 15, 200, 24))
-        font9 = QFont()
-        font9.setFamilies([u"Arial"])
-        font9.setPointSize(14)
-        self.lbl_cell_volt_alarm.setFont(font9)
+        font2 = QFont()
+        font2.setFamilies([u"Arial"])
+        font2.setPointSize(14)
+        self.lbl_cell_volt_alarm.setFont(font2)
         self.lbl_coolant_temp_alarm = QLabel(self.page_9)
         self.lbl_coolant_temp_alarm.setObjectName(u"lbl_coolant_temp_alarm")
         self.lbl_coolant_temp_alarm.setGeometry(QRect(45, 45, 311, 24))
-        self.lbl_coolant_temp_alarm.setFont(font9)
+        self.lbl_coolant_temp_alarm.setFont(font2)
         self.lbl_coolant_flow_alarm = QLabel(self.page_9)
         self.lbl_coolant_flow_alarm.setObjectName(u"lbl_coolant_flow_alarm")
         self.lbl_coolant_flow_alarm.setGeometry(QRect(45, 75, 200, 24))
-        self.lbl_coolant_flow_alarm.setFont(font9)
+        self.lbl_coolant_flow_alarm.setFont(font2)
         self.lbl_cell_temp_alarm = QLabel(self.page_9)
         self.lbl_cell_temp_alarm.setObjectName(u"lbl_cell_temp_alarm")
         self.lbl_cell_temp_alarm.setGeometry(QRect(520, 15, 200, 24))
-        self.lbl_cell_temp_alarm.setFont(font9)
+        self.lbl_cell_temp_alarm.setFont(font2)
         self.lbl_cell_temp_alarm.setAlignment(Qt.AlignmentFlag.AlignRight|Qt.AlignmentFlag.AlignTrailing|Qt.AlignmentFlag.AlignVCenter)
         self.led_cell_temp = QWidget(self.page_9)
         self.led_cell_temp.setObjectName(u"led_cell_temp")
@@ -1029,7 +1407,7 @@ class Ui_MainWindow(object):
         self.lbl_hv_batt_ok = QLabel(self.page_9)
         self.lbl_hv_batt_ok.setObjectName(u"lbl_hv_batt_ok")
         self.lbl_hv_batt_ok.setGeometry(QRect(520, 45, 200, 24))
-        self.lbl_hv_batt_ok.setFont(font9)
+        self.lbl_hv_batt_ok.setFont(font2)
         self.lbl_hv_batt_ok.setAlignment(Qt.AlignmentFlag.AlignRight|Qt.AlignmentFlag.AlignTrailing|Qt.AlignmentFlag.AlignVCenter)
         self.led_hv_batt_ok = QWidget(self.page_9)
         self.led_hv_batt_ok.setObjectName(u"led_hv_batt_ok")
@@ -1039,7 +1417,7 @@ class Ui_MainWindow(object):
         self.lbl_can_ok = QLabel(self.page_9)
         self.lbl_can_ok.setObjectName(u"lbl_can_ok")
         self.lbl_can_ok.setGeometry(QRect(520, 75, 200, 24))
-        self.lbl_can_ok.setFont(font9)
+        self.lbl_can_ok.setFont(font2)
         self.lbl_can_ok.setAlignment(Qt.AlignmentFlag.AlignRight|Qt.AlignmentFlag.AlignTrailing|Qt.AlignmentFlag.AlignVCenter)
         self.led_can_ok = QWidget(self.page_9)
         self.led_can_ok.setObjectName(u"led_can_ok")
@@ -1049,89 +1427,89 @@ class Ui_MainWindow(object):
         self.val_speed = QLabel(self.page_9)
         self.val_speed.setObjectName(u"val_speed")
         self.val_speed.setGeometry(QRect(229, 80, 221, 150))
-        font10 = QFont()
-        font10.setFamilies([u"Arial"])
-        font10.setPointSize(120)
-        font10.setBold(True)
-        self.val_speed.setFont(font10)
+        font3 = QFont()
+        font3.setFamilies([u"Arial"])
+        font3.setPointSize(120)
+        font3.setBold(True)
+        self.val_speed.setFont(font3)
         self.val_speed.setAlignment(Qt.AlignmentFlag.AlignRight|Qt.AlignmentFlag.AlignTrailing|Qt.AlignmentFlag.AlignVCenter)
         self.lbl_kmh = QLabel(self.page_9)
         self.lbl_kmh.setObjectName(u"lbl_kmh")
         self.lbl_kmh.setGeometry(QRect(460, 140, 201, 70))
-        font11 = QFont()
-        font11.setFamilies([u"Arial"])
-        font11.setPointSize(45)
-        font11.setBold(True)
-        self.lbl_kmh.setFont(font11)
+        font4 = QFont()
+        font4.setFamilies([u"Arial"])
+        font4.setPointSize(45)
+        font4.setBold(True)
+        self.lbl_kmh.setFont(font4)
         self.val_soc = QLabel(self.page_9)
         self.val_soc.setObjectName(u"val_soc")
         self.val_soc.setGeometry(QRect(169, 240, 181, 50))
-        font12 = QFont()
-        font12.setFamilies([u"Arial"])
-        font12.setPointSize(40)
-        self.val_soc.setFont(font12)
+        font5 = QFont()
+        font5.setFamilies([u"Arial"])
+        font5.setPointSize(40)
+        self.val_soc.setFont(font5)
         self.val_soc.setAlignment(Qt.AlignmentFlag.AlignCenter)
         self.lbl_soc = QLabel(self.page_9)
         self.lbl_soc.setObjectName(u"lbl_soc")
         self.lbl_soc.setGeometry(QRect(190, 295, 160, 20))
-        font13 = QFont()
-        font13.setFamilies([u"Arial"])
-        font13.setPointSize(14)
-        font13.setItalic(True)
-        self.lbl_soc.setFont(font13)
+        font6 = QFont()
+        font6.setFamilies([u"Arial"])
+        font6.setPointSize(14)
+        font6.setItalic(True)
+        self.lbl_soc.setFont(font6)
         self.lbl_soc.setAlignment(Qt.AlignmentFlag.AlignCenter)
         self.val_inv_volt = QLabel(self.page_9)
         self.val_inv_volt.setObjectName(u"val_inv_volt")
         self.val_inv_volt.setGeometry(QRect(390, 240, 181, 50))
-        self.val_inv_volt.setFont(font12)
+        self.val_inv_volt.setFont(font5)
         self.val_inv_volt.setAlignment(Qt.AlignmentFlag.AlignCenter)
         self.lbl_inv_volt = QLabel(self.page_9)
         self.lbl_inv_volt.setObjectName(u"lbl_inv_volt")
         self.lbl_inv_volt.setGeometry(QRect(390, 295, 160, 20))
-        self.lbl_inv_volt.setFont(font13)
+        self.lbl_inv_volt.setFont(font6)
         self.lbl_inv_volt.setAlignment(Qt.AlignmentFlag.AlignCenter)
         self.lbl_min_cell = QLabel(self.page_9)
         self.lbl_min_cell.setObjectName(u"lbl_min_cell")
         self.lbl_min_cell.setGeometry(QRect(10, 329, 180, 51))
-        self.lbl_min_cell.setFont(font13)
+        self.lbl_min_cell.setFont(font6)
         self.lbl_min_cell.setAlignment(Qt.AlignmentFlag.AlignCenter)
         self.val_min_cell = QLabel(self.page_9)
         self.val_min_cell.setObjectName(u"val_min_cell")
         self.val_min_cell.setGeometry(QRect(10, 385, 180, 45))
-        font14 = QFont()
-        font14.setFamilies([u"Arial"])
-        font14.setPointSize(35)
-        self.val_min_cell.setFont(font14)
+        font7 = QFont()
+        font7.setFamilies([u"Arial"])
+        font7.setPointSize(35)
+        self.val_min_cell.setFont(font7)
         self.val_min_cell.setAlignment(Qt.AlignmentFlag.AlignCenter)
         self.lbl_max_igbt = QLabel(self.page_9)
         self.lbl_max_igbt.setObjectName(u"lbl_max_igbt")
         self.lbl_max_igbt.setGeometry(QRect(200, 329, 180, 51))
-        self.lbl_max_igbt.setFont(font13)
+        self.lbl_max_igbt.setFont(font6)
         self.lbl_max_igbt.setAlignment(Qt.AlignmentFlag.AlignCenter)
         self.val_max_igbt = QLabel(self.page_9)
         self.val_max_igbt.setObjectName(u"val_max_igbt")
         self.val_max_igbt.setGeometry(QRect(200, 385, 180, 45))
-        self.val_max_igbt.setFont(font14)
+        self.val_max_igbt.setFont(font7)
         self.val_max_igbt.setAlignment(Qt.AlignmentFlag.AlignCenter)
         self.lbl_max_inv = QLabel(self.page_9)
         self.lbl_max_inv.setObjectName(u"lbl_max_inv")
         self.lbl_max_inv.setGeometry(QRect(390, 329, 180, 51))
-        self.lbl_max_inv.setFont(font13)
+        self.lbl_max_inv.setFont(font6)
         self.lbl_max_inv.setAlignment(Qt.AlignmentFlag.AlignCenter)
         self.val_max_inv = QLabel(self.page_9)
         self.val_max_inv.setObjectName(u"val_max_inv")
         self.val_max_inv.setGeometry(QRect(390, 385, 180, 45))
-        self.val_max_inv.setFont(font14)
+        self.val_max_inv.setFont(font7)
         self.val_max_inv.setAlignment(Qt.AlignmentFlag.AlignCenter)
         self.lbl_max_motor = QLabel(self.page_9)
         self.lbl_max_motor.setObjectName(u"lbl_max_motor")
         self.lbl_max_motor.setGeometry(QRect(580, 329, 180, 51))
-        self.lbl_max_motor.setFont(font13)
+        self.lbl_max_motor.setFont(font6)
         self.lbl_max_motor.setAlignment(Qt.AlignmentFlag.AlignCenter)
         self.val_max_motor = QLabel(self.page_9)
         self.val_max_motor.setObjectName(u"val_max_motor")
         self.val_max_motor.setGeometry(QRect(580, 385, 180, 45))
-        self.val_max_motor.setFont(font14)
+        self.val_max_motor.setFont(font7)
         self.val_max_motor.setAlignment(Qt.AlignmentFlag.AlignCenter)
         self.led_cell_volt_2 = QWidget(self.page_9)
         self.led_cell_volt_2.setObjectName(u"led_cell_volt_2")
@@ -1151,7 +1529,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.stackedWidget.setCurrentIndex(5)
+        self.stackedWidget.setCurrentIndex(0)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
@@ -1178,124 +1556,99 @@ class Ui_MainWindow(object):
         self.statTHLabel.setText(QCoreApplication.translate("MainWindow", u"THROTTLE", None))
         self.statTHVal.setText(QCoreApplication.translate("MainWindow", u"-- %", None))
         self.label_13.setText("")
-        self.label_7.setText(QCoreApplication.translate("MainWindow", u"Pack Total", None))
-        self.pack_total_volt.setText(QCoreApplication.translate("MainWindow", u"000V", None))
-        self.label_9.setText(QCoreApplication.translate("MainWindow", u"Cell", None))
-        self.cell_volt.setText(QCoreApplication.translate("MainWindow", u"000V", None))
-        self.label_8.setText(QCoreApplication.translate("MainWindow", u"Running", None))
-        self.label_10.setText(QCoreApplication.translate("MainWindow", u"Gated", None))
-        self.label_11.setText(QCoreApplication.translate("MainWindow", u"Running", None))
-        self.label_12.setText(QCoreApplication.translate("MainWindow", u"Current Max Temp.", None))
-        self.running_perc.setText(QCoreApplication.translate("MainWindow", u"00.0%", None))
-        self.gated_percent.setText(QCoreApplication.translate("MainWindow", u"00.0%", None))
-        self.running_temp.setText(QCoreApplication.translate("MainWindow", u"00.0 C", None))
-        self.cur_max_temp.setText(QCoreApplication.translate("MainWindow", u"00.0 C", None))
-
-        __sortingEnabled = self.front_rear_temp_table.isSortingEnabled()
-        self.front_rear_temp_table.setSortingEnabled(False)
-        ___qtablewidgetitem = self.front_rear_temp_table.item(0, 1)
-        ___qtablewidgetitem.setText(QCoreApplication.translate("MainWindow", u"FL", None));
-        ___qtablewidgetitem1 = self.front_rear_temp_table.item(0, 2)
-        ___qtablewidgetitem1.setText(QCoreApplication.translate("MainWindow", u"FR", None));
-        ___qtablewidgetitem2 = self.front_rear_temp_table.item(0, 3)
-        ___qtablewidgetitem2.setText(QCoreApplication.translate("MainWindow", u"RL", None));
-        ___qtablewidgetitem3 = self.front_rear_temp_table.item(0, 4)
-        ___qtablewidgetitem3.setText(QCoreApplication.translate("MainWindow", u"RR", None));
-        ___qtablewidgetitem4 = self.front_rear_temp_table.item(1, 0)
-        ___qtablewidgetitem4.setText(QCoreApplication.translate("MainWindow", u"Motor", None));
-        ___qtablewidgetitem5 = self.front_rear_temp_table.item(1, 1)
-        ___qtablewidgetitem5.setText(QCoreApplication.translate("MainWindow", u"0 C", None));
-        ___qtablewidgetitem6 = self.front_rear_temp_table.item(1, 2)
-        ___qtablewidgetitem6.setText(QCoreApplication.translate("MainWindow", u"0 C", None));
-        ___qtablewidgetitem7 = self.front_rear_temp_table.item(1, 3)
-        ___qtablewidgetitem7.setText(QCoreApplication.translate("MainWindow", u"0 C", None));
-        ___qtablewidgetitem8 = self.front_rear_temp_table.item(1, 4)
-        ___qtablewidgetitem8.setText(QCoreApplication.translate("MainWindow", u"0 C", None));
-        ___qtablewidgetitem9 = self.front_rear_temp_table.item(2, 0)
-        ___qtablewidgetitem9.setText(QCoreApplication.translate("MainWindow", u"IGBT", None));
-        ___qtablewidgetitem10 = self.front_rear_temp_table.item(2, 1)
-        ___qtablewidgetitem10.setText(QCoreApplication.translate("MainWindow", u"0 C", None));
-        ___qtablewidgetitem11 = self.front_rear_temp_table.item(2, 2)
-        ___qtablewidgetitem11.setText(QCoreApplication.translate("MainWindow", u"0 C", None));
-        ___qtablewidgetitem12 = self.front_rear_temp_table.item(2, 3)
-        ___qtablewidgetitem12.setText(QCoreApplication.translate("MainWindow", u"0 C", None));
-        ___qtablewidgetitem13 = self.front_rear_temp_table.item(2, 4)
-        ___qtablewidgetitem13.setText(QCoreApplication.translate("MainWindow", u"0 C", None));
-        ___qtablewidgetitem14 = self.front_rear_temp_table.item(3, 0)
-        ___qtablewidgetitem14.setText(QCoreApplication.translate("MainWindow", u"Cold Plate", None));
-        ___qtablewidgetitem15 = self.front_rear_temp_table.item(3, 1)
-        ___qtablewidgetitem15.setText(QCoreApplication.translate("MainWindow", u"0 C", None));
-        ___qtablewidgetitem16 = self.front_rear_temp_table.item(3, 2)
-        ___qtablewidgetitem16.setText(QCoreApplication.translate("MainWindow", u"0 C", None));
-        ___qtablewidgetitem17 = self.front_rear_temp_table.item(3, 3)
-        ___qtablewidgetitem17.setText(QCoreApplication.translate("MainWindow", u"0 C", None));
-        ___qtablewidgetitem18 = self.front_rear_temp_table.item(3, 4)
-        ___qtablewidgetitem18.setText(QCoreApplication.translate("MainWindow", u"0 C", None));
-        self.front_rear_temp_table.setSortingEnabled(__sortingEnabled)
-
-
-        __sortingEnabled1 = self.motor_loop_temp_table.isSortingEnabled()
-        self.motor_loop_temp_table.setSortingEnabled(False)
-        ___qtablewidgetitem19 = self.motor_loop_temp_table.item(0, 1)
-        ___qtablewidgetitem19.setText(QCoreApplication.translate("MainWindow", u"Start", None));
-        ___qtablewidgetitem20 = self.motor_loop_temp_table.item(0, 2)
-        ___qtablewidgetitem20.setText(QCoreApplication.translate("MainWindow", u"End", None));
-        ___qtablewidgetitem21 = self.motor_loop_temp_table.item(1, 0)
-        ___qtablewidgetitem21.setText(QCoreApplication.translate("MainWindow", u"Motor Loop", None));
-        ___qtablewidgetitem22 = self.motor_loop_temp_table.item(1, 1)
-        ___qtablewidgetitem22.setText(QCoreApplication.translate("MainWindow", u"0 C", None));
-        ___qtablewidgetitem23 = self.motor_loop_temp_table.item(1, 2)
-        ___qtablewidgetitem23.setText(QCoreApplication.translate("MainWindow", u"0 C", None));
-        self.motor_loop_temp_table.setSortingEnabled(__sortingEnabled1)
-
-
-        __sortingEnabled2 = self.inv_loop_temp_table.isSortingEnabled()
-        self.inv_loop_temp_table.setSortingEnabled(False)
-        ___qtablewidgetitem24 = self.inv_loop_temp_table.item(0, 1)
-        ___qtablewidgetitem24.setText(QCoreApplication.translate("MainWindow", u"Start", None));
-        ___qtablewidgetitem25 = self.inv_loop_temp_table.item(0, 2)
-        ___qtablewidgetitem25.setText(QCoreApplication.translate("MainWindow", u"End", None));
-        ___qtablewidgetitem26 = self.inv_loop_temp_table.item(1, 0)
-        ___qtablewidgetitem26.setText(QCoreApplication.translate("MainWindow", u"Inverter Loop", None));
-        ___qtablewidgetitem27 = self.inv_loop_temp_table.item(1, 1)
-        ___qtablewidgetitem27.setText(QCoreApplication.translate("MainWindow", u"0 C", None));
-        ___qtablewidgetitem28 = self.inv_loop_temp_table.item(1, 2)
-        ___qtablewidgetitem28.setText(QCoreApplication.translate("MainWindow", u"0 C", None));
-        self.inv_loop_temp_table.setSortingEnabled(__sortingEnabled2)
-
-        self.label_14.setText(QCoreApplication.translate("MainWindow", u"Can 1", None))
-
-        __sortingEnabled3 = self.inverte_code_table.isSortingEnabled()
-        self.inverte_code_table.setSortingEnabled(False)
-        ___qtablewidgetitem29 = self.inverte_code_table.item(0, 0)
-        ___qtablewidgetitem29.setText(QCoreApplication.translate("MainWindow", u"Inverter", None));
-        ___qtablewidgetitem30 = self.inverte_code_table.item(0, 1)
-        ___qtablewidgetitem30.setText(QCoreApplication.translate("MainWindow", u"Code", None));
-        ___qtablewidgetitem31 = self.inverte_code_table.item(1, 0)
-        ___qtablewidgetitem31.setText(QCoreApplication.translate("MainWindow", u"Inverter 1", None));
-        ___qtablewidgetitem32 = self.inverte_code_table.item(1, 1)
-        ___qtablewidgetitem32.setText(QCoreApplication.translate("MainWindow", u"0", None));
-        ___qtablewidgetitem33 = self.inverte_code_table.item(2, 0)
-        ___qtablewidgetitem33.setText(QCoreApplication.translate("MainWindow", u"Inverter 2", None));
-        ___qtablewidgetitem34 = self.inverte_code_table.item(2, 1)
-        ___qtablewidgetitem34.setText(QCoreApplication.translate("MainWindow", u"0", None));
-        ___qtablewidgetitem35 = self.inverte_code_table.item(3, 0)
-        ___qtablewidgetitem35.setText(QCoreApplication.translate("MainWindow", u"Inverter 3", None));
-        ___qtablewidgetitem36 = self.inverte_code_table.item(3, 1)
-        ___qtablewidgetitem36.setText(QCoreApplication.translate("MainWindow", u"0", None));
-        ___qtablewidgetitem37 = self.inverte_code_table.item(4, 0)
-        ___qtablewidgetitem37.setText(QCoreApplication.translate("MainWindow", u"Inverter 4", None));
-        ___qtablewidgetitem38 = self.inverte_code_table.item(4, 1)
-        ___qtablewidgetitem38.setText(QCoreApplication.translate("MainWindow", u"0", None));
-        self.inverte_code_table.setSortingEnabled(__sortingEnabled3)
-
-        self.label_15.setText(QCoreApplication.translate("MainWindow", u"L3 error", None))
-        self.label_16.setText(QCoreApplication.translate("MainWindow", u"L4 error", None))
-        self.label_17.setText(QCoreApplication.translate("MainWindow", u"L2 error", None))
-        self.label_18.setText(QCoreApplication.translate("MainWindow", u"Can 1", None))
-        self.label_19.setText(QCoreApplication.translate("MainWindow", u"Can 1", None))
-        self.label_19_2.setText(QCoreApplication.translate("MainWindow", u"Can 1", None))
-        self.label_21.setText(QCoreApplication.translate("MainWindow", u"L1 error", None))
+        self.statusDot.setText("")
+        self.headerTitle.setText(QCoreApplication.translate("MainWindow", u"BATTERY MONITOR", None))
+        self.packLabel.setText(QCoreApplication.translate("MainWindow", u"PACK TOTAL", None))
+        self.packBadge.setText(QCoreApplication.translate("MainWindow", u"\u25cf NORMAL", None))
+        self.packValue.setText(QCoreApplication.translate("MainWindow", u"48.6", None))
+        self.packUnit.setText(QCoreApplication.translate("MainWindow", u"V", None))
+        self.packMin.setText(QCoreApplication.translate("MainWindow", u"Min: 40.0 V", None))
+        self.packMax.setText(QCoreApplication.translate("MainWindow", u"Max: 58.8 V", None))
+        self.cellLabel.setText(QCoreApplication.translate("MainWindow", u"CELL VOLTAGE", None))
+        self.cellBadge.setText(QCoreApplication.translate("MainWindow", u"\u25cf BALANCED", None))
+        self.cellValue.setText(QCoreApplication.translate("MainWindow", u"3.71", None))
+        self.cellUnit.setText(QCoreApplication.translate("MainWindow", u"V", None))
+        self.cellMin.setText(QCoreApplication.translate("MainWindow", u"Min: 3.0 V", None))
+        self.cellMax.setText(QCoreApplication.translate("MainWindow", u"Max: 4.2 V", None))
+        self.footer.setText(QCoreApplication.translate("MainWindow", u"REAL-TIME VOLTAGE READOUT", None))
+        self.labelDot1.setText(QCoreApplication.translate("MainWindow", u"\u2022", None))
+        self.label_8.setText(QCoreApplication.translate("MainWindow", u"RUNNING", None))
+        self.labelCorner1.setText(QCoreApplication.translate("MainWindow", u"CH1", None))
+        self.running_perc.setText(QCoreApplication.translate("MainWindow", u"00.0", None))
+        self.labelUnit1.setText(QCoreApplication.translate("MainWindow", u"percent", None))
+        self.labelDot2.setText(QCoreApplication.translate("MainWindow", u"\u2022", None))
+        self.label_10.setText(QCoreApplication.translate("MainWindow", u"GATED", None))
+        self.labelCorner2.setText(QCoreApplication.translate("MainWindow", u"CH2", None))
+        self.gated_percent.setText(QCoreApplication.translate("MainWindow", u"00.0", None))
+        self.labelUnit2.setText(QCoreApplication.translate("MainWindow", u"percent", None))
+        self.labelDot3.setText(QCoreApplication.translate("MainWindow", u"\u2022", None))
+        self.label_11.setText(QCoreApplication.translate("MainWindow", u"RUNNING", None))
+        self.labelCorner3.setText(QCoreApplication.translate("MainWindow", u"T1", None))
+        self.running_temp.setText(QCoreApplication.translate("MainWindow", u"00.0", None))
+        self.labelUnit3.setText(QCoreApplication.translate("MainWindow", u"celsius", None))
+        self.labelDot4.setText(QCoreApplication.translate("MainWindow", u"\u2022", None))
+        self.label_12.setText(QCoreApplication.translate("MainWindow", u"MAX TEMP", None))
+        self.labelCorner4.setText(QCoreApplication.translate("MainWindow", u"T2", None))
+        self.cur_max_temp.setText(QCoreApplication.translate("MainWindow", u"00.0", None))
+        self.labelUnit4.setText(QCoreApplication.translate("MainWindow", u"celsius", None))
+        self.thermalSectionDot.setText(QCoreApplication.translate("MainWindow", u"\u25cf", None))
+        self.thermalSectionTitle.setText(QCoreApplication.translate("MainWindow", u"THERMAL MONITOR", None))
+        self.componentHeader.setText(QCoreApplication.translate("MainWindow", u"Component", None))
+        self.flHeader.setText(QCoreApplication.translate("MainWindow", u"FL", None))
+        self.frHeader.setText(QCoreApplication.translate("MainWindow", u"FR", None))
+        self.rlHeader.setText(QCoreApplication.translate("MainWindow", u"RL", None))
+        self.rrHeader.setText(QCoreApplication.translate("MainWindow", u"RR", None))
+        self.motorLabel.setText(QCoreApplication.translate("MainWindow", u"Motor", None))
+        self.motorFLValue.setText(QCoreApplication.translate("MainWindow", u"0 \u00b0C", None))
+        self.motorFRValue.setText(QCoreApplication.translate("MainWindow", u"0 \u00b0C", None))
+        self.motorRLValue.setText(QCoreApplication.translate("MainWindow", u"0 \u00b0C", None))
+        self.motorRRValue.setText(QCoreApplication.translate("MainWindow", u"0 \u00b0C", None))
+        self.igbtLabel.setText(QCoreApplication.translate("MainWindow", u"IGBT", None))
+        self.igbtFLValue.setText(QCoreApplication.translate("MainWindow", u"0 \u00b0C", None))
+        self.igbtFRValue.setText(QCoreApplication.translate("MainWindow", u"0 \u00b0C", None))
+        self.igbtRLValue.setText(QCoreApplication.translate("MainWindow", u"0 \u00b0C", None))
+        self.igbtRRValue.setText(QCoreApplication.translate("MainWindow", u"0 \u00b0C", None))
+        self.coldPlateLabel.setText(QCoreApplication.translate("MainWindow", u"Cold Plate", None))
+        self.coldPlateFLValue.setText(QCoreApplication.translate("MainWindow", u"0 \u00b0C", None))
+        self.coldPlateFRValue.setText(QCoreApplication.translate("MainWindow", u"0 \u00b0C", None))
+        self.coldPlateRLValue.setText(QCoreApplication.translate("MainWindow", u"0 \u00b0C", None))
+        self.coldPlateRRValue.setText(QCoreApplication.translate("MainWindow", u"0 \u00b0C", None))
+        self.motorLoopTitle.setText(QCoreApplication.translate("MainWindow", u"MOTOR LOOP", None))
+        self.motorLoopStartLabel.setText(QCoreApplication.translate("MainWindow", u"Start", None))
+        self.motorLoopEndLabel.setText(QCoreApplication.translate("MainWindow", u"End", None))
+        self.motorLoopStartValue.setText(QCoreApplication.translate("MainWindow", u"0 \u00b0C", None))
+        self.motorLoopEndValue.setText(QCoreApplication.translate("MainWindow", u"0 \u00b0C", None))
+        self.inverterLoopTitle.setText(QCoreApplication.translate("MainWindow", u"INVERTER LOOP", None))
+        self.inverterLoopStartLabel.setText(QCoreApplication.translate("MainWindow", u"Start", None))
+        self.inverterLoopEndLabel.setText(QCoreApplication.translate("MainWindow", u"End", None))
+        self.inverterLoopStartValue.setText(QCoreApplication.translate("MainWindow", u"0 \u00b0C", None))
+        self.inverterLoopEndValue.setText(QCoreApplication.translate("MainWindow", u"0 \u00b0C", None))
+        self.page6Dot.setText(QCoreApplication.translate("MainWindow", u"\u25cf", None))
+        self.page6Title.setText(QCoreApplication.translate("MainWindow", u"INVERTER MONITOR", None))
+        self.barPercentStyle.setText(QCoreApplication.translate("MainWindow", u"100%", None))
+        self.barPercentStyle1.setText(QCoreApplication.translate("MainWindow", u"100%", None))
+        self.barPercentStyle2.setText(QCoreApplication.translate("MainWindow", u"100%", None))
+        self.barPercentStyle3.setText(QCoreApplication.translate("MainWindow", u"100%", None))
+        self.canLabelStyle.setText(QCoreApplication.translate("MainWindow", u"CAN\n"
+"1", None))
+        self.canLabelStyle1.setText(QCoreApplication.translate("MainWindow", u"CAN 2", None))
+        self.canLabelStyle2.setText(QCoreApplication.translate("MainWindow", u"CAN 3", None))
+        self.canLabelStyle3.setText(QCoreApplication.translate("MainWindow", u"CAN 4", None))
+        self.linkErrorsTitle.setText(QCoreApplication.translate("MainWindow", u"LINK ERRORS", None))
+        self.linkErrorText.setText(QCoreApplication.translate("MainWindow", u"L1", None))
+        self.linkErrorText1.setText(QCoreApplication.translate("MainWindow", u"L2", None))
+        self.linkErrorText2.setText(QCoreApplication.translate("MainWindow", u"L3", None))
+        self.linkErrorText3.setText(QCoreApplication.translate("MainWindow", u"L4", None))
+        self.tableHeaderLabel.setText(QCoreApplication.translate("MainWindow", u"Inverter", None))
+        self.tableHeaderLabel1.setText(QCoreApplication.translate("MainWindow", u"Code", None))
+        self.tableRowLabel.setText(QCoreApplication.translate("MainWindow", u"Inverter 1", None))
+        self.tableRowValue.setText(QCoreApplication.translate("MainWindow", u"0", None))
+        self.tableRowLabel1.setText(QCoreApplication.translate("MainWindow", u"Inverter 2", None))
+        self.tableRowValue1.setText(QCoreApplication.translate("MainWindow", u"0", None))
+        self.tableRowLabel2.setText(QCoreApplication.translate("MainWindow", u"Inverter 3", None))
+        self.tableRowValue2.setText(QCoreApplication.translate("MainWindow", u"0", None))
+        self.tableRowLabel3.setText(QCoreApplication.translate("MainWindow", u"Inverter 4", None))
+        self.tableRowValue3.setText(QCoreApplication.translate("MainWindow", u"0", None))
         self.bms_title.setText(QCoreApplication.translate("MainWindow", u"Battery Management", None))
         self.bms_subtitle.setText(QCoreApplication.translate("MainWindow", u"BMS Monitor", None))
         self.dotCharging.setText(QCoreApplication.translate("MainWindow", u"\u25cf", None))
@@ -1342,88 +1695,88 @@ class Ui_MainWindow(object):
         self.label_min_volt.setText(QCoreApplication.translate("MainWindow", u"Min Volt", None))
         self.min_volt_value.setText(QCoreApplication.translate("MainWindow", u"0.00 V", None))
 
-        __sortingEnabled4 = self.fl_table.isSortingEnabled()
+        __sortingEnabled = self.fl_table.isSortingEnabled()
         self.fl_table.setSortingEnabled(False)
-        ___qtablewidgetitem39 = self.fl_table.item(0, 0)
-        ___qtablewidgetitem39.setText(QCoreApplication.translate("MainWindow", u"Wheel Speed", None));
-        ___qtablewidgetitem40 = self.fl_table.item(0, 1)
-        ___qtablewidgetitem40.setText(QCoreApplication.translate("MainWindow", u"0000", None));
-        ___qtablewidgetitem41 = self.fl_table.item(1, 0)
-        ___qtablewidgetitem41.setText(QCoreApplication.translate("MainWindow", u"Torque", None));
-        ___qtablewidgetitem42 = self.fl_table.item(1, 1)
-        ___qtablewidgetitem42.setText(QCoreApplication.translate("MainWindow", u"0.0", None));
-        ___qtablewidgetitem43 = self.fl_table.item(2, 0)
-        ___qtablewidgetitem43.setText(QCoreApplication.translate("MainWindow", u"Rot Pot", None));
-        ___qtablewidgetitem44 = self.fl_table.item(2, 1)
-        ___qtablewidgetitem44.setText(QCoreApplication.translate("MainWindow", u"00.0", None));
-        ___qtablewidgetitem45 = self.fl_table.item(3, 0)
-        ___qtablewidgetitem45.setText(QCoreApplication.translate("MainWindow", u"Brake Temp", None));
-        ___qtablewidgetitem46 = self.fl_table.item(3, 1)
-        ___qtablewidgetitem46.setText(QCoreApplication.translate("MainWindow", u"00.0", None));
-        self.fl_table.setSortingEnabled(__sortingEnabled4)
+        ___qtablewidgetitem = self.fl_table.item(0, 0)
+        ___qtablewidgetitem.setText(QCoreApplication.translate("MainWindow", u"Wheel Speed", None));
+        ___qtablewidgetitem1 = self.fl_table.item(0, 1)
+        ___qtablewidgetitem1.setText(QCoreApplication.translate("MainWindow", u"0000", None));
+        ___qtablewidgetitem2 = self.fl_table.item(1, 0)
+        ___qtablewidgetitem2.setText(QCoreApplication.translate("MainWindow", u"Torque", None));
+        ___qtablewidgetitem3 = self.fl_table.item(1, 1)
+        ___qtablewidgetitem3.setText(QCoreApplication.translate("MainWindow", u"0.0", None));
+        ___qtablewidgetitem4 = self.fl_table.item(2, 0)
+        ___qtablewidgetitem4.setText(QCoreApplication.translate("MainWindow", u"Rot Pot", None));
+        ___qtablewidgetitem5 = self.fl_table.item(2, 1)
+        ___qtablewidgetitem5.setText(QCoreApplication.translate("MainWindow", u"00.0", None));
+        ___qtablewidgetitem6 = self.fl_table.item(3, 0)
+        ___qtablewidgetitem6.setText(QCoreApplication.translate("MainWindow", u"Brake Temp", None));
+        ___qtablewidgetitem7 = self.fl_table.item(3, 1)
+        ___qtablewidgetitem7.setText(QCoreApplication.translate("MainWindow", u"00.0", None));
+        self.fl_table.setSortingEnabled(__sortingEnabled)
 
 
-        __sortingEnabled5 = self.fr_table.isSortingEnabled()
+        __sortingEnabled1 = self.fr_table.isSortingEnabled()
         self.fr_table.setSortingEnabled(False)
-        ___qtablewidgetitem47 = self.fr_table.item(0, 0)
-        ___qtablewidgetitem47.setText(QCoreApplication.translate("MainWindow", u"Wheel Speed", None));
-        ___qtablewidgetitem48 = self.fr_table.item(0, 1)
-        ___qtablewidgetitem48.setText(QCoreApplication.translate("MainWindow", u"0000", None));
-        ___qtablewidgetitem49 = self.fr_table.item(1, 0)
-        ___qtablewidgetitem49.setText(QCoreApplication.translate("MainWindow", u"Torque", None));
-        ___qtablewidgetitem50 = self.fr_table.item(1, 1)
-        ___qtablewidgetitem50.setText(QCoreApplication.translate("MainWindow", u"0.0", None));
-        ___qtablewidgetitem51 = self.fr_table.item(2, 0)
-        ___qtablewidgetitem51.setText(QCoreApplication.translate("MainWindow", u"Rot Pot", None));
-        ___qtablewidgetitem52 = self.fr_table.item(2, 1)
-        ___qtablewidgetitem52.setText(QCoreApplication.translate("MainWindow", u"00.0", None));
-        ___qtablewidgetitem53 = self.fr_table.item(3, 0)
-        ___qtablewidgetitem53.setText(QCoreApplication.translate("MainWindow", u"Brake Temp", None));
-        ___qtablewidgetitem54 = self.fr_table.item(3, 1)
-        ___qtablewidgetitem54.setText(QCoreApplication.translate("MainWindow", u"00.0", None));
-        self.fr_table.setSortingEnabled(__sortingEnabled5)
+        ___qtablewidgetitem8 = self.fr_table.item(0, 0)
+        ___qtablewidgetitem8.setText(QCoreApplication.translate("MainWindow", u"Wheel Speed", None));
+        ___qtablewidgetitem9 = self.fr_table.item(0, 1)
+        ___qtablewidgetitem9.setText(QCoreApplication.translate("MainWindow", u"0000", None));
+        ___qtablewidgetitem10 = self.fr_table.item(1, 0)
+        ___qtablewidgetitem10.setText(QCoreApplication.translate("MainWindow", u"Torque", None));
+        ___qtablewidgetitem11 = self.fr_table.item(1, 1)
+        ___qtablewidgetitem11.setText(QCoreApplication.translate("MainWindow", u"0.0", None));
+        ___qtablewidgetitem12 = self.fr_table.item(2, 0)
+        ___qtablewidgetitem12.setText(QCoreApplication.translate("MainWindow", u"Rot Pot", None));
+        ___qtablewidgetitem13 = self.fr_table.item(2, 1)
+        ___qtablewidgetitem13.setText(QCoreApplication.translate("MainWindow", u"00.0", None));
+        ___qtablewidgetitem14 = self.fr_table.item(3, 0)
+        ___qtablewidgetitem14.setText(QCoreApplication.translate("MainWindow", u"Brake Temp", None));
+        ___qtablewidgetitem15 = self.fr_table.item(3, 1)
+        ___qtablewidgetitem15.setText(QCoreApplication.translate("MainWindow", u"00.0", None));
+        self.fr_table.setSortingEnabled(__sortingEnabled1)
 
 
-        __sortingEnabled6 = self.rl_table.isSortingEnabled()
+        __sortingEnabled2 = self.rl_table.isSortingEnabled()
         self.rl_table.setSortingEnabled(False)
-        ___qtablewidgetitem55 = self.rl_table.item(0, 0)
-        ___qtablewidgetitem55.setText(QCoreApplication.translate("MainWindow", u"Wheel Speed", None));
-        ___qtablewidgetitem56 = self.rl_table.item(0, 1)
-        ___qtablewidgetitem56.setText(QCoreApplication.translate("MainWindow", u"0000", None));
-        ___qtablewidgetitem57 = self.rl_table.item(1, 0)
-        ___qtablewidgetitem57.setText(QCoreApplication.translate("MainWindow", u"Torque", None));
-        ___qtablewidgetitem58 = self.rl_table.item(1, 1)
-        ___qtablewidgetitem58.setText(QCoreApplication.translate("MainWindow", u"0.0", None));
-        ___qtablewidgetitem59 = self.rl_table.item(2, 0)
-        ___qtablewidgetitem59.setText(QCoreApplication.translate("MainWindow", u"Rot Pot", None));
-        ___qtablewidgetitem60 = self.rl_table.item(2, 1)
-        ___qtablewidgetitem60.setText(QCoreApplication.translate("MainWindow", u"00.0", None));
-        ___qtablewidgetitem61 = self.rl_table.item(3, 0)
-        ___qtablewidgetitem61.setText(QCoreApplication.translate("MainWindow", u"Brake Temp", None));
-        ___qtablewidgetitem62 = self.rl_table.item(3, 1)
-        ___qtablewidgetitem62.setText(QCoreApplication.translate("MainWindow", u"00.0", None));
-        self.rl_table.setSortingEnabled(__sortingEnabled6)
+        ___qtablewidgetitem16 = self.rl_table.item(0, 0)
+        ___qtablewidgetitem16.setText(QCoreApplication.translate("MainWindow", u"Wheel Speed", None));
+        ___qtablewidgetitem17 = self.rl_table.item(0, 1)
+        ___qtablewidgetitem17.setText(QCoreApplication.translate("MainWindow", u"0000", None));
+        ___qtablewidgetitem18 = self.rl_table.item(1, 0)
+        ___qtablewidgetitem18.setText(QCoreApplication.translate("MainWindow", u"Torque", None));
+        ___qtablewidgetitem19 = self.rl_table.item(1, 1)
+        ___qtablewidgetitem19.setText(QCoreApplication.translate("MainWindow", u"0.0", None));
+        ___qtablewidgetitem20 = self.rl_table.item(2, 0)
+        ___qtablewidgetitem20.setText(QCoreApplication.translate("MainWindow", u"Rot Pot", None));
+        ___qtablewidgetitem21 = self.rl_table.item(2, 1)
+        ___qtablewidgetitem21.setText(QCoreApplication.translate("MainWindow", u"00.0", None));
+        ___qtablewidgetitem22 = self.rl_table.item(3, 0)
+        ___qtablewidgetitem22.setText(QCoreApplication.translate("MainWindow", u"Brake Temp", None));
+        ___qtablewidgetitem23 = self.rl_table.item(3, 1)
+        ___qtablewidgetitem23.setText(QCoreApplication.translate("MainWindow", u"00.0", None));
+        self.rl_table.setSortingEnabled(__sortingEnabled2)
 
 
-        __sortingEnabled7 = self.rr_table.isSortingEnabled()
+        __sortingEnabled3 = self.rr_table.isSortingEnabled()
         self.rr_table.setSortingEnabled(False)
-        ___qtablewidgetitem63 = self.rr_table.item(0, 0)
-        ___qtablewidgetitem63.setText(QCoreApplication.translate("MainWindow", u"Wheel Speed", None));
-        ___qtablewidgetitem64 = self.rr_table.item(0, 1)
-        ___qtablewidgetitem64.setText(QCoreApplication.translate("MainWindow", u"0000", None));
-        ___qtablewidgetitem65 = self.rr_table.item(1, 0)
-        ___qtablewidgetitem65.setText(QCoreApplication.translate("MainWindow", u"Torque", None));
-        ___qtablewidgetitem66 = self.rr_table.item(1, 1)
-        ___qtablewidgetitem66.setText(QCoreApplication.translate("MainWindow", u"0.0", None));
-        ___qtablewidgetitem67 = self.rr_table.item(2, 0)
-        ___qtablewidgetitem67.setText(QCoreApplication.translate("MainWindow", u"Rot Pot", None));
-        ___qtablewidgetitem68 = self.rr_table.item(2, 1)
-        ___qtablewidgetitem68.setText(QCoreApplication.translate("MainWindow", u"00.0", None));
-        ___qtablewidgetitem69 = self.rr_table.item(3, 0)
-        ___qtablewidgetitem69.setText(QCoreApplication.translate("MainWindow", u"Brake Temp", None));
-        ___qtablewidgetitem70 = self.rr_table.item(3, 1)
-        ___qtablewidgetitem70.setText(QCoreApplication.translate("MainWindow", u"00.0", None));
-        self.rr_table.setSortingEnabled(__sortingEnabled7)
+        ___qtablewidgetitem24 = self.rr_table.item(0, 0)
+        ___qtablewidgetitem24.setText(QCoreApplication.translate("MainWindow", u"Wheel Speed", None));
+        ___qtablewidgetitem25 = self.rr_table.item(0, 1)
+        ___qtablewidgetitem25.setText(QCoreApplication.translate("MainWindow", u"0000", None));
+        ___qtablewidgetitem26 = self.rr_table.item(1, 0)
+        ___qtablewidgetitem26.setText(QCoreApplication.translate("MainWindow", u"Torque", None));
+        ___qtablewidgetitem27 = self.rr_table.item(1, 1)
+        ___qtablewidgetitem27.setText(QCoreApplication.translate("MainWindow", u"0.0", None));
+        ___qtablewidgetitem28 = self.rr_table.item(2, 0)
+        ___qtablewidgetitem28.setText(QCoreApplication.translate("MainWindow", u"Rot Pot", None));
+        ___qtablewidgetitem29 = self.rr_table.item(2, 1)
+        ___qtablewidgetitem29.setText(QCoreApplication.translate("MainWindow", u"00.0", None));
+        ___qtablewidgetitem30 = self.rr_table.item(3, 0)
+        ___qtablewidgetitem30.setText(QCoreApplication.translate("MainWindow", u"Brake Temp", None));
+        ___qtablewidgetitem31 = self.rr_table.item(3, 1)
+        ___qtablewidgetitem31.setText(QCoreApplication.translate("MainWindow", u"00.0", None));
+        self.rr_table.setSortingEnabled(__sortingEnabled3)
 
         self.lbl_cell_volt_alarm.setText(QCoreApplication.translate("MainWindow", u"Cell Voltage Alarm", None))
         self.lbl_coolant_temp_alarm.setText(QCoreApplication.translate("MainWindow", u"Coolant Temperature Alarm", None))
