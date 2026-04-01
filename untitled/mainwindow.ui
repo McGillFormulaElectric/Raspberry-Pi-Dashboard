@@ -3958,7 +3958,7 @@ QLabel#valMinVolt, QLabel#valMaxVolt {
        <string/>
       </property>
       <property name="scaledContents">
-       <bool>false</bool>
+       <bool>true</bool>
       </property>
      </widget>
     </widget>
