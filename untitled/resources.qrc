@@ -1,5 +1,6 @@
 <RCC>
     <qresource prefix="/">
         <file>logo.png</file>
+        <file>../../../../Downloads/f1_birds_eye.png</file>
     </qresource>
 </RCC>
