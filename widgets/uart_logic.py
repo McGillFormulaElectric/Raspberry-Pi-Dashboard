@@ -17,7 +17,7 @@ def setup_serial():
     ser.reset_input_buffer()
     print("listening...")
 
-def uart_input(window):
+def uart_input(window, object_name):
     global ser
     if ser is None:
         return
@@ -28,7 +28,7 @@ def uart_input(window):
             value = raw[0]
             print(value)
             print("\r\n")
-            bar_resize(window, value)
+            bar_resize(window, object_name, value)
 def uart_store(window):
     '''store incoming uart values in a dictionnary'''
     pass

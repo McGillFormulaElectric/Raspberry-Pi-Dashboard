@@ -3,10 +3,11 @@ from PySide6.QtWidgets import QApplication
 from PySide6.QtGui import QCursor
 from PySide6.QtCore import Qt, QFile, QTimer
 from PySide6.QtUiTools import QUiLoader
-
-from widgets.uart_logic import setup_serial, uart_input
+from dashboard.dynamic_logic import bar_resize, update_text
 from widgets.page_2 import pulse_light
 from images.image_loader import load_page_image
+import serial
+from dashboard.signals_and_pages import uart_data, pages, id
 
 
 class Dashboard:
@@ -27,20 +28,21 @@ class Dashboard:
         # Load static page images (if matching QLabel names exist in the .ui).
         #self.load_startup_images()
 
-        # Current page
-        self.current_page = self.window.stackedWidget.currentIndex()
-
-        # Setup serial
-        setup_serial()
-
         #UART
-        self.uart_data = {} #{class_names: value}
-        self.id = {} #{id: class_name}
-        self.pages = {} #page_num: [bars,led,...]
+        self.ser = None
+        self.pi_port = '/dev/serial0'
+        self.test_port = 'COM4'
+        self.uart5_port = '/dev/ttyAMA5'
+
+
+        self.uart_data = uart_data #{class_names: value}
+        self.id = id #{id: class_name}
+        self.pages = pages #page_num: [bars,led,...]
 
         # Timer for UART
+        self.setup_serial() #opens uart port
         self.timer = QTimer()
-        self.timer.timeout.connect(self.update_uart)
+        self.timer.timeout.connect(self.uart_update) #main UART Loop
         self.timer.start(5)
 
         # Shortcuts
@@ -56,13 +58,67 @@ class Dashboard:
         #dictionnary
     def run(self):
         self.app.exec()
+    def setup_serial(self):
+        try:
+            self.ser = serial.Serial(
+                port=self.test_port,
+                baudrate=115200,
+                timeout=1,
+            )
+            self.ser.reset_input_buffer()
+            print(f"listening on {self.test_port}...")
+        except (serial.SerialException, OSError) as exc:
+            self.ser = None
+            print(f"[setup_serial] Failed to open {self.test_port}: {exc}")
 
-    def update_uart(self):
-        uart_input(self.window)
+    def uart_store(self):
+        '''stores values from uart into the dictionnary'''
+        if self.ser is None:
+            return
+
+        try:
+            while self.ser.in_waiting >= 3:
+                # look for start byte
+                start = self.ser.read(1)
+                if start[0] != 0xFF:
+                    print(f"[uart_store] Framing error, discarding byte: {start[0]}")
+                    continue  # discard and re-sync
+
+                raw = self.ser.read(2)
+                if len(raw) == 2:
+                    msg_id, value = raw[0], raw[1]
+                    if msg_id in self.id:
+                        object_name = self.id[msg_id]
+                        self.uart_data[object_name] = value
+                    else:
+                        print(f"[uart_store] Unknown ID: {msg_id}")
+        except (serial.SerialException, OSError) as exc:
+            print(f"[uart_store] Serial read failed: {exc}")
+            try:
+                self.ser.close()
+            except (serial.SerialException, OSError):
+                pass
+            self.ser = None
+
     
     def uart_update(self):
-        '''update the values on the given page by looping through the list'''
-        pass
+        '''Update the values on the given page by looping through the dicts'''
+        self.uart_store()
+        current_page = self.window.stackedWidget.currentIndex() + 1
+
+        if current_page not in self.pages:
+            return
+
+        for object_name, widget_type in self.pages[current_page].items():
+            if object_name in self.uart_data:
+                value = self.uart_data.get(object_name, 0)
+            else:
+                continue
+
+            if widget_type == "bar":
+                bar_resize(self.window, object_name, value)
+            elif widget_type == "text":
+                update_text(self.window, object_name, value)
 
     def toggle_fullscreen(self):
         if self.window.isFullScreen():
