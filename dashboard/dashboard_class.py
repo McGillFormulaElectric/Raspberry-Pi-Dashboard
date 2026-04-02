@@ -3,7 +3,7 @@ from PySide6.QtWidgets import QApplication
 from PySide6.QtGui import QCursor
 from PySide6.QtCore import Qt, QFile, QTimer
 from PySide6.QtUiTools import QUiLoader
-from dashboard.dynamic_logic import bar_resize, update_text
+from dashboard.dynamic_logic import bar_resize, update_text, find_track_widget
 from widgets.page_2 import pulse_light
 from images.image_loader import load_page_image
 import serial
@@ -42,7 +42,8 @@ class Dashboard:
 
         self.uart_data = uart_data #{class_names: value}
         self.id = id #{id: class_name}
-        self.pages = pages #page_num: [bars,led,...]
+        self.pages = pages #page_object_name: {object_name: widget_type}
+        self.validate_page_mappings()
 
         # Timer for UART
         self.setup_serial() #opens uart port
@@ -104,12 +105,16 @@ class Dashboard:
     def uart_update(self):
         '''Update the values on the given page by looping through the dicts'''
         self.uart_store()
-        current_page = self.window.stackedWidget.currentIndex() + 1
-
-        if current_page not in self.pages:
+        current_page = self.window.stackedWidget.currentWidget()
+        if current_page is None:
             return
 
-        for object_name, widget_type in self.pages[current_page].items():
+        current_page_name = current_page.objectName()
+
+        if current_page_name not in self.pages:
+            return
+
+        for object_name, widget_type in self.pages[current_page_name].items():
             if object_name in self.uart_data:
                 value = self.uart_data.get(object_name, 0)
             else:
@@ -119,6 +124,9 @@ class Dashboard:
                 bar_resize(self.window, object_name, value)
             if widget_type == "text":
                 update_text(self.window, object_name, value)
+                bar_resize(current_page, object_name, value)
+            elif widget_type == "text":
+                update_text(current_page, object_name, value)
 
     def toggle_fullscreen(self):
         if self.window.isFullScreen():
@@ -144,6 +152,40 @@ class Dashboard:
         QtGui.QShortcut(QtGui.QKeySequence("Ctrl+M"), self.window, activated=self.window.showMinimized)
         QtGui.QShortcut(QtGui.QKeySequence("Ctrl+F"), self.window, activated=self.toggle_fullscreen)
         QtGui.QShortcut(QtGui.QKeySequence("Ctrl+Q"), self.window, activated=QtWidgets.QApplication.quit)
+
+    def validate_page_mappings(self):
+        '''Log missing page/widget mappings so UI drift is visible at startup.'''
+        for page_name, widgets in self.pages.items():
+            page = self.window.findChild(QtWidgets.QWidget, page_name)
+            if page is None:
+                print(f"[validate_page_mappings] Page not found: {page_name}")
+                continue
+
+            for object_name, widget_type in widgets.items():
+                if widget_type == "text":
+                    widget = page.findChild(QtWidgets.QLabel, object_name)
+                else:
+                    widget = page.findChild(QtWidgets.QWidget, object_name)
+
+                if widget is None:
+                    print(
+                        f"[validate_page_mappings] {widget_type} widget not found on "
+                        f"{page_name}: {object_name}"
+                    )
+                    continue
+
+                if widget_type == "bar":
+                    track, track_name = find_track_widget(page, object_name)
+                    if track is None:
+                        print(
+                            f"[validate_page_mappings] Track not found on {page_name} "
+                            f"for {object_name}"
+                        )
+                    elif track.parent() is not page:
+                        print(
+                            f"[validate_page_mappings] Track {track_name} for {object_name} "
+                            f"is nested unexpectedly on {page_name}"
+                        )
 
     def load_startup_images(self):
         """
