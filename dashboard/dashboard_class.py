@@ -29,10 +29,15 @@ class Dashboard:
         #self.load_startup_images()
 
         #UART
-        self.ser = None
+        #self.ser = None
         self.pi_port = '/dev/serial0'
         self.test_port = 'COM4'
         self.uart5_port = '/dev/ttyAMA5'
+        self.ser = serial.Serial(
+                port=self.uart5_port,
+                baudrate=115200,
+                timeout=1,
+            )
 
 
         self.uart_data = uart_data #{class_names: value}
@@ -60,13 +65,8 @@ class Dashboard:
         self.app.exec()
     def setup_serial(self):
         try:
-            self.ser = serial.Serial(
-                port=self.test_port,
-                baudrate=115200,
-                timeout=1,
-            )
             self.ser.reset_input_buffer()
-            print(f"listening on {self.test_port}...")
+            print(f"listening on {self.uart5_port}...")
         except (serial.SerialException, OSError) as exc:
             self.ser = None
             print(f"[setup_serial] Failed to open {self.test_port}: {exc}")
@@ -117,7 +117,7 @@ class Dashboard:
 
             if widget_type == "bar":
                 bar_resize(self.window, object_name, value)
-            elif widget_type == "text":
+            if widget_type == "text":
                 update_text(self.window, object_name, value)
 
     def toggle_fullscreen(self):

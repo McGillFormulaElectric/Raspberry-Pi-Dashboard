@@ -8,7 +8,7 @@ def bar_resize(window, object_name, height):
     # findChild(QWidget, object_name) searches window's descendant widgets for one matching the given type and name
     bar = window.findChild(QWidget, object_name)
     if bar is None:
-        print(f"[bar_resize] Widget not found: {object_name}")
+        #print(f"[bar_resize] Widget not found: {object_name}")
         return
 
     track_name = object_name.replace("_bar", "_track")
@@ -42,7 +42,10 @@ def update_text(window, object_name, value):
     # Only update the text when the label exists.
     if label is not None:
         # Qt boilerplate: `setText(str(value))` converts the value to text and updates what the label shows on screen.
+        print(f"[update_text] label found: {object_name}")
         label.setText(str(value))
+    else:
+        print(f"[update_text] label not found: {object_name}")
 
 # Update a value inside a dashboard table widget.
 def update_table(window, object_name, row, column):
