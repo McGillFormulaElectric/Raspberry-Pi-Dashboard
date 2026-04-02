@@ -11,7 +11,7 @@ def bar_resize(window, object_name, height):
         #print(f"[bar_resize] Widget not found: {object_name}")
         return
 
-    track_name = object_name.replace("_bar", "_track")
+    track_name = object_name.replace("bar", "Track")
     # findChild(QWidget, track_name) fetches the track widget that defines the full bar area
     track = window.findChild(QWidget, track_name)
     if track is None:
