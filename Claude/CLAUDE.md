@@ -1,5 +1,7 @@
 # CLAUDE.md
 
+All changes must be logged in `CHANGELOG.md`.
+
 ## Project Summary
 
 This repository is a PySide6 telemetry dashboard for a Raspberry Pi / Formula Electric workflow.

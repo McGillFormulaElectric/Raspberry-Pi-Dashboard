@@ -1,3 +1,5 @@
+All changes must be logged in `CHANGELOG.md`.
+
 -separate uart logic and dynamic logic
 -create uart_store in uart logic folder and uart_update method in dashbaord
 
