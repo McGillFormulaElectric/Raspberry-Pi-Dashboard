@@ -1,144 +1,60 @@
 # CLAUDE.md
 
-All changes must be logged in `CHANGELOG.md`.
+## Purpose
+This file captures the team's working norms for using Claude Code effectively. Update it whenever we notice repeatable mistakes, useful workflows, or better defaults.
 
-## Project Summary
+## Team Practices
 
-This repository is a PySide6 telemetry dashboard for a Raspberry Pi / Formula Electric workflow.
+1. Start in Plan mode for non-trivial work.
+   Use planning before implementation, especially for pull requests. A strong plan usually leads to better one-shot execution.
 
-- The main desktop entrypoint is `main.py`.
-- The live dashboard logic is in `dashboard/`.
-- The runtime UI is loaded from `untitled/mainwindow.ui` with `QUiLoader`.
-- Raspberry Pi helper scripts live in `config_scripts/`.
+2. Use parallel sessions when helpful.
+   It is normal to run multiple Claude sessions across terminal, web, and mobile to explore tasks in parallel and hand work off between environments.
 
-## Source Of Truth
+3. Prefer the strongest model when quality matters.
+   Slower models can still be faster overall if they need less steering and make better tool decisions.
 
-When working on the dashboard, treat these files as authoritative:
+4. Keep `CLAUDE.md` in git and treat it as shared team memory.
+   When Claude makes a repeated mistake or the team discovers a better workflow, add it here.
 
-- `main.py`
-- `dashboard/dashboard_class.py`
-- `dashboard/dynamic_logic.py`
-- `dashboard/signals_and_pages.py`
-- `widgets/page_2.py`
-- `images/image_loader.py`
-- `untitled/mainwindow.ui`
+5. Use PR review to improve the system.
+   During review, add guidance to `CLAUDE.md` when a lesson should become a reusable rule rather than a one-off comment.
 
-These files exist but are not the main runtime source of truth:
+6. Turn repeated workflows into slash commands.
+   Store common commands in `.claude/commands/` so both humans and Claude can use them consistently.
 
-- `untitled/mainwindow_ui.py`
-- `main/mainwindow_ui.py`
-- `main/ui_mainwindow.py`
-- `untitled/main.py`
-- `untitled/main.qml`
-- `untitled/main.cpp`
-- `untitled/mainwindow.cpp`
+7. Use subagents for recurring support tasks.
+   Examples include verification, cleanup, simplification, or other repeatable post-processing steps.
 
-They look like Qt Creator generated files, experiments, or alternate project artifacts. Do not assume the app uses them unless a task explicitly says so.
+8. Use hooks to enforce consistency.
+   For example, format generated code with a `PostToolUse` hook to reduce CI formatting failures.
 
-## How The App Runs
+9. Pre-approve safe commands where possible.
+   Prefer shared permissions settings over unnecessary approval friction. Store safe defaults in `.claude/settings.json` when appropriate.
 
-- `main.py` constructs `dashboard.dashboard_class.Dashboard` and calls `run()`.
-- `Dashboard` loads `untitled/mainwindow.ui`.
-- UART data is read in `Dashboard.uart_store()`.
-- The UI refresh loop runs on a `QTimer` in `Dashboard.uart_update()`.
-- Dynamic widgets are mapped in `dashboard/signals_and_pages.py`.
+10. Connect Claude to the team's tools.
+    Claude should be able to use shared systems such as Slack, analytics, logs, and other MCP-enabled tooling when useful.
 
-## UART Notes
+11. Give Claude a way to verify its work.
+    Verification is one of the biggest quality multipliers. Prefer workflows where Claude can test, inspect, or validate results directly.
 
-The current codebase uses simple framed UART packets:
+## Verification Expectations
 
-- Byte 1: `0xFF` start byte
-- Byte 2: signal id
-- Byte 3: value
+Choose the strongest practical feedback loop for the task:
+- Run a command
+- Run tests
+- Check logs
+- Use a browser
+- Use a simulator
+- Use a background verification agent
 
-Ports referenced in the repo:
+If Claude can verify its own work, results are usually much better.
 
-- Windows dev: `COM4`
-- Raspberry Pi: `/dev/serial0`
-- Raspberry Pi alternate: `/dev/ttyAMA5`
+## Team-Owned Files
+- `CLAUDE.md`: shared operating guidance
+- `.claude/commands/`: reusable slash commands
+- `.claude/settings.json`: shared safe permissions and settings
+- `.mcp.json`: shared MCP tool configuration
 
-If UART behavior changes, update the parser and the id-to-widget mapping together.
-
-## UI Editing Rules
-
-- Make layout and widget changes in `untitled/mainwindow.ui`.
-- Do not hand-edit generated `*_ui.py` files unless the task is specifically about generated code.
-- Keep every dynamic widget's Qt `objectName` in sync with `dashboard/signals_and_pages.py`.
-- If you rename a widget in Qt Designer, update:
-  - `uart_data`
-  - `id`
-  - `pages`
-  - any helper logic that depends on the widget naming pattern
-
-Important: the stacked widget pages are not guaranteed to be added in numeric order. Use the current page widget's `objectName` instead of assuming `currentIndex() + 1` matches `page_N`.
-
-## Dynamic Widget Conventions
-
-`dashboard/dynamic_logic.py` contains generic helpers for:
-
-- resizing bars
-- updating text labels
-- future LED/table helpers
-
-When adding new bar widgets:
-
-- make sure the bar widget and its track widget follow a naming pattern the helper can resolve
-- keep both widgets on the same page
-- verify the `objectName` values in the `.ui` file, not just what Qt Creator displays visually
-
-When adding text widgets:
-
-- the mapped widget should be a `QLabel`
-- the `objectName` must match the value used in `signals_and_pages.py`
-
-## Repo Footguns
-
-- `widgets/uart_logic.py` appears to be older experimental code. The main runtime path is `dashboard/dashboard_class.py`.
-- `README.md` is more of a working design note than a finished setup guide.
-- `untitled/requirements.txt` currently lists `PySide6`, but the code also imports `serial`, so `pyserial` is also required in practice.
-- `__pycache__/`, `.pyc`, and Qt Creator cache folders are generated noise and should not be edited or committed.
-
-## Useful Commands
-
-Run the desktop app from the repo root:
-
-```bash
-python main.py
-```
-
-Manual UART listener:
-
-```bash
-python test/testUart.py
-```
-
-Pi launch helper:
-
-```bash
-bash config_scripts/run_app.sh
-```
-
-Pi serial read helper:
-
-```bash
-bash config_scripts/read_port.sh
-```
-
-## When Adding A New Telemetry Signal
-
-1. Add or identify the target widget in `untitled/mainwindow.ui`.
-2. Confirm its `objectName`.
-3. Add the widget to `dashboard/signals_and_pages.py`.
-4. Add the UART id mapping in `dashboard/signals_and_pages.py`.
-5. Make sure `dashboard/dynamic_logic.py` supports that widget type.
-6. Run the app and verify the visible page updates correctly.
-
-## Recommended Workflow For Future Changes
-
-- Inspect `untitled/mainwindow.ui` first for real widget names.
-- Then inspect `dashboard/signals_and_pages.py`.
-- Then inspect `dashboard/dashboard_class.py` and `dashboard/dynamic_logic.py`.
-- Prefer small, synchronized changes across UI names and Python mappings.
-- If a widget "exists in Qt Creator" but updates fail at runtime, suspect an `objectName` mismatch before suspecting Qt itself.
-
-VERY IMPORTANT!!!! WHEN SOLVING ISSUES DONT JUST EDIT THE CODE. EXPLAIN THE ISSUE
+## Maintenance Rule
+If the team sees Claude make the same mistake twice, update this file.
