@@ -64,6 +64,9 @@ def update_table(window, object_name, row, column):
     pass
 
 def update_progress_bar(window, object_name, value):
+    if object_name == "maxCellBar" and value>60:
+        value=60
+
     label = window.findChild(QProgressBar, object_name)
     if label is not None:
         print(f"Progress Bar {object_name} found")
