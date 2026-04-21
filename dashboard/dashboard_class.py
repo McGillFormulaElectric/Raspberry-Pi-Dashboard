@@ -3,7 +3,7 @@ from PySide6.QtWidgets import QApplication, QFrame, QLabel
 from PySide6.QtGui import QCursor
 from PySide6.QtCore import Qt, QFile, QTimer
 from PySide6.QtUiTools import QUiLoader
-from dashboard.dynamic_logic import bar_resize, update_text, update_progress_bar
+from dashboard.dynamic_logic import bar_resize, update_text, update_progress_bar, toggle_badge
 from widgets.page_2 import pulse_light
 from images.image_loader import load_page_image
 import serial
@@ -129,7 +129,8 @@ class Dashboard:
                 update_text(self.window, object_name, value)
             if widget_type == "progress_bar":
                 update_progress_bar(self.window, object_name, value)
-
+            if widget_type == "badge":
+                toggle_badge(self.window, object_name, 1)
 
     def toggle_fullscreen(self):
         if self.window.isFullScreen():

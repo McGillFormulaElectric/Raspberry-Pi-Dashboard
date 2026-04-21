@@ -71,10 +71,8 @@ def update_progress_bar(window, object_name, value):
     else:
         print(f"{object_name} Progress Bar Not Found")
 
-def flash_badge(window, object_name, state): #<---incomplete
-    widget = window.findChild(QWidget, object_name)
-    if widget is None:
-        return
-    color = "#1D9E75" if state else "#1a1a1a"
-    widget.setStyleSheet(f"background-color: {color}; border-radius: 4px;")
-    
+
+
+def flash_badge(window, object_name, state):
+    '''toggle badges'''
+    pass
