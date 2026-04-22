@@ -39,9 +39,7 @@ def led_blink(window, object_name, state):
         label.setStyleSheet("rgb(255, 5, 38)")
 
 
-def toggle_badge(window, object_name, state):
-    '''toggle badges on/off'''
-    pass
+
 
 
 # Update the text shown by a named label widget.
@@ -76,6 +74,37 @@ def update_progress_bar(window, object_name, value):
 
 
 
-def flash_badge(window, object_name, state):
-    '''toggle badges'''
-    pass
+
+
+
+
+
+_flash_timers = {}
+_flash_states = {}
+
+def toggle_badge(window, object_name, state):
+    '''flash badge when state==1, hide when state==0'''
+    badge = window.findChild(QFrame, object_name)
+    if badge is None:
+        return
+
+    if not state:
+        if object_name in _flash_timers:
+            _flash_timers[object_name].stop()
+        _flash_states[object_name] = False
+        badge.setVisible(False)
+        return
+
+    if object_name in _flash_timers and _flash_timers[object_name].isActive():
+        return
+
+    _flash_states[object_name] = False
+
+    def _tick():
+        _flash_states[object_name] = not _flash_states[object_name]
+        badge.setVisible(_flash_states[object_name])
+
+    timer = QTimer()
+    timer.timeout.connect(_tick)
+    timer.start(250)
+    _flash_timers[object_name] = timer

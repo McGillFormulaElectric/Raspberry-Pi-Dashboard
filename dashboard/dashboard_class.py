@@ -50,7 +50,7 @@ class Dashboard:
         self.setup_serial() #opens uart port
         self.timer = QTimer()
         self.timer.timeout.connect(self.uart_update) #main UART Loop
-        self.timer.start(5) #calls uart update every 5ms
+        self.timer.start(1) #calls uart update every 5ms
 
         # Shortcuts
         self.setup_shortcuts()
@@ -130,7 +130,7 @@ class Dashboard:
             if widget_type == "progress_bar":
                 update_progress_bar(self.window, object_name, value)
             if widget_type == "badge":
-                toggle_badge(self.window, object_name, 1)
+                toggle_badge(self.window, object_name, value)
 
     def toggle_fullscreen(self):
         if self.window.isFullScreen():
