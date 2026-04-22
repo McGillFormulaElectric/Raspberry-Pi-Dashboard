@@ -33,7 +33,7 @@ class Dashboard:
         #UART
         #self.ser = None
         self.pi_port = '/dev/serial0'
-        self.test_port = 'COM4'
+        self.test_port = 'COM9'
         self.uart5_port = '/dev/ttyAMA5'
         self.ser = serial.Serial(
                 port=self.test_port,
