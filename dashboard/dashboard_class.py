@@ -50,7 +50,7 @@ class Dashboard:
         self.setup_serial() #opens uart port
         self.timer = QTimer()
         self.timer.timeout.connect(self.uart_update) #main UART Loop
-        self.timer.start(1) #calls uart update every 5ms
+        self.timer.start(10) #calls uart update every 10ms
 
         # Shortcuts
         self.setup_shortcuts()
