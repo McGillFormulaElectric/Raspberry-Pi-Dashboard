@@ -36,7 +36,7 @@ class Dashboard:
         self.test_port = 'COM9'
         self.uart5_port = '/dev/ttyAMA5'
         self.ser = serial.Serial(
-                port=self.test_port,
+                port=self.uart5_port,
                 baudrate=115200,
                 timeout=1,
             )
