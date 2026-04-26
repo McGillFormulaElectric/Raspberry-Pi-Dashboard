@@ -1,4 +1,4 @@
-from PySide6.QtWidgets import QFrame, QApplication, QMainWindow, QWidget, QLabel, QProgressBar
+from PySide6.QtWidgets import QFrame, QApplication, QMainWindow, QWidget, QLabel
 from PySide6.QtGui import QPainter, QColor
 from PySide6.QtCore import QTimer
 
@@ -29,18 +29,10 @@ def bar_resize(window, object_name, height):
     bar.move(bar.x(), bottom - new_height)
 
 # Toggle an LED-style widget between on and off colors.
-def led_blink(window, object_name, state):
-    '''change color of led from red to green, green to red, state is 0 for off/red and 1 for on/green'''
-    #red: rgb(255, 5, 38), green:  rgb(14, 255, 54)
-    label = window.findChild(QLabel, object_name) #grab the qlabel
-    if state:
-        label.setStyleSheet("color:  rgb(14, 255, 54);")
-    else:
-        label.setStyleSheet("rgb(255, 5, 38)")
-
-
-
-
+def led_toggle(window, object_name, bool):
+    '''change color of led from red to green, green to red'''
+    # Leave the implementation empty for now.
+    pass
 
 # Update the text shown by a named label widget.
 def update_text(window, object_name, value):
@@ -60,51 +52,3 @@ def update_table(window, object_name, row, column):
     '''update value of cell in table'''
     # Leave the implementation empty for now.
     pass
-
-def update_progress_bar(window, object_name, value):
-    if object_name == "maxCellBar" and value>60:
-        value=60
-
-    label = window.findChild(QProgressBar, object_name)
-    if label is not None:
-        print(f"Progress Bar {object_name} found")
-        label.setValue(value)
-    else:
-        print(f"{object_name} Progress Bar Not Found")
-
-
-
-
-
-
-
-
-_flash_timers = {}
-_flash_states = {}
-
-def toggle_badge(window, object_name, state):
-    '''flash badge when state==1, hide when state==0'''
-    badge = window.findChild(QFrame, object_name)
-    if badge is None:
-        return
-
-    if not state:
-        if object_name in _flash_timers:
-            _flash_timers[object_name].stop()
-        _flash_states[object_name] = False
-        badge.setVisible(False)
-        return
-
-    if object_name in _flash_timers and _flash_timers[object_name].isActive():
-        return
-
-    _flash_states[object_name] = False
-
-    def _tick():
-        _flash_states[object_name] = not _flash_states[object_name]
-        badge.setVisible(_flash_states[object_name])
-
-    timer = QTimer()
-    timer.timeout.connect(_tick)
-    timer.start(250)
-    _flash_timers[object_name] = timer
