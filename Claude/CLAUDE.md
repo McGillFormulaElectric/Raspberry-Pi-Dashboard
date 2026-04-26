@@ -38,6 +38,32 @@ This file captures the team's working norms for using Claude Code effectively. U
 11. Give Claude a way to verify its work.
     Verification is one of the biggest quality multipliers. Prefer workflows where Claude can test, inspect, or validate results directly.
 
+## PySide6 mainwindow.ui Editing Rules
+
+⚠️ **CRITICAL RULES — ALWAYS FOLLOW THESE:**
+
+When editing `mainwindow.ui` files for PySide6:
+
+1. **DO NOT USE ANY LAYOUTS**
+   - NO QBoxLayout (horizontal or vertical)
+   - NO QGridLayout
+   - NO FlowLayout or any other layout manager
+   - This is non-negotiable. Always break layouts if they appear.
+
+2. **USE ONLY SIMPLE WIDGETS**
+   - Stick to: QFrame, QLabel, QProgressBar, QPushButton, QLineEdit, QComboBox, etc.
+   - Simple, individual widgets only.
+
+3. **NEVER SET LAYOUT PROPERTIES**
+   - Do not configure spacing, margins, or alignment via layout system
+   - Position widgets by absolute coordinates or frame hierarchy only
+
+4. **IF A LAYOUT IS PRESENT, REMOVE IT**
+   - Check for any `<layout>` tags in the XML — delete them
+   - If Claude detects a layout, stop and flag it immediately
+
+This keeps the UI simple, predictable, and easy to manage programmatically.
+
 ## Verification Expectations
 
 Choose the strongest practical feedback loop for the task:
@@ -55,6 +81,17 @@ If Claude can verify its own work, results are usually much better.
 - `.claude/commands/`: reusable slash commands
 - `.claude/settings.json`: shared safe permissions and settings
 - `.mcp.json`: shared MCP tool configuration
+
+## Changelog Requirements
+
+⚠️ **MANDATORY — DO NOT SKIP:**
+
+**ALL changes must be added to `changelog.md`.**
+
+- Every feature, bug fix, update, or modification must have a corresponding entry in `changelog.md`
+- Add entries BEFORE committing code
+- Format: Clear description of what changed and why
+- This is non-negotiable. No PR or commit should merge without a changelog entry.
 
 ## Maintenance Rule
 If the team sees Claude make the same mistake twice, update this file.
