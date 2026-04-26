@@ -1,9 +1,9 @@
 from PySide6 import QtCore, QtGui, QtWidgets
-from PySide6.QtWidgets import QApplication
+from PySide6.QtWidgets import QApplication, QFrame, QLabel
 from PySide6.QtGui import QCursor
 from PySide6.QtCore import Qt, QFile, QTimer
 from PySide6.QtUiTools import QUiLoader
-from dashboard.dynamic_logic import bar_resize, update_text
+from dashboard.dynamic_logic import bar_resize, update_text, update_progress_bar, toggle_badge
 from widgets.page_2 import pulse_light
 from images.image_loader import load_page_image
 import serial
@@ -25,14 +25,16 @@ class Dashboard:
         self.window = loader.load(ui_file)
         ui_file.close()
 
+        
+
         # Load static page images (if matching QLabel names exist in the .ui).
         #self.load_startup_images()
 
         #UART
         #self.ser = None
         self.pi_port = '/dev/serial0'
-        self.test_port = 'COM4'
-        self.uart5_port = '/dev/ttyAMA0'
+        self.test_port = 'COM9'
+        self.uart5_port = '/dev/ttyAMA5'
         self.ser = serial.Serial(
                 port=self.uart5_port,
                 baudrate=115200,
@@ -48,7 +50,7 @@ class Dashboard:
         self.setup_serial() #opens uart port
         self.timer = QTimer()
         self.timer.timeout.connect(self.uart_update) #main UART Loop
-        self.timer.start(5)
+        self.timer.start(10) #calls uart update every 10ms
 
         # Shortcuts
         self.setup_shortcuts()
@@ -92,6 +94,8 @@ class Dashboard:
                         self.uart_data[object_name] = value
                     else:
                         print(f"[uart_store] Unknown ID: {msg_id}")
+
+        #error handling, not very necessary                
         except (serial.SerialException, OSError) as exc:
             print(f"[uart_store] Serial read failed: {exc}")
             try:
@@ -123,6 +127,10 @@ class Dashboard:
                 bar_resize(self.window, object_name, value)
             if widget_type == "text":
                 update_text(self.window, object_name, value)
+            if widget_type == "progress_bar":
+                update_progress_bar(self.window, object_name, value)
+            if widget_type == "badge":
+                toggle_badge(self.window, object_name, value)
 
     def toggle_fullscreen(self):
         if self.window.isFullScreen():

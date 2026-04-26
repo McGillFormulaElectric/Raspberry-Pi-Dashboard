@@ -33,7 +33,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>9</number>
     </property>
     <widget class="QWidget" name="page_1">
      <widget class="QWidget" name="accentStripe" native="true">
@@ -2184,7 +2184,7 @@ QFrame#tableLine1, QFrame#tableLine2, QFrame#tableLine3 {
         <height>220</height>
        </rect>
       </property>
-      <widget class="QLabel" name="barPercentStyle">
+      <widget class="QLabel" name="barPercentStyle2">
        <property name="geometry">
         <rect>
          <x>0</x>
@@ -2210,7 +2210,7 @@ QFrame#tableLine1, QFrame#tableLine2, QFrame#tableLine3 {
         <height>220</height>
        </rect>
       </property>
-      <widget class="QLabel" name="barPercentStyle">
+      <widget class="QLabel" name="barPercentStyle3">
        <property name="geometry">
         <rect>
          <x>0</x>
@@ -2236,7 +2236,7 @@ QFrame#tableLine1, QFrame#tableLine2, QFrame#tableLine3 {
         <height>220</height>
        </rect>
       </property>
-      <widget class="QLabel" name="barPercentStyle">
+      <widget class="QLabel" name="barPercentStyle4">
        <property name="geometry">
         <rect>
          <x>0</x>
@@ -2270,7 +2270,7 @@ QFrame#tableLine1, QFrame#tableLine2, QFrame#tableLine3 {
        <set>Qt::AlignmentFlag::AlignHCenter|Qt::AlignmentFlag::AlignTop</set>
       </property>
      </widget>
-     <widget class="QLabel" name="canLabelStyle">
+     <widget class="QLabel" name="canLabelStyle2">
       <property name="geometry">
        <rect>
         <x>125</x>
@@ -2286,7 +2286,7 @@ QFrame#tableLine1, QFrame#tableLine2, QFrame#tableLine3 {
        <set>Qt::AlignmentFlag::AlignHCenter|Qt::AlignmentFlag::AlignTop</set>
       </property>
      </widget>
-     <widget class="QLabel" name="canLabelStyle">
+     <widget class="QLabel" name="canLabelStyle3">
       <property name="geometry">
        <rect>
         <x>219</x>
@@ -2302,7 +2302,7 @@ QFrame#tableLine1, QFrame#tableLine2, QFrame#tableLine3 {
        <set>Qt::AlignmentFlag::AlignHCenter|Qt::AlignmentFlag::AlignTop</set>
       </property>
      </widget>
-     <widget class="QLabel" name="canLabelStyle">
+     <widget class="QLabel" name="canLabelStyle4">
       <property name="geometry">
        <rect>
         <x>313</x>
@@ -2396,7 +2396,7 @@ QFrame#tableLine1, QFrame#tableLine2, QFrame#tableLine3 {
         <set>Qt::AlignmentFlag::AlignCenter</set>
        </property>
       </widget>
-      <widget class="QLabel" name="linkErrorText">
+      <widget class="QLabel" name="linkErrorText2">
        <property name="geometry">
         <rect>
          <x>250</x>
@@ -2412,7 +2412,7 @@ QFrame#tableLine1, QFrame#tableLine2, QFrame#tableLine3 {
         <set>Qt::AlignmentFlag::AlignCenter</set>
        </property>
       </widget>
-      <widget class="QLabel" name="linkErrorText">
+      <widget class="QLabel" name="linkErrorText3">
        <property name="geometry">
         <rect>
          <x>441</x>
@@ -2428,7 +2428,7 @@ QFrame#tableLine1, QFrame#tableLine2, QFrame#tableLine3 {
         <set>Qt::AlignmentFlag::AlignCenter</set>
        </property>
       </widget>
-      <widget class="QLabel" name="linkErrorText">
+      <widget class="QLabel" name="linkErrorText4">
        <property name="geometry">
         <rect>
          <x>632</x>
@@ -2470,7 +2470,7 @@ QFrame#tableLine1, QFrame#tableLine2, QFrame#tableLine3 {
         <string>Inverter</string>
        </property>
       </widget>
-      <widget class="QLabel" name="tableHeaderLabel">
+      <widget class="QLabel" name="tableHeaderLabel2">
        <property name="geometry">
         <rect>
          <x>265</x>
@@ -2541,7 +2541,7 @@ QFrame#tableLine1, QFrame#tableLine2, QFrame#tableLine3 {
         <enum>QFrame::Shape::HLine</enum>
        </property>
       </widget>
-      <widget class="QLabel" name="tableRowLabel">
+      <widget class="QLabel" name="tableRowLabel2">
        <property name="geometry">
         <rect>
          <x>20</x>
@@ -2554,7 +2554,7 @@ QFrame#tableLine1, QFrame#tableLine2, QFrame#tableLine3 {
         <string>Inverter 2</string>
        </property>
       </widget>
-      <widget class="QLabel" name="tableRowValue">
+      <widget class="QLabel" name="tableRowValue2">
        <property name="geometry">
         <rect>
          <x>282</x>
@@ -2583,7 +2583,7 @@ QFrame#tableLine1, QFrame#tableLine2, QFrame#tableLine3 {
         <enum>QFrame::Shape::HLine</enum>
        </property>
       </widget>
-      <widget class="QLabel" name="tableRowLabel">
+      <widget class="QLabel" name="tableRowLabel3">
        <property name="geometry">
         <rect>
          <x>20</x>
@@ -2596,7 +2596,7 @@ QFrame#tableLine1, QFrame#tableLine2, QFrame#tableLine3 {
         <string>Inverter 3</string>
        </property>
       </widget>
-      <widget class="QLabel" name="tableRowValue">
+      <widget class="QLabel" name="tableRowValue3">
        <property name="geometry">
         <rect>
          <x>282</x>
@@ -2612,7 +2612,7 @@ QFrame#tableLine1, QFrame#tableLine2, QFrame#tableLine3 {
         <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
        </property>
       </widget>
-      <widget class="QLabel" name="tableRowLabel">
+      <widget class="QLabel" name="tableRowLabel4">
        <property name="geometry">
         <rect>
          <x>20</x>
@@ -2625,7 +2625,7 @@ QFrame#tableLine1, QFrame#tableLine2, QFrame#tableLine3 {
         <string>Inverter 4</string>
        </property>
       </widget>
-      <widget class="QLabel" name="tableRowValue">
+      <widget class="QLabel" name="tableRowValue4">
        <property name="geometry">
         <rect>
          <x>282</x>
@@ -4494,9 +4494,1215 @@ border-radius: 12px; </string>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 0, 0); 
+       <string notr="true">background-color: rgb(255, 0, 0);
 border-radius: 12px; </string>
       </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_10">
+     <property name="styleSheet">
+      <string notr="true">/* ===== Root ===== */
+QWidget#page_10 {
+    background-color: #000000;
+}
+
+/* ===== Card panels ===== */
+QFrame#cardSpeed,
+QFrame#cardTirePSI,
+QFrame#cardBrake,
+QFrame#cardThrottle {
+    background-color: #000000;
+    border: none;
+    border-radius: 8px;
+}
+
+QFrame#cardTireTemp {
+    background-color: #000000;
+    border: none;
+    border-radius: 8px;
+}
+
+QFrame#cardPitMode {
+    background-color: #FF1F1F;
+    border: none;
+    border-radius: 8px;
+}
+
+/* ===== Section headers ===== */
+QLabel#tireTempHeader,
+QLabel#tirePSIHeader,
+QLabel#maxCellHeader,
+QLabel#socHeader {
+    color: rgba(255, 255, 255, 140);
+    font-family: &quot;Roboto&quot;, sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    background: transparent;
+    border: none;
+}
+
+QLabel#tireFLLabel,
+QLabel#tireFRLabel,
+QLabel#tireRLLabel,
+QLabel#tireRRLabel,
+QLabel#psiFLLabel,
+QLabel#psiFRLabel,
+QLabel#psiRLLabel,
+QLabel#psiRRLabel {
+    color: rgba(255, 255, 255, 89);
+    font-family: &quot;Roboto&quot;, sans-serif;
+    font-size: 11px;
+    letter-spacing: 1px;
+    background: transparent;
+    border: none;
+}
+
+/* ===== Tire temp / PSI numbers ===== */
+QLabel#tireFLValue,
+QLabel#tireFRValue {
+    color: #EF9F27;
+    font-family: &quot;Roboto Mono&quot;, &quot;Courier New&quot;, monospace;
+    font-size: 34px;
+    font-weight: 500;
+    background: transparent;
+    border: none;
+}
+
+QLabel#tireRLValue,
+QLabel#tireRRValue {
+    color: #E24B4A;
+    font-family: &quot;Roboto Mono&quot;, &quot;Courier New&quot;, monospace;
+    font-size: 34px;
+    font-weight: 500;
+    background: transparent;
+    border: none;
+}
+
+QLabel#psiFLValue,
+QLabel#psiFRValue,
+QLabel#psiRLValue,
+QLabel#psiRRValue {
+    color: #FFFFFF;
+    font-family: &quot;Roboto Mono&quot;, &quot;Courier New&quot;, monospace;
+    font-size: 36px;
+    font-weight: 500;
+    background: transparent;
+    border: none;
+}
+
+/* ===== Speed ===== */
+QLabel#speedValue {
+    color: #FFFFFF;
+    font-family: &quot;Roboto Mono&quot;, &quot;Courier New&quot;, monospace;
+    font-size: 200px;
+    font-weight: 500;
+    background: transparent;
+    border: none;
+}
+
+QLabel#speedUnit {
+    color: rgba(255, 255, 255, 128);
+    font-family: &quot;Roboto&quot;, sans-serif;
+    font-size: 15px;
+    letter-spacing: 4px;
+    background: transparent;
+    border: none;
+}
+
+/* ===== Max Cell / SoC ===== */
+QLabel#maxCellValue {
+    color: #1D9E75;
+    font-family: &quot;Roboto Mono&quot;, &quot;Courier New&quot;, monospace;
+    font-size: 32px;
+    font-weight: 500;
+    background: transparent;
+    border: none;
+}
+
+QLabel#socValue {
+    color: #1D9E75;
+    font-family: &quot;Roboto Mono&quot;, &quot;Courier New&quot;, monospace;
+    font-size: 30px;
+    font-weight: 500;
+    background: transparent;
+    border: none;
+}
+
+/* ===== Scale labels ===== */
+QLabel#scaleLabel0,
+QLabel#scaleLabel15,
+QLabel#scaleLabel30 {
+    color: rgba(255, 255, 255, 102);
+    font-family: &quot;Roboto Mono&quot;, &quot;Courier New&quot;, monospace;
+    font-size: 16px;
+    background: transparent;
+    border: none;
+}
+
+QLabel#scaleLabel45 {
+    color: rgba(239, 159, 39, 230);
+    font-family: &quot;Roboto Mono&quot;, &quot;Courier New&quot;, monospace;
+    font-size: 16px;
+    background: transparent;
+    border: none;
+}
+
+QLabel#scaleLabel60,
+QLabel#scaleLabelDQ {
+    color: #E24B4A;
+    font-family: &quot;Roboto Mono&quot;, &quot;Courier New&quot;, monospace;
+    font-size: 16px;
+    font-weight: 500;
+    background: transparent;
+    border: none;
+}
+
+/* ===== Pit mode ===== */
+QLabel#pitModeLabel {
+    color: #000000;
+    font-family: &quot;Roboto&quot;, sans-serif;
+    font-size: 36px;
+    font-weight: 500;
+    letter-spacing: 9px;
+    background: transparent;
+    border: none;
+}
+
+/* ===== Pedal labels ===== */
+QLabel#brakeLabel,
+QLabel#throttleLabel {
+    color: rgba(255, 255, 255, 153);
+    font-family: &quot;Roboto&quot;, sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    background: transparent;
+    border: none;
+}
+
+/* ===== Separators ===== */
+QFrame#tireTempSep,
+QFrame#psiSep {
+    background-color: rgba(255, 255, 255, 31);
+    border: none;
+    max-height: 1px;
+    min-height: 1px;
+}
+
+/* ===== Progress bars ===== */
+QProgressBar#maxCellBar {
+    background-color: #000000;
+    border: 1px solid #EF9F27;
+    border-radius: 4px;
+    text-align: center;
+    color: transparent;
+}
+QProgressBar#maxCellBar::chunk {
+    background-color: #1D9E75;
+    border-radius: 3px;
+}
+
+QProgressBar#socBar {
+    background-color: #000000;
+    border: 1px solid #EF9F27;
+    border-radius: 3px;
+    text-align: center;
+    color: transparent;
+}
+QProgressBar#socBar::chunk {
+    background-color: #1D9E75;
+    border-radius: 2px;
+}
+
+QProgressBar#brakeBar {
+    background-color: #000000;
+    border: 1px solid #EF9F27;
+    border-radius: 4px;
+    text-align: center;
+    color: transparent;
+}
+QProgressBar#brakeBar::chunk {
+    background-color: #E24B4A;
+    border-radius: 3px;
+}
+
+QProgressBar#throttleBar {
+    background-color: #000000;
+    border: 1px solid #EF9F27;
+    border-radius: 4px;
+    text-align: center;
+    color: transparent;
+}
+QProgressBar#throttleBar::chunk {
+    background-color: #1D9E75;
+    border-radius: 3px;
+}
+</string>
+     </property>
+     <widget class="QFrame" name="cardTireTemp">
+      <property name="geometry">
+       <rect>
+        <x>14</x>
+        <y>14</y>
+        <width>220</width>
+        <height>319</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Shape::NoFrame</enum>
+      </property>
+      <widget class="QFrame" name="tireTempGrid">
+       <property name="geometry">
+        <rect>
+         <x>14</x>
+         <y>14</y>
+         <width>192</width>
+         <height>126</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>192</width>
+         <height>126</height>
+        </size>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::Shape::NoFrame</enum>
+       </property>
+       <widget class="QFrame" name="tireFLCell">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>90</width>
+          <height>60</height>
+         </rect>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::Shape::NoFrame</enum>
+        </property>
+        <widget class="QLabel" name="tireFLLabel">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>0</y>
+           <width>90</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>FL</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignmentFlag::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QLabel" name="tireFLValue">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>20</y>
+           <width>90</width>
+           <height>40</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>84</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignmentFlag::AlignCenter</set>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QFrame" name="tireFRCell">
+        <property name="geometry">
+         <rect>
+          <x>96</x>
+          <y>0</y>
+          <width>90</width>
+          <height>60</height>
+         </rect>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::Shape::NoFrame</enum>
+        </property>
+        <widget class="QLabel" name="tireFRLabel">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>0</y>
+           <width>90</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>FR</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignmentFlag::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QLabel" name="tireFRValue">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>20</y>
+           <width>90</width>
+           <height>40</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>82</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignmentFlag::AlignCenter</set>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QFrame" name="tireRLCell">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>66</y>
+          <width>90</width>
+          <height>60</height>
+         </rect>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::Shape::NoFrame</enum>
+        </property>
+        <widget class="QLabel" name="tireRLLabel">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>0</y>
+           <width>90</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>RL</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignmentFlag::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QLabel" name="tireRLValue">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>20</y>
+           <width>90</width>
+           <height>40</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>91</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignmentFlag::AlignCenter</set>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QFrame" name="tireRRCell">
+        <property name="geometry">
+         <rect>
+          <x>96</x>
+          <y>66</y>
+          <width>90</width>
+          <height>60</height>
+         </rect>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::Shape::NoFrame</enum>
+        </property>
+        <widget class="QLabel" name="tireRRLabel">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>0</y>
+           <width>90</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>RR</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignmentFlag::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QLabel" name="tireRRValue">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>20</y>
+           <width>90</width>
+           <height>40</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>93</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignmentFlag::AlignCenter</set>
+         </property>
+        </widget>
+       </widget>
+      </widget>
+      <widget class="QFrame" name="tireTempSep">
+       <property name="geometry">
+        <rect>
+         <x>14</x>
+         <y>153</y>
+         <width>192</width>
+         <height>1</height>
+        </rect>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::Shape::HLine</enum>
+       </property>
+       <property name="role" stdset="0">
+        <string>hsep</string>
+       </property>
+      </widget>
+      <widget class="QFrame" name="maxCellHeaderRow">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>170</y>
+         <width>192</width>
+         <height>42</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>40</height>
+        </size>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::Shape::NoFrame</enum>
+       </property>
+       <widget class="QLabel" name="maxCellHeader">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>192</width>
+          <height>40</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>MAX CELL</string>
+        </property>
+        <property name="role" stdset="0">
+         <string>sectionHeader</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="maxCellValue">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>192</width>
+          <height>40</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>43°</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QProgressBar" name="maxCellBar">
+       <property name="geometry">
+        <rect>
+         <x>14</x>
+         <y>220</y>
+         <width>192</width>
+         <height>40</height>
+        </rect>
+       </property>
+       <property name="minimum">
+        <number>0</number>
+       </property>
+       <property name="maximum">
+        <number>60</number>
+       </property>
+       <property name="value">
+        <number>43</number>
+       </property>
+       <property name="textVisible">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QFrame" name="scaleLabelsRow">
+       <property name="geometry">
+        <rect>
+         <x>14</x>
+         <y>272</y>
+         <width>192</width>
+         <height>50</height>
+        </rect>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::Shape::NoFrame</enum>
+       </property>
+       <widget class="QLabel" name="scaleLabel0">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>22</width>
+          <height>25</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>0</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
+        </property>
+        <property name="role" stdset="0">
+         <string>scaleLabel</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="scaleLabel15">
+        <property name="geometry">
+         <rect>
+          <x>34</x>
+          <y>0</y>
+          <width>28</width>
+          <height>25</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>15</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignmentFlag::AlignCenter</set>
+        </property>
+        <property name="role" stdset="0">
+         <string>scaleLabel</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="scaleLabel30">
+        <property name="geometry">
+         <rect>
+          <x>82</x>
+          <y>0</y>
+          <width>28</width>
+          <height>25</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>30</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignmentFlag::AlignCenter</set>
+        </property>
+        <property name="role" stdset="0">
+         <string>scaleLabel</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="scaleLabel45">
+        <property name="geometry">
+         <rect>
+          <x>130</x>
+          <y>0</y>
+          <width>28</width>
+          <height>25</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>45</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignmentFlag::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QLabel" name="scaleLabel60">
+        <property name="geometry">
+         <rect>
+          <x>162</x>
+          <y>0</y>
+          <width>30</width>
+          <height>25</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>60</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
+        </property>
+       </widget>
+       <widget class="QLabel" name="scaleLabelDQ">
+        <property name="geometry">
+         <rect>
+          <x>155</x>
+          <y>25</y>
+          <width>37</width>
+          <height>25</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>DQ</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+     <widget class="QFrame" name="cardSpeed">
+      <property name="geometry">
+       <rect>
+        <x>246</x>
+        <y>14</y>
+        <width>252</width>
+        <height>263</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Shape::NoFrame</enum>
+      </property>
+      <layout class="QVBoxLayout" name="speedLayout">
+       <property name="spacing">
+        <number>6</number>
+       </property>
+       <property name="leftMargin">
+        <number>6</number>
+       </property>
+       <property name="topMargin">
+        <number>6</number>
+       </property>
+       <property name="rightMargin">
+        <number>6</number>
+       </property>
+       <property name="bottomMargin">
+        <number>6</number>
+       </property>
+       <item>
+        <widget class="QLabel" name="speedValue">
+         <property name="text">
+          <string>72</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignmentFlag::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="speedUnit">
+         <property name="text">
+          <string>KM / H</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignmentFlag::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QFrame" name="cardTirePSI">
+      <property name="geometry">
+       <rect>
+        <x>529</x>
+        <y>14</y>
+        <width>228</width>
+        <height>319</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Shape::NoFrame</enum>
+      </property>
+      <widget class="QLabel" name="tirePSIHeader">
+       <property name="geometry">
+        <rect>
+         <x>14</x>
+         <y>14</y>
+         <width>74</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>TIRE PSI</string>
+       </property>
+       <property name="role" stdset="0">
+        <string>sectionHeader</string>
+       </property>
+      </widget>
+      <widget class="QFrame" name="tirePSIGrid">
+       <property name="geometry">
+        <rect>
+         <x>14</x>
+         <y>42</y>
+         <width>200</width>
+         <height>138</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>200</width>
+         <height>138</height>
+        </size>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::Shape::NoFrame</enum>
+       </property>
+       <widget class="QFrame" name="psiFLCell">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>90</width>
+          <height>66</height>
+         </rect>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::Shape::NoFrame</enum>
+        </property>
+        <widget class="QLabel" name="psiFLLabel">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>0</y>
+           <width>90</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>FL</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignmentFlag::AlignCenter</set>
+         </property>
+         <property name="role" stdset="0">
+          <string>cornerLabel</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="psiFLValue">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>20</y>
+           <width>90</width>
+           <height>46</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>12.4</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignmentFlag::AlignCenter</set>
+         </property>
+         <property name="role" stdset="0">
+          <string>tireValueWhite</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QFrame" name="psiFRCell">
+        <property name="geometry">
+         <rect>
+          <x>110</x>
+          <y>0</y>
+          <width>90</width>
+          <height>66</height>
+         </rect>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::Shape::NoFrame</enum>
+        </property>
+        <widget class="QLabel" name="psiFRLabel">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>0</y>
+           <width>90</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>FR</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignmentFlag::AlignCenter</set>
+         </property>
+         <property name="role" stdset="0">
+          <string>cornerLabel</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="psiFRValue">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>20</y>
+           <width>90</width>
+           <height>46</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>12.6</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignmentFlag::AlignCenter</set>
+         </property>
+         <property name="role" stdset="0">
+          <string>tireValueWhite</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QFrame" name="psiRLCell">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>72</y>
+          <width>90</width>
+          <height>66</height>
+         </rect>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::Shape::NoFrame</enum>
+        </property>
+        <widget class="QLabel" name="psiRLLabel">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>0</y>
+           <width>90</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>RL</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignmentFlag::AlignCenter</set>
+         </property>
+         <property name="role" stdset="0">
+          <string>cornerLabel</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="psiRLValue">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>20</y>
+           <width>90</width>
+           <height>46</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>12.1</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignmentFlag::AlignCenter</set>
+         </property>
+         <property name="role" stdset="0">
+          <string>tireValueWhite</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QFrame" name="psiRRCell">
+        <property name="geometry">
+         <rect>
+          <x>110</x>
+          <y>72</y>
+          <width>90</width>
+          <height>66</height>
+         </rect>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::Shape::NoFrame</enum>
+        </property>
+        <widget class="QLabel" name="psiRRLabel">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>0</y>
+           <width>90</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>RR</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignmentFlag::AlignCenter</set>
+         </property>
+         <property name="role" stdset="0">
+          <string>cornerLabel</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="psiRRValue">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>20</y>
+           <width>90</width>
+           <height>46</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>12.2</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignmentFlag::AlignCenter</set>
+         </property>
+         <property name="role" stdset="0">
+          <string>tireValueWhite</string>
+         </property>
+        </widget>
+       </widget>
+      </widget>
+      <widget class="QFrame" name="psiSep">
+       <property name="geometry">
+        <rect>
+         <x>14</x>
+         <y>195</y>
+         <width>200</width>
+         <height>1</height>
+        </rect>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::Shape::HLine</enum>
+       </property>
+       <property name="role" stdset="0">
+        <string>hsep</string>
+       </property>
+      </widget>
+      <widget class="QFrame" name="socHeaderRow">
+       <property name="geometry">
+        <rect>
+         <x>14</x>
+         <y>213</y>
+         <width>200</width>
+         <height>40</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>40</height>
+        </size>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::Shape::NoFrame</enum>
+       </property>
+       <widget class="QLabel" name="socHeader">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>192</width>
+          <height>40</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>SOC</string>
+        </property>
+        <property name="role" stdset="0">
+         <string>sectionHeader</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="socValue">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>0</y>
+          <width>192</width>
+          <height>40</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>68%</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QProgressBar" name="socBar">
+       <property name="geometry">
+        <rect>
+         <x>14</x>
+         <y>265</y>
+         <width>200</width>
+         <height>40</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>40</height>
+        </size>
+       </property>
+       <property name="minimum">
+        <number>0</number>
+       </property>
+       <property name="maximum">
+        <number>100</number>
+       </property>
+       <property name="value">
+        <number>68</number>
+       </property>
+       <property name="textVisible">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QFrame" name="cardBrake">
+      <property name="geometry">
+       <rect>
+        <x>14</x>
+        <y>345</y>
+        <width>201</width>
+        <height>82</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Shape::NoFrame</enum>
+      </property>
+      <widget class="QProgressBar" name="brakeBar">
+       <property name="geometry">
+        <rect>
+         <x>14</x>
+         <y>10</y>
+         <width>173</width>
+         <height>40</height>
+        </rect>
+       </property>
+       <property name="minimum">
+        <number>0</number>
+       </property>
+       <property name="maximum">
+        <number>100</number>
+       </property>
+       <property name="value">
+        <number>18</number>
+       </property>
+       <property name="textVisible">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="brakeLabel">
+       <property name="geometry">
+        <rect>
+         <x>14</x>
+         <y>58</y>
+         <width>173</width>
+         <height>24</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>BRAKE</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignmentFlag::AlignCenter</set>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QFrame" name="cardPitMode">
+      <property name="geometry">
+       <rect>
+        <x>246</x>
+        <y>345</y>
+        <width>267</width>
+        <height>75</height>
+       </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+        <horstretch>11</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Shape::StyledPanel</enum>
+      </property>
+      <layout class="QHBoxLayout" name="pitModeLayout">
+       <property name="spacing">
+        <number>16</number>
+       </property>
+       <property name="leftMargin">
+        <number>16</number>
+       </property>
+       <property name="topMargin">
+        <number>16</number>
+       </property>
+       <property name="rightMargin">
+        <number>16</number>
+       </property>
+       <property name="bottomMargin">
+        <number>16</number>
+       </property>
+       <item>
+        <widget class="QLabel" name="pitModeLabel">
+         <property name="text">
+          <string>PIT MODE</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignmentFlag::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QFrame" name="cardThrottle">
+      <property name="geometry">
+       <rect>
+        <x>529</x>
+        <y>345</y>
+        <width>228</width>
+        <height>82</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Shape::NoFrame</enum>
+      </property>
+      <widget class="QProgressBar" name="throttleBar">
+       <property name="geometry">
+        <rect>
+         <x>14</x>
+         <y>10</y>
+         <width>200</width>
+         <height>40</height>
+        </rect>
+       </property>
+       <property name="minimum">
+        <number>0</number>
+       </property>
+       <property name="maximum">
+        <number>100</number>
+       </property>
+       <property name="value">
+        <number>64</number>
+       </property>
+       <property name="textVisible">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="throttleLabel">
+       <property name="geometry">
+        <rect>
+         <x>14</x>
+         <y>58</y>
+         <width>200</width>
+         <height>24</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>THROTTLE</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignmentFlag::AlignCenter</set>
+       </property>
+      </widget>
      </widget>
     </widget>
    </widget>

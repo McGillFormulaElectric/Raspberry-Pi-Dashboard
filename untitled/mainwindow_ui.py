@@ -16,9 +16,10 @@ from PySide6.QtGui import (QAction, QBrush, QColor, QConicalGradient,
     QIcon, QImage, QKeySequence, QLinearGradient,
     QPainter, QPalette, QPixmap, QRadialGradient,
     QTransform)
-from PySide6.QtWidgets import (QApplication, QFrame, QHeaderView, QLabel,
-    QMainWindow, QProgressBar, QSizePolicy, QStackedWidget,
-    QStatusBar, QTableWidget, QTableWidgetItem, QWidget)
+from PySide6.QtWidgets import (QApplication, QFrame, QHBoxLayout, QHeaderView,
+    QLabel, QMainWindow, QProgressBar, QSizePolicy,
+    QStackedWidget, QStatusBar, QTableWidget, QTableWidgetItem,
+    QVBoxLayout, QWidget)
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -827,40 +828,40 @@ class Ui_MainWindow(object):
         self.can1_util_bar_2 = QWidget(self.page_6)
         self.can1_util_bar_2.setObjectName(u"can1_util_bar_2")
         self.can1_util_bar_2.setGeometry(QRect(112, 74, 80, 220))
-        self.barPercentStyle1 = QLabel(self.can1_util_bar_2)
-        self.barPercentStyle1.setObjectName(u"barPercentStyle1")
-        self.barPercentStyle1.setGeometry(QRect(0, 178, 80, 24))
-        self.barPercentStyle1.setAlignment(Qt.AlignmentFlag.AlignCenter)
-        self.can1_util_bar_3 = QWidget(self.page_6)
-        self.can1_util_bar_3.setObjectName(u"can1_util_bar_3")
-        self.can1_util_bar_3.setGeometry(QRect(206, 74, 80, 220))
-        self.barPercentStyle2 = QLabel(self.can1_util_bar_3)
+        self.barPercentStyle2 = QLabel(self.can1_util_bar_2)
         self.barPercentStyle2.setObjectName(u"barPercentStyle2")
         self.barPercentStyle2.setGeometry(QRect(0, 178, 80, 24))
         self.barPercentStyle2.setAlignment(Qt.AlignmentFlag.AlignCenter)
-        self.can1_util_bar_4 = QWidget(self.page_6)
-        self.can1_util_bar_4.setObjectName(u"can1_util_bar_4")
-        self.can1_util_bar_4.setGeometry(QRect(300, 74, 80, 220))
-        self.barPercentStyle3 = QLabel(self.can1_util_bar_4)
+        self.can1_util_bar_3 = QWidget(self.page_6)
+        self.can1_util_bar_3.setObjectName(u"can1_util_bar_3")
+        self.can1_util_bar_3.setGeometry(QRect(206, 74, 80, 220))
+        self.barPercentStyle3 = QLabel(self.can1_util_bar_3)
         self.barPercentStyle3.setObjectName(u"barPercentStyle3")
         self.barPercentStyle3.setGeometry(QRect(0, 178, 80, 24))
         self.barPercentStyle3.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.can1_util_bar_4 = QWidget(self.page_6)
+        self.can1_util_bar_4.setObjectName(u"can1_util_bar_4")
+        self.can1_util_bar_4.setGeometry(QRect(300, 74, 80, 220))
+        self.barPercentStyle4 = QLabel(self.can1_util_bar_4)
+        self.barPercentStyle4.setObjectName(u"barPercentStyle4")
+        self.barPercentStyle4.setGeometry(QRect(0, 178, 80, 24))
+        self.barPercentStyle4.setAlignment(Qt.AlignmentFlag.AlignCenter)
         self.canLabelStyle = QLabel(self.page_6)
         self.canLabelStyle.setObjectName(u"canLabelStyle")
         self.canLabelStyle.setGeometry(QRect(31, 300, 54, 34))
         self.canLabelStyle.setAlignment(Qt.AlignmentFlag.AlignHCenter|Qt.AlignmentFlag.AlignTop)
-        self.canLabelStyle1 = QLabel(self.page_6)
-        self.canLabelStyle1.setObjectName(u"canLabelStyle1")
-        self.canLabelStyle1.setGeometry(QRect(125, 300, 54, 34))
-        self.canLabelStyle1.setAlignment(Qt.AlignmentFlag.AlignHCenter|Qt.AlignmentFlag.AlignTop)
         self.canLabelStyle2 = QLabel(self.page_6)
         self.canLabelStyle2.setObjectName(u"canLabelStyle2")
-        self.canLabelStyle2.setGeometry(QRect(219, 300, 54, 34))
+        self.canLabelStyle2.setGeometry(QRect(125, 300, 54, 34))
         self.canLabelStyle2.setAlignment(Qt.AlignmentFlag.AlignHCenter|Qt.AlignmentFlag.AlignTop)
         self.canLabelStyle3 = QLabel(self.page_6)
         self.canLabelStyle3.setObjectName(u"canLabelStyle3")
-        self.canLabelStyle3.setGeometry(QRect(313, 300, 54, 34))
+        self.canLabelStyle3.setGeometry(QRect(219, 300, 54, 34))
         self.canLabelStyle3.setAlignment(Qt.AlignmentFlag.AlignHCenter|Qt.AlignmentFlag.AlignTop)
+        self.canLabelStyle4 = QLabel(self.page_6)
+        self.canLabelStyle4.setObjectName(u"canLabelStyle4")
+        self.canLabelStyle4.setGeometry(QRect(313, 300, 54, 34))
+        self.canLabelStyle4.setAlignment(Qt.AlignmentFlag.AlignHCenter|Qt.AlignmentFlag.AlignTop)
         self.linkErrorsCard = QWidget(self.page_6)
         self.linkErrorsCard.setObjectName(u"linkErrorsCard")
         self.linkErrorsCard.setGeometry(QRect(18, 332, 734, 96))
@@ -883,18 +884,18 @@ class Ui_MainWindow(object):
         self.linkErrorText.setObjectName(u"linkErrorText")
         self.linkErrorText.setGeometry(QRect(59, 70, 42, 18))
         self.linkErrorText.setAlignment(Qt.AlignmentFlag.AlignCenter)
-        self.linkErrorText1 = QLabel(self.linkErrorsCard)
-        self.linkErrorText1.setObjectName(u"linkErrorText1")
-        self.linkErrorText1.setGeometry(QRect(250, 70, 42, 18))
-        self.linkErrorText1.setAlignment(Qt.AlignmentFlag.AlignCenter)
         self.linkErrorText2 = QLabel(self.linkErrorsCard)
         self.linkErrorText2.setObjectName(u"linkErrorText2")
-        self.linkErrorText2.setGeometry(QRect(441, 70, 42, 18))
+        self.linkErrorText2.setGeometry(QRect(250, 70, 42, 18))
         self.linkErrorText2.setAlignment(Qt.AlignmentFlag.AlignCenter)
         self.linkErrorText3 = QLabel(self.linkErrorsCard)
         self.linkErrorText3.setObjectName(u"linkErrorText3")
-        self.linkErrorText3.setGeometry(QRect(632, 70, 42, 18))
+        self.linkErrorText3.setGeometry(QRect(441, 70, 42, 18))
         self.linkErrorText3.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.linkErrorText4 = QLabel(self.linkErrorsCard)
+        self.linkErrorText4.setObjectName(u"linkErrorText4")
+        self.linkErrorText4.setGeometry(QRect(632, 70, 42, 18))
+        self.linkErrorText4.setAlignment(Qt.AlignmentFlag.AlignCenter)
         self.inverte_code_table = QFrame(self.page_6)
         self.inverte_code_table.setObjectName(u"inverte_code_table")
         self.inverte_code_table.setGeometry(QRect(402, 74, 350, 220))
@@ -902,10 +903,10 @@ class Ui_MainWindow(object):
         self.tableHeaderLabel = QLabel(self.inverte_code_table)
         self.tableHeaderLabel.setObjectName(u"tableHeaderLabel")
         self.tableHeaderLabel.setGeometry(QRect(20, 14, 100, 22))
-        self.tableHeaderLabel1 = QLabel(self.inverte_code_table)
-        self.tableHeaderLabel1.setObjectName(u"tableHeaderLabel1")
-        self.tableHeaderLabel1.setGeometry(QRect(265, 14, 65, 22))
-        self.tableHeaderLabel1.setAlignment(Qt.AlignmentFlag.AlignRight|Qt.AlignmentFlag.AlignTrailing|Qt.AlignmentFlag.AlignVCenter)
+        self.tableHeaderLabel2 = QLabel(self.inverte_code_table)
+        self.tableHeaderLabel2.setObjectName(u"tableHeaderLabel2")
+        self.tableHeaderLabel2.setGeometry(QRect(265, 14, 65, 22))
+        self.tableHeaderLabel2.setAlignment(Qt.AlignmentFlag.AlignRight|Qt.AlignmentFlag.AlignTrailing|Qt.AlignmentFlag.AlignVCenter)
         self.tableLine1 = QFrame(self.inverte_code_table)
         self.tableLine1.setObjectName(u"tableLine1")
         self.tableLine1.setGeometry(QRect(20, 44, 310, 1))
@@ -921,31 +922,31 @@ class Ui_MainWindow(object):
         self.tableLine2.setObjectName(u"tableLine2")
         self.tableLine2.setGeometry(QRect(20, 90, 310, 1))
         self.tableLine2.setFrameShape(QFrame.Shape.HLine)
-        self.tableRowLabel1 = QLabel(self.inverte_code_table)
-        self.tableRowLabel1.setObjectName(u"tableRowLabel1")
-        self.tableRowLabel1.setGeometry(QRect(20, 104, 120, 20))
-        self.tableRowValue1 = QLabel(self.inverte_code_table)
-        self.tableRowValue1.setObjectName(u"tableRowValue1")
-        self.tableRowValue1.setGeometry(QRect(282, 104, 48, 20))
-        self.tableRowValue1.setAlignment(Qt.AlignmentFlag.AlignRight|Qt.AlignmentFlag.AlignTrailing|Qt.AlignmentFlag.AlignVCenter)
+        self.tableRowLabel2 = QLabel(self.inverte_code_table)
+        self.tableRowLabel2.setObjectName(u"tableRowLabel2")
+        self.tableRowLabel2.setGeometry(QRect(20, 104, 120, 20))
+        self.tableRowValue2 = QLabel(self.inverte_code_table)
+        self.tableRowValue2.setObjectName(u"tableRowValue2")
+        self.tableRowValue2.setGeometry(QRect(282, 104, 48, 20))
+        self.tableRowValue2.setAlignment(Qt.AlignmentFlag.AlignRight|Qt.AlignmentFlag.AlignTrailing|Qt.AlignmentFlag.AlignVCenter)
         self.tableLine3 = QFrame(self.inverte_code_table)
         self.tableLine3.setObjectName(u"tableLine3")
         self.tableLine3.setGeometry(QRect(20, 136, 310, 1))
         self.tableLine3.setFrameShape(QFrame.Shape.HLine)
-        self.tableRowLabel2 = QLabel(self.inverte_code_table)
-        self.tableRowLabel2.setObjectName(u"tableRowLabel2")
-        self.tableRowLabel2.setGeometry(QRect(20, 150, 120, 20))
-        self.tableRowValue2 = QLabel(self.inverte_code_table)
-        self.tableRowValue2.setObjectName(u"tableRowValue2")
-        self.tableRowValue2.setGeometry(QRect(282, 150, 48, 20))
-        self.tableRowValue2.setAlignment(Qt.AlignmentFlag.AlignRight|Qt.AlignmentFlag.AlignTrailing|Qt.AlignmentFlag.AlignVCenter)
         self.tableRowLabel3 = QLabel(self.inverte_code_table)
         self.tableRowLabel3.setObjectName(u"tableRowLabel3")
-        self.tableRowLabel3.setGeometry(QRect(20, 186, 120, 20))
+        self.tableRowLabel3.setGeometry(QRect(20, 150, 120, 20))
         self.tableRowValue3 = QLabel(self.inverte_code_table)
         self.tableRowValue3.setObjectName(u"tableRowValue3")
-        self.tableRowValue3.setGeometry(QRect(282, 186, 48, 20))
+        self.tableRowValue3.setGeometry(QRect(282, 150, 48, 20))
         self.tableRowValue3.setAlignment(Qt.AlignmentFlag.AlignRight|Qt.AlignmentFlag.AlignTrailing|Qt.AlignmentFlag.AlignVCenter)
+        self.tableRowLabel4 = QLabel(self.inverte_code_table)
+        self.tableRowLabel4.setObjectName(u"tableRowLabel4")
+        self.tableRowLabel4.setGeometry(QRect(20, 186, 120, 20))
+        self.tableRowValue4 = QLabel(self.inverte_code_table)
+        self.tableRowValue4.setObjectName(u"tableRowValue4")
+        self.tableRowValue4.setGeometry(QRect(282, 186, 48, 20))
+        self.tableRowValue4.setAlignment(Qt.AlignmentFlag.AlignRight|Qt.AlignmentFlag.AlignTrailing|Qt.AlignmentFlag.AlignVCenter)
         self.stackedWidget.addWidget(self.page_6)
         self.page_2 = QWidget()
         self.page_2.setObjectName(u"page_2")
@@ -1536,9 +1537,516 @@ class Ui_MainWindow(object):
         self.led_cell_volt_3 = QWidget(self.page_9)
         self.led_cell_volt_3.setObjectName(u"led_cell_volt_3")
         self.led_cell_volt_3.setGeometry(QRect(10, 70, 24, 24))
-        self.led_cell_volt_3.setStyleSheet(u"background-color: rgb(255, 0, 0); \n"
+        self.led_cell_volt_3.setStyleSheet(u"background-color: rgb(255, 0, 0);\n"
 "border-radius: 12px; ")
         self.stackedWidget.addWidget(self.page_9)
+        self.page_10 = QWidget()
+        self.page_10.setObjectName(u"page_10")
+        self.page_10.setStyleSheet(u"/* ===== Root ===== */\n"
+"QWidget#page_10 {\n"
+"    background-color: #000000;\n"
+"}\n"
+"\n"
+"/* ===== Card panels ===== */\n"
+"QFrame#cardSpeed,\n"
+"QFrame#cardTirePSI,\n"
+"QFrame#cardBrake,\n"
+"QFrame#cardThrottle {\n"
+"    background-color: #000000;\n"
+"    border: none;\n"
+"    border-radius: 8px;\n"
+"}\n"
+"\n"
+"QFrame#cardTireTemp {\n"
+"    background-color: #000000;\n"
+"    border: none;\n"
+"    border-radius: 8px;\n"
+"}\n"
+"\n"
+"QFrame#cardPitMode {\n"
+"    background-color: #FF1F1F;\n"
+"    border: none;\n"
+"    border-radius: 8px;\n"
+"}\n"
+"\n"
+"/* ===== Section headers ===== */\n"
+"QLabel#tireTempHeader,\n"
+"QLabel#tirePSIHeader,\n"
+"QLabel#maxCellHeader,\n"
+"QLabel#socHeader {\n"
+"    color: rgba(255, 255, 255, 140);\n"
+"    font-family: \"Roboto\", sans-serif;\n"
+"    font-size: 13px;\n"
+"    font-weight: 500;\n"
+"    letter-spacing: 3px;\n"
+"    background: transparent;\n"
+"    border: none;\n"
+"}\n"
+"\n"
+"QLabel#tireFLLabel,\n"
+"QLabel#tireFRLabel,\n"
+"QLabel#tireRLLabel,\n"
+"QLabel#tireRRLabel,"
+                        "\n"
+"QLabel#psiFLLabel,\n"
+"QLabel#psiFRLabel,\n"
+"QLabel#psiRLLabel,\n"
+"QLabel#psiRRLabel {\n"
+"    color: rgba(255, 255, 255, 89);\n"
+"    font-family: \"Roboto\", sans-serif;\n"
+"    font-size: 11px;\n"
+"    letter-spacing: 1px;\n"
+"    background: transparent;\n"
+"    border: none;\n"
+"}\n"
+"\n"
+"/* ===== Tire temp / PSI numbers ===== */\n"
+"QLabel#tireFLValue,\n"
+"QLabel#tireFRValue {\n"
+"    color: #EF9F27;\n"
+"    font-family: \"Roboto Mono\", \"Courier New\", monospace;\n"
+"    font-size: 34px;\n"
+"    font-weight: 500;\n"
+"    background: transparent;\n"
+"    border: none;\n"
+"}\n"
+"\n"
+"QLabel#tireRLValue,\n"
+"QLabel#tireRRValue {\n"
+"    color: #E24B4A;\n"
+"    font-family: \"Roboto Mono\", \"Courier New\", monospace;\n"
+"    font-size: 34px;\n"
+"    font-weight: 500;\n"
+"    background: transparent;\n"
+"    border: none;\n"
+"}\n"
+"\n"
+"QLabel#psiFLValue,\n"
+"QLabel#psiFRValue,\n"
+"QLabel#psiRLValue,\n"
+"QLabel#psiRRValue {\n"
+"    color: #FFFFFF;\n"
+"    font-family: \"Roboto Mono\", \"Courier New"
+                        "\", monospace;\n"
+"    font-size: 36px;\n"
+"    font-weight: 500;\n"
+"    background: transparent;\n"
+"    border: none;\n"
+"}\n"
+"\n"
+"/* ===== Speed ===== */\n"
+"QLabel#speedValue {\n"
+"    color: #FFFFFF;\n"
+"    font-family: \"Roboto Mono\", \"Courier New\", monospace;\n"
+"    font-size: 200px;\n"
+"    font-weight: 500;\n"
+"    background: transparent;\n"
+"    border: none;\n"
+"}\n"
+"\n"
+"QLabel#speedUnit {\n"
+"    color: rgba(255, 255, 255, 128);\n"
+"    font-family: \"Roboto\", sans-serif;\n"
+"    font-size: 15px;\n"
+"    letter-spacing: 4px;\n"
+"    background: transparent;\n"
+"    border: none;\n"
+"}\n"
+"\n"
+"/* ===== Max Cell / SoC ===== */\n"
+"QLabel#maxCellValue {\n"
+"    color: #1D9E75;\n"
+"    font-family: \"Roboto Mono\", \"Courier New\", monospace;\n"
+"    font-size: 32px;\n"
+"    font-weight: 500;\n"
+"    background: transparent;\n"
+"    border: none;\n"
+"}\n"
+"\n"
+"QLabel#socValue {\n"
+"    color: #1D9E75;\n"
+"    font-family: \"Roboto Mono\", \"Courier New\", monospace;\n"
+"    font-size: 30p"
+                        "x;\n"
+"    font-weight: 500;\n"
+"    background: transparent;\n"
+"    border: none;\n"
+"}\n"
+"\n"
+"/* ===== Scale labels ===== */\n"
+"QLabel#scaleLabel0,\n"
+"QLabel#scaleLabel15,\n"
+"QLabel#scaleLabel30 {\n"
+"    color: rgba(255, 255, 255, 102);\n"
+"    font-family: \"Roboto Mono\", \"Courier New\", monospace;\n"
+"    font-size: 16px;\n"
+"    background: transparent;\n"
+"    border: none;\n"
+"}\n"
+"\n"
+"QLabel#scaleLabel45 {\n"
+"    color: rgba(239, 159, 39, 230);\n"
+"    font-family: \"Roboto Mono\", \"Courier New\", monospace;\n"
+"    font-size: 16px;\n"
+"    background: transparent;\n"
+"    border: none;\n"
+"}\n"
+"\n"
+"QLabel#scaleLabel60,\n"
+"QLabel#scaleLabelDQ {\n"
+"    color: #E24B4A;\n"
+"    font-family: \"Roboto Mono\", \"Courier New\", monospace;\n"
+"    font-size: 16px;\n"
+"    font-weight: 500;\n"
+"    background: transparent;\n"
+"    border: none;\n"
+"}\n"
+"\n"
+"/* ===== Pit mode ===== */\n"
+"QLabel#pitModeLabel {\n"
+"    color: #000000;\n"
+"    font-family: \"Roboto\", sans-serif;\n"
+"    font-si"
+                        "ze: 36px;\n"
+"    font-weight: 500;\n"
+"    letter-spacing: 9px;\n"
+"    background: transparent;\n"
+"    border: none;\n"
+"}\n"
+"\n"
+"/* ===== Pedal labels ===== */\n"
+"QLabel#brakeLabel,\n"
+"QLabel#throttleLabel {\n"
+"    color: rgba(255, 255, 255, 153);\n"
+"    font-family: \"Roboto\", sans-serif;\n"
+"    font-size: 12px;\n"
+"    font-weight: 500;\n"
+"    letter-spacing: 3px;\n"
+"    background: transparent;\n"
+"    border: none;\n"
+"}\n"
+"\n"
+"/* ===== Separators ===== */\n"
+"QFrame#tireTempSep,\n"
+"QFrame#psiSep {\n"
+"    background-color: rgba(255, 255, 255, 31);\n"
+"    border: none;\n"
+"    max-height: 1px;\n"
+"    min-height: 1px;\n"
+"}\n"
+"\n"
+"/* ===== Progress bars ===== */\n"
+"QProgressBar#maxCellBar {\n"
+"    background-color: #000000;\n"
+"    border: 1px solid #EF9F27;\n"
+"    border-radius: 4px;\n"
+"    text-align: center;\n"
+"    color: transparent;\n"
+"}\n"
+"QProgressBar#maxCellBar::chunk {\n"
+"    background-color: #1D9E75;\n"
+"    border-radius: 3px;\n"
+"}\n"
+"\n"
+"QProgressBar#socBar {\n"
+""
+                        "    background-color: #000000;\n"
+"    border: 1px solid #EF9F27;\n"
+"    border-radius: 3px;\n"
+"    text-align: center;\n"
+"    color: transparent;\n"
+"}\n"
+"QProgressBar#socBar::chunk {\n"
+"    background-color: #1D9E75;\n"
+"    border-radius: 2px;\n"
+"}\n"
+"\n"
+"QProgressBar#brakeBar {\n"
+"    background-color: #000000;\n"
+"    border: 1px solid #EF9F27;\n"
+"    border-radius: 4px;\n"
+"    text-align: center;\n"
+"    color: transparent;\n"
+"}\n"
+"QProgressBar#brakeBar::chunk {\n"
+"    background-color: #E24B4A;\n"
+"    border-radius: 3px;\n"
+"}\n"
+"\n"
+"QProgressBar#throttleBar {\n"
+"    background-color: #000000;\n"
+"    border: 1px solid #EF9F27;\n"
+"    border-radius: 4px;\n"
+"    text-align: center;\n"
+"    color: transparent;\n"
+"}\n"
+"QProgressBar#throttleBar::chunk {\n"
+"    background-color: #1D9E75;\n"
+"    border-radius: 3px;\n"
+"}\n"
+"")
+        self.cardTireTemp = QFrame(self.page_10)
+        self.cardTireTemp.setObjectName(u"cardTireTemp")
+        self.cardTireTemp.setGeometry(QRect(14, 14, 220, 319))
+        self.cardTireTemp.setFrameShape(QFrame.Shape.NoFrame)
+        self.tireTempGrid = QFrame(self.cardTireTemp)
+        self.tireTempGrid.setObjectName(u"tireTempGrid")
+        self.tireTempGrid.setGeometry(QRect(14, 14, 192, 126))
+        self.tireTempGrid.setMinimumSize(QSize(192, 126))
+        self.tireTempGrid.setFrameShape(QFrame.Shape.NoFrame)
+        self.tireFLCell = QFrame(self.tireTempGrid)
+        self.tireFLCell.setObjectName(u"tireFLCell")
+        self.tireFLCell.setGeometry(QRect(0, 0, 90, 60))
+        self.tireFLCell.setFrameShape(QFrame.Shape.NoFrame)
+        self.tireFLLabel = QLabel(self.tireFLCell)
+        self.tireFLLabel.setObjectName(u"tireFLLabel")
+        self.tireFLLabel.setGeometry(QRect(0, 0, 90, 20))
+        self.tireFLLabel.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.tireFLValue = QLabel(self.tireFLCell)
+        self.tireFLValue.setObjectName(u"tireFLValue")
+        self.tireFLValue.setGeometry(QRect(0, 20, 90, 40))
+        self.tireFLValue.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.tireFRCell = QFrame(self.tireTempGrid)
+        self.tireFRCell.setObjectName(u"tireFRCell")
+        self.tireFRCell.setGeometry(QRect(96, 0, 90, 60))
+        self.tireFRCell.setFrameShape(QFrame.Shape.NoFrame)
+        self.tireFRLabel = QLabel(self.tireFRCell)
+        self.tireFRLabel.setObjectName(u"tireFRLabel")
+        self.tireFRLabel.setGeometry(QRect(0, 0, 90, 20))
+        self.tireFRLabel.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.tireFRValue = QLabel(self.tireFRCell)
+        self.tireFRValue.setObjectName(u"tireFRValue")
+        self.tireFRValue.setGeometry(QRect(0, 20, 90, 40))
+        self.tireFRValue.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.tireRLCell = QFrame(self.tireTempGrid)
+        self.tireRLCell.setObjectName(u"tireRLCell")
+        self.tireRLCell.setGeometry(QRect(0, 66, 90, 60))
+        self.tireRLCell.setFrameShape(QFrame.Shape.NoFrame)
+        self.tireRLLabel = QLabel(self.tireRLCell)
+        self.tireRLLabel.setObjectName(u"tireRLLabel")
+        self.tireRLLabel.setGeometry(QRect(0, 0, 90, 20))
+        self.tireRLLabel.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.tireRLValue = QLabel(self.tireRLCell)
+        self.tireRLValue.setObjectName(u"tireRLValue")
+        self.tireRLValue.setGeometry(QRect(0, 20, 90, 40))
+        self.tireRLValue.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.tireRRCell = QFrame(self.tireTempGrid)
+        self.tireRRCell.setObjectName(u"tireRRCell")
+        self.tireRRCell.setGeometry(QRect(96, 66, 90, 60))
+        self.tireRRCell.setFrameShape(QFrame.Shape.NoFrame)
+        self.tireRRLabel = QLabel(self.tireRRCell)
+        self.tireRRLabel.setObjectName(u"tireRRLabel")
+        self.tireRRLabel.setGeometry(QRect(0, 0, 90, 20))
+        self.tireRRLabel.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.tireRRValue = QLabel(self.tireRRCell)
+        self.tireRRValue.setObjectName(u"tireRRValue")
+        self.tireRRValue.setGeometry(QRect(0, 20, 90, 40))
+        self.tireRRValue.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.tireTempSep = QFrame(self.cardTireTemp)
+        self.tireTempSep.setObjectName(u"tireTempSep")
+        self.tireTempSep.setGeometry(QRect(14, 153, 192, 1))
+        self.tireTempSep.setFrameShape(QFrame.Shape.HLine)
+        self.maxCellHeaderRow = QFrame(self.cardTireTemp)
+        self.maxCellHeaderRow.setObjectName(u"maxCellHeaderRow")
+        self.maxCellHeaderRow.setGeometry(QRect(14, 167, 192, 42))
+        self.maxCellHeaderRow.setMinimumSize(QSize(0, 40))
+        self.maxCellHeaderRow.setFrameShape(QFrame.Shape.NoFrame)
+        self.maxCellHeader = QLabel(self.maxCellHeaderRow)
+        self.maxCellHeader.setObjectName(u"maxCellHeader")
+        self.maxCellHeader.setGeometry(QRect(0, 0, 192, 40))
+        self.maxCellValue = QLabel(self.maxCellHeaderRow)
+        self.maxCellValue.setObjectName(u"maxCellValue")
+        self.maxCellValue.setGeometry(QRect(0, 0, 192, 40))
+        self.maxCellValue.setAlignment(Qt.AlignmentFlag.AlignRight|Qt.AlignmentFlag.AlignTrailing|Qt.AlignmentFlag.AlignVCenter)
+        self.maxCellBar = QProgressBar(self.cardTireTemp)
+        self.maxCellBar.setObjectName(u"maxCellBar")
+        self.maxCellBar.setGeometry(QRect(14, 220, 192, 40))
+        self.maxCellBar.setMinimum(0)
+        self.maxCellBar.setMaximum(60)
+        self.maxCellBar.setValue(43)
+        self.maxCellBar.setTextVisible(False)
+        self.scaleLabelsRow = QFrame(self.cardTireTemp)
+        self.scaleLabelsRow.setObjectName(u"scaleLabelsRow")
+        self.scaleLabelsRow.setGeometry(QRect(14, 272, 192, 50))
+        self.scaleLabelsRow.setFrameShape(QFrame.Shape.NoFrame)
+        self.scaleLabel0 = QLabel(self.scaleLabelsRow)
+        self.scaleLabel0.setObjectName(u"scaleLabel0")
+        self.scaleLabel0.setGeometry(QRect(0, 0, 22, 25))
+        self.scaleLabel0.setAlignment(Qt.AlignmentFlag.AlignLeading|Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
+        self.scaleLabel15 = QLabel(self.scaleLabelsRow)
+        self.scaleLabel15.setObjectName(u"scaleLabel15")
+        self.scaleLabel15.setGeometry(QRect(34, 0, 28, 25))
+        self.scaleLabel15.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.scaleLabel30 = QLabel(self.scaleLabelsRow)
+        self.scaleLabel30.setObjectName(u"scaleLabel30")
+        self.scaleLabel30.setGeometry(QRect(82, 0, 28, 25))
+        self.scaleLabel30.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.scaleLabel45 = QLabel(self.scaleLabelsRow)
+        self.scaleLabel45.setObjectName(u"scaleLabel45")
+        self.scaleLabel45.setGeometry(QRect(130, 0, 28, 25))
+        self.scaleLabel45.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.scaleLabel60 = QLabel(self.scaleLabelsRow)
+        self.scaleLabel60.setObjectName(u"scaleLabel60")
+        self.scaleLabel60.setGeometry(QRect(162, 0, 30, 25))
+        self.scaleLabel60.setAlignment(Qt.AlignmentFlag.AlignRight|Qt.AlignmentFlag.AlignTrailing|Qt.AlignmentFlag.AlignVCenter)
+        self.scaleLabelDQ = QLabel(self.scaleLabelsRow)
+        self.scaleLabelDQ.setObjectName(u"scaleLabelDQ")
+        self.scaleLabelDQ.setGeometry(QRect(155, 25, 37, 25))
+        self.scaleLabelDQ.setAlignment(Qt.AlignmentFlag.AlignRight|Qt.AlignmentFlag.AlignTrailing|Qt.AlignmentFlag.AlignVCenter)
+        self.cardSpeed = QFrame(self.page_10)
+        self.cardSpeed.setObjectName(u"cardSpeed")
+        self.cardSpeed.setGeometry(QRect(246, 14, 252, 263))
+        self.cardSpeed.setFrameShape(QFrame.Shape.NoFrame)
+        self.speedLayout = QVBoxLayout(self.cardSpeed)
+        self.speedLayout.setSpacing(6)
+        self.speedLayout.setObjectName(u"speedLayout")
+        self.speedLayout.setContentsMargins(6, 6, 6, 6)
+        self.speedValue = QLabel(self.cardSpeed)
+        self.speedValue.setObjectName(u"speedValue")
+        self.speedValue.setAlignment(Qt.AlignmentFlag.AlignCenter)
+
+        self.speedLayout.addWidget(self.speedValue)
+
+        self.speedUnit = QLabel(self.cardSpeed)
+        self.speedUnit.setObjectName(u"speedUnit")
+        self.speedUnit.setAlignment(Qt.AlignmentFlag.AlignCenter)
+
+        self.speedLayout.addWidget(self.speedUnit)
+
+        self.cardTirePSI = QFrame(self.page_10)
+        self.cardTirePSI.setObjectName(u"cardTirePSI")
+        self.cardTirePSI.setGeometry(QRect(529, 14, 228, 319))
+        self.cardTirePSI.setFrameShape(QFrame.Shape.NoFrame)
+        self.tirePSIHeader = QLabel(self.cardTirePSI)
+        self.tirePSIHeader.setObjectName(u"tirePSIHeader")
+        self.tirePSIHeader.setGeometry(QRect(14, 14, 74, 16))
+        self.tirePSIGrid = QFrame(self.cardTirePSI)
+        self.tirePSIGrid.setObjectName(u"tirePSIGrid")
+        self.tirePSIGrid.setGeometry(QRect(14, 42, 200, 138))
+        self.tirePSIGrid.setMinimumSize(QSize(200, 138))
+        self.tirePSIGrid.setFrameShape(QFrame.Shape.NoFrame)
+        self.psiFLCell = QFrame(self.tirePSIGrid)
+        self.psiFLCell.setObjectName(u"psiFLCell")
+        self.psiFLCell.setGeometry(QRect(0, 0, 90, 66))
+        self.psiFLCell.setFrameShape(QFrame.Shape.NoFrame)
+        self.psiFLLabel = QLabel(self.psiFLCell)
+        self.psiFLLabel.setObjectName(u"psiFLLabel")
+        self.psiFLLabel.setGeometry(QRect(0, 0, 90, 20))
+        self.psiFLLabel.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.psiFLValue = QLabel(self.psiFLCell)
+        self.psiFLValue.setObjectName(u"psiFLValue")
+        self.psiFLValue.setGeometry(QRect(0, 20, 90, 46))
+        self.psiFLValue.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.psiFRCell = QFrame(self.tirePSIGrid)
+        self.psiFRCell.setObjectName(u"psiFRCell")
+        self.psiFRCell.setGeometry(QRect(110, 0, 90, 66))
+        self.psiFRCell.setFrameShape(QFrame.Shape.NoFrame)
+        self.psiFRLabel = QLabel(self.psiFRCell)
+        self.psiFRLabel.setObjectName(u"psiFRLabel")
+        self.psiFRLabel.setGeometry(QRect(0, 0, 90, 20))
+        self.psiFRLabel.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.psiFRValue = QLabel(self.psiFRCell)
+        self.psiFRValue.setObjectName(u"psiFRValue")
+        self.psiFRValue.setGeometry(QRect(0, 20, 90, 46))
+        self.psiFRValue.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.psiRLCell = QFrame(self.tirePSIGrid)
+        self.psiRLCell.setObjectName(u"psiRLCell")
+        self.psiRLCell.setGeometry(QRect(0, 72, 90, 66))
+        self.psiRLCell.setFrameShape(QFrame.Shape.NoFrame)
+        self.psiRLLabel = QLabel(self.psiRLCell)
+        self.psiRLLabel.setObjectName(u"psiRLLabel")
+        self.psiRLLabel.setGeometry(QRect(0, 0, 90, 20))
+        self.psiRLLabel.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.psiRLValue = QLabel(self.psiRLCell)
+        self.psiRLValue.setObjectName(u"psiRLValue")
+        self.psiRLValue.setGeometry(QRect(0, 20, 90, 46))
+        self.psiRLValue.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.psiRRCell = QFrame(self.tirePSIGrid)
+        self.psiRRCell.setObjectName(u"psiRRCell")
+        self.psiRRCell.setGeometry(QRect(110, 72, 90, 66))
+        self.psiRRCell.setFrameShape(QFrame.Shape.NoFrame)
+        self.psiRRLabel = QLabel(self.psiRRCell)
+        self.psiRRLabel.setObjectName(u"psiRRLabel")
+        self.psiRRLabel.setGeometry(QRect(0, 0, 90, 20))
+        self.psiRRLabel.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.psiRRValue = QLabel(self.psiRRCell)
+        self.psiRRValue.setObjectName(u"psiRRValue")
+        self.psiRRValue.setGeometry(QRect(0, 20, 90, 46))
+        self.psiRRValue.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.psiSep = QFrame(self.cardTirePSI)
+        self.psiSep.setObjectName(u"psiSep")
+        self.psiSep.setGeometry(QRect(14, 195, 200, 1))
+        self.psiSep.setFrameShape(QFrame.Shape.HLine)
+        self.socHeaderRow = QFrame(self.cardTirePSI)
+        self.socHeaderRow.setObjectName(u"socHeaderRow")
+        self.socHeaderRow.setGeometry(QRect(14, 213, 200, 40))
+        self.socHeaderRow.setMinimumSize(QSize(0, 40))
+        self.socHeaderRow.setFrameShape(QFrame.Shape.NoFrame)
+        self.socHeader = QLabel(self.socHeaderRow)
+        self.socHeader.setObjectName(u"socHeader")
+        self.socHeader.setGeometry(QRect(0, 0, 192, 40))
+        self.socValue = QLabel(self.socHeaderRow)
+        self.socValue.setObjectName(u"socValue")
+        self.socValue.setGeometry(QRect(10, 0, 192, 40))
+        self.socValue.setAlignment(Qt.AlignmentFlag.AlignRight|Qt.AlignmentFlag.AlignTrailing|Qt.AlignmentFlag.AlignVCenter)
+        self.socBar = QProgressBar(self.cardTirePSI)
+        self.socBar.setObjectName(u"socBar")
+        self.socBar.setGeometry(QRect(14, 265, 200, 40))
+        self.socBar.setMinimumSize(QSize(0, 40))
+        self.socBar.setMinimum(0)
+        self.socBar.setMaximum(100)
+        self.socBar.setValue(68)
+        self.socBar.setTextVisible(False)
+        self.cardBrake = QFrame(self.page_10)
+        self.cardBrake.setObjectName(u"cardBrake")
+        self.cardBrake.setGeometry(QRect(14, 345, 201, 82))
+        self.cardBrake.setFrameShape(QFrame.Shape.NoFrame)
+        self.brakeBar = QProgressBar(self.cardBrake)
+        self.brakeBar.setObjectName(u"brakeBar")
+        self.brakeBar.setGeometry(QRect(14, 10, 173, 40))
+        self.brakeBar.setMinimum(0)
+        self.brakeBar.setMaximum(100)
+        self.brakeBar.setValue(18)
+        self.brakeBar.setTextVisible(False)
+        self.brakeLabel = QLabel(self.cardBrake)
+        self.brakeLabel.setObjectName(u"brakeLabel")
+        self.brakeLabel.setGeometry(QRect(14, 58, 173, 24))
+        self.brakeLabel.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.cardPitMode = QFrame(self.page_10)
+        self.cardPitMode.setObjectName(u"cardPitMode")
+        self.cardPitMode.setGeometry(QRect(246, 345, 267, 75))
+        sizePolicy = QSizePolicy(QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Preferred)
+        sizePolicy.setHorizontalStretch(11)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.cardPitMode.sizePolicy().hasHeightForWidth())
+        self.cardPitMode.setSizePolicy(sizePolicy)
+        self.cardPitMode.setFrameShape(QFrame.Shape.StyledPanel)
+        self.pitModeLayout = QHBoxLayout(self.cardPitMode)
+        self.pitModeLayout.setSpacing(16)
+        self.pitModeLayout.setObjectName(u"pitModeLayout")
+        self.pitModeLayout.setContentsMargins(16, 16, 16, 16)
+        self.pitModeLabel = QLabel(self.cardPitMode)
+        self.pitModeLabel.setObjectName(u"pitModeLabel")
+        self.pitModeLabel.setAlignment(Qt.AlignmentFlag.AlignCenter)
+
+        self.pitModeLayout.addWidget(self.pitModeLabel)
+
+        self.cardThrottle = QFrame(self.page_10)
+        self.cardThrottle.setObjectName(u"cardThrottle")
+        self.cardThrottle.setGeometry(QRect(529, 345, 228, 82))
+        self.cardThrottle.setFrameShape(QFrame.Shape.NoFrame)
+        self.throttleBar = QProgressBar(self.cardThrottle)
+        self.throttleBar.setObjectName(u"throttleBar")
+        self.throttleBar.setGeometry(QRect(14, 10, 200, 40))
+        self.throttleBar.setMinimum(0)
+        self.throttleBar.setMaximum(100)
+        self.throttleBar.setValue(64)
+        self.throttleBar.setTextVisible(False)
+        self.throttleLabel = QLabel(self.cardThrottle)
+        self.throttleLabel.setObjectName(u"throttleLabel")
+        self.throttleLabel.setGeometry(QRect(14, 58, 200, 24))
+        self.throttleLabel.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.stackedWidget.addWidget(self.page_10)
         MainWindow.setCentralWidget(self.centralwidget)
         self.statusbar = QStatusBar(MainWindow)
         self.statusbar.setObjectName(u"statusbar")
@@ -1546,7 +2054,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.stackedWidget.setCurrentIndex(0)
+        self.stackedWidget.setCurrentIndex(9)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
@@ -1647,29 +2155,29 @@ class Ui_MainWindow(object):
         self.page6Dot.setText(QCoreApplication.translate("MainWindow", u"\u25cf", None))
         self.page6Title.setText(QCoreApplication.translate("MainWindow", u"INVERTER MONITOR", None))
         self.barPercentStyle.setText(QCoreApplication.translate("MainWindow", u"100%", None))
-        self.barPercentStyle1.setText(QCoreApplication.translate("MainWindow", u"100%", None))
         self.barPercentStyle2.setText(QCoreApplication.translate("MainWindow", u"100%", None))
         self.barPercentStyle3.setText(QCoreApplication.translate("MainWindow", u"100%", None))
+        self.barPercentStyle4.setText(QCoreApplication.translate("MainWindow", u"100%", None))
         self.canLabelStyle.setText(QCoreApplication.translate("MainWindow", u"CAN\n"
 "1", None))
-        self.canLabelStyle1.setText(QCoreApplication.translate("MainWindow", u"CAN 2", None))
-        self.canLabelStyle2.setText(QCoreApplication.translate("MainWindow", u"CAN 3", None))
-        self.canLabelStyle3.setText(QCoreApplication.translate("MainWindow", u"CAN 4", None))
+        self.canLabelStyle2.setText(QCoreApplication.translate("MainWindow", u"CAN 2", None))
+        self.canLabelStyle3.setText(QCoreApplication.translate("MainWindow", u"CAN 3", None))
+        self.canLabelStyle4.setText(QCoreApplication.translate("MainWindow", u"CAN 4", None))
         self.linkErrorsTitle.setText(QCoreApplication.translate("MainWindow", u"LINK ERRORS", None))
         self.linkErrorText.setText(QCoreApplication.translate("MainWindow", u"L1", None))
-        self.linkErrorText1.setText(QCoreApplication.translate("MainWindow", u"L2", None))
-        self.linkErrorText2.setText(QCoreApplication.translate("MainWindow", u"L3", None))
-        self.linkErrorText3.setText(QCoreApplication.translate("MainWindow", u"L4", None))
+        self.linkErrorText2.setText(QCoreApplication.translate("MainWindow", u"L2", None))
+        self.linkErrorText3.setText(QCoreApplication.translate("MainWindow", u"L3", None))
+        self.linkErrorText4.setText(QCoreApplication.translate("MainWindow", u"L4", None))
         self.tableHeaderLabel.setText(QCoreApplication.translate("MainWindow", u"Inverter", None))
-        self.tableHeaderLabel1.setText(QCoreApplication.translate("MainWindow", u"Code", None))
+        self.tableHeaderLabel2.setText(QCoreApplication.translate("MainWindow", u"Code", None))
         self.tableRowLabel.setText(QCoreApplication.translate("MainWindow", u"Inverter 1", None))
         self.tableRowValue.setText(QCoreApplication.translate("MainWindow", u"0", None))
-        self.tableRowLabel1.setText(QCoreApplication.translate("MainWindow", u"Inverter 2", None))
-        self.tableRowValue1.setText(QCoreApplication.translate("MainWindow", u"0", None))
-        self.tableRowLabel2.setText(QCoreApplication.translate("MainWindow", u"Inverter 3", None))
+        self.tableRowLabel2.setText(QCoreApplication.translate("MainWindow", u"Inverter 2", None))
         self.tableRowValue2.setText(QCoreApplication.translate("MainWindow", u"0", None))
-        self.tableRowLabel3.setText(QCoreApplication.translate("MainWindow", u"Inverter 4", None))
+        self.tableRowLabel3.setText(QCoreApplication.translate("MainWindow", u"Inverter 3", None))
         self.tableRowValue3.setText(QCoreApplication.translate("MainWindow", u"0", None))
+        self.tableRowLabel4.setText(QCoreApplication.translate("MainWindow", u"Inverter 4", None))
+        self.tableRowValue4.setText(QCoreApplication.translate("MainWindow", u"0", None))
         self.bms_title.setText(QCoreApplication.translate("MainWindow", u"Battery Management", None))
         self.bms_subtitle.setText(QCoreApplication.translate("MainWindow", u"BMS Monitor", None))
         self.dotCharging.setText(QCoreApplication.translate("MainWindow", u"\u25cf", None))
@@ -1824,5 +2332,53 @@ class Ui_MainWindow(object):
         self.lbl_max_motor.setText(QCoreApplication.translate("MainWindow", u"Max\n"
 "Motor Temp", None))
         self.val_max_motor.setText(QCoreApplication.translate("MainWindow", u"00.0 C", None))
+        self.tireFLLabel.setText(QCoreApplication.translate("MainWindow", u"FL", None))
+        self.tireFLValue.setText(QCoreApplication.translate("MainWindow", u"84", None))
+        self.tireFRLabel.setText(QCoreApplication.translate("MainWindow", u"FR", None))
+        self.tireFRValue.setText(QCoreApplication.translate("MainWindow", u"82", None))
+        self.tireRLLabel.setText(QCoreApplication.translate("MainWindow", u"RL", None))
+        self.tireRLValue.setText(QCoreApplication.translate("MainWindow", u"91", None))
+        self.tireRRLabel.setText(QCoreApplication.translate("MainWindow", u"RR", None))
+        self.tireRRValue.setText(QCoreApplication.translate("MainWindow", u"93", None))
+        self.tireTempSep.setProperty(u"role", QCoreApplication.translate("MainWindow", u"hsep", None))
+        self.maxCellHeader.setText(QCoreApplication.translate("MainWindow", u"MAX CELL", None))
+        self.maxCellHeader.setProperty(u"role", QCoreApplication.translate("MainWindow", u"sectionHeader", None))
+        self.maxCellValue.setText(QCoreApplication.translate("MainWindow", u"43\u00b0", None))
+        self.scaleLabel0.setText(QCoreApplication.translate("MainWindow", u"0", None))
+        self.scaleLabel0.setProperty(u"role", QCoreApplication.translate("MainWindow", u"scaleLabel", None))
+        self.scaleLabel15.setText(QCoreApplication.translate("MainWindow", u"15", None))
+        self.scaleLabel15.setProperty(u"role", QCoreApplication.translate("MainWindow", u"scaleLabel", None))
+        self.scaleLabel30.setText(QCoreApplication.translate("MainWindow", u"30", None))
+        self.scaleLabel30.setProperty(u"role", QCoreApplication.translate("MainWindow", u"scaleLabel", None))
+        self.scaleLabel45.setText(QCoreApplication.translate("MainWindow", u"45", None))
+        self.scaleLabel60.setText(QCoreApplication.translate("MainWindow", u"60", None))
+        self.scaleLabelDQ.setText(QCoreApplication.translate("MainWindow", u"DQ", None))
+        self.speedValue.setText(QCoreApplication.translate("MainWindow", u"72", None))
+        self.speedUnit.setText(QCoreApplication.translate("MainWindow", u"KM / H", None))
+        self.tirePSIHeader.setText(QCoreApplication.translate("MainWindow", u"TIRE PSI", None))
+        self.tirePSIHeader.setProperty(u"role", QCoreApplication.translate("MainWindow", u"sectionHeader", None))
+        self.psiFLLabel.setText(QCoreApplication.translate("MainWindow", u"FL", None))
+        self.psiFLLabel.setProperty(u"role", QCoreApplication.translate("MainWindow", u"cornerLabel", None))
+        self.psiFLValue.setText(QCoreApplication.translate("MainWindow", u"12.4", None))
+        self.psiFLValue.setProperty(u"role", QCoreApplication.translate("MainWindow", u"tireValueWhite", None))
+        self.psiFRLabel.setText(QCoreApplication.translate("MainWindow", u"FR", None))
+        self.psiFRLabel.setProperty(u"role", QCoreApplication.translate("MainWindow", u"cornerLabel", None))
+        self.psiFRValue.setText(QCoreApplication.translate("MainWindow", u"12.6", None))
+        self.psiFRValue.setProperty(u"role", QCoreApplication.translate("MainWindow", u"tireValueWhite", None))
+        self.psiRLLabel.setText(QCoreApplication.translate("MainWindow", u"RL", None))
+        self.psiRLLabel.setProperty(u"role", QCoreApplication.translate("MainWindow", u"cornerLabel", None))
+        self.psiRLValue.setText(QCoreApplication.translate("MainWindow", u"12.1", None))
+        self.psiRLValue.setProperty(u"role", QCoreApplication.translate("MainWindow", u"tireValueWhite", None))
+        self.psiRRLabel.setText(QCoreApplication.translate("MainWindow", u"RR", None))
+        self.psiRRLabel.setProperty(u"role", QCoreApplication.translate("MainWindow", u"cornerLabel", None))
+        self.psiRRValue.setText(QCoreApplication.translate("MainWindow", u"12.2", None))
+        self.psiRRValue.setProperty(u"role", QCoreApplication.translate("MainWindow", u"tireValueWhite", None))
+        self.psiSep.setProperty(u"role", QCoreApplication.translate("MainWindow", u"hsep", None))
+        self.socHeader.setText(QCoreApplication.translate("MainWindow", u"SOC", None))
+        self.socHeader.setProperty(u"role", QCoreApplication.translate("MainWindow", u"sectionHeader", None))
+        self.socValue.setText(QCoreApplication.translate("MainWindow", u"68%", None))
+        self.brakeLabel.setText(QCoreApplication.translate("MainWindow", u"BRAKE", None))
+        self.pitModeLabel.setText(QCoreApplication.translate("MainWindow", u"PIT MODE", None))
+        self.throttleLabel.setText(QCoreApplication.translate("MainWindow", u"THROTTLE", None))
     # retranslateUi
 

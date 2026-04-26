@@ -1,4 +1,12 @@
-# CLAUDE.md
+# AGENTS.md
+
+All changes must be logged in `CHANGELOG.md`.
+
+## Core Instruction
+
+- Never edit code unless the user explicitly asks for code changes.
+- Default to analysis, explanation, debugging, review, and recommendations unless the request clearly authorizes implementation.
+- When reviewing code, treat the user as `person 1` from `work.md` if that file is present. If `work.md` is missing, do not invent its contents.
 
 ## Project Summary
 
@@ -31,7 +39,7 @@ These files exist but are not the main runtime source of truth:
 - `untitled/main.cpp`
 - `untitled/mainwindow.cpp`
 
-They look like Qt Creator generated files, experiments, or alternate project artifacts. Do not assume the app uses them unless a task explicitly says so.
+They appear to be Qt Creator generated files, experiments, or alternate artifacts. Do not assume the app uses them unless a task explicitly says so.
 
 ## How The App Runs
 
@@ -93,7 +101,7 @@ When adding text widgets:
 
 - `widgets/uart_logic.py` appears to be older experimental code. The main runtime path is `dashboard/dashboard_class.py`.
 - `README.md` is more of a working design note than a finished setup guide.
-- `untitled/requirements.txt` currently lists `PySide6`, but the code also imports `serial`, so `pyserial` is also required in practice.
+- `untitled/requirements.txt` lists `PySide6`, but the code also imports `serial`, so `pyserial` is also required in practice.
 - `__pycache__/`, `.pyc`, and Qt Creator cache folders are generated noise and should not be edited or committed.
 
 ## Useful Commands
@@ -131,12 +139,15 @@ bash config_scripts/read_port.sh
 5. Make sure `dashboard/dynamic_logic.py` supports that widget type.
 6. Run the app and verify the visible page updates correctly.
 
-## Recommended Workflow For Future Changes
+## Recommended Workflow
 
 - Inspect `untitled/mainwindow.ui` first for real widget names.
 - Then inspect `dashboard/signals_and_pages.py`.
 - Then inspect `dashboard/dashboard_class.py` and `dashboard/dynamic_logic.py`.
 - Prefer small, synchronized changes across UI names and Python mappings.
-- If a widget "exists in Qt Creator" but updates fail at runtime, suspect an `objectName` mismatch before suspecting Qt itself.
+- If a widget appears in Qt Creator but updates fail at runtime, suspect an `objectName` mismatch before suspecting Qt itself.
 
-VERY IMPORTANT!!!! WHEN SOLVING ISSUES DONT JUST EDIT THE CODE. EXPLAIN THE ISSUE
+## Communication Rule
+
+- When diagnosing issues, explain the issue before proposing or making code edits.
+- If the user has not explicitly authorized edits, stop at explanation and recommendations.
