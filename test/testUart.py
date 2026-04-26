@@ -1,7 +1,7 @@
 import serial
 import time
 
-ser = serial.Serial("/dev/ttyAMA5", 115200, timeout=5)
+ser = serial.Serial("/dev/ttyAMA0", 115200, timeout=5)
 
 print('Listening...')
 

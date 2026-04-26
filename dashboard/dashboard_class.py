@@ -32,7 +32,7 @@ class Dashboard:
         #self.ser = None
         self.pi_port = '/dev/serial0'
         self.test_port = 'COM4'
-        self.uart5_port = '/dev/ttyAMA5'
+        self.uart5_port = '/dev/ttyAMA0'
         self.ser = serial.Serial(
                 port=self.uart5_port,
                 baudrate=115200,
