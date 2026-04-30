@@ -233,7 +233,7 @@ This section is for whoever is taking over the dashboard. It covers how the piec
 
 There are two sides to this system:
 
-1. **The car side (Nucleo microcontroller).** This is an STM32 running C code. It reads sensor data over CAN, packages it into small UART frames, and sends them out over a wire to the Pi. The code that does this lives in `test/nucleo_test_uart.c` as a reference (the actual flight firmware is in a different repo).
+1. **The car side (STM microcontroller).** This is an STM32 running C code. It reads sensor data over CAN, packages it into small UART frames, and sends them out over a wire to the Pi. The code that does this lives in `test/nucleo_test_uart.c` as a reference (the actual flight firmware is in a different repo).
 
 2. **The Pi side (this project).** A Python program reads those UART frames, stores the values in a dictionary, and a Qt-based UI displays them on screen.
 
@@ -242,7 +242,7 @@ Data flow:
 ```
 Car sensors
    v
-Nucleo (CAN -> UART frame)
+VC (CAN -> UART frame)
    v
 Serial cable
    v

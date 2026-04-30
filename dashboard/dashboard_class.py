@@ -3,7 +3,7 @@ from PySide6.QtWidgets import QApplication, QFrame, QLabel
 from PySide6.QtGui import QCursor
 from PySide6.QtCore import Qt, QFile, QTimer
 from PySide6.QtUiTools import QUiLoader
-from dashboard.dynamic_logic import bar_resize, update_text, update_progress_bar, toggle_badge
+from dashboard.dynamic_logic import bar_resize, update_text, update_progress_bar, toggle_badge, led_blink
 from widgets.page_2 import pulse_light
 from images.image_loader import load_page_image
 import serial
@@ -36,7 +36,7 @@ class Dashboard:
         self.test_port = 'COM9'
         self.uart5_port = '/dev/ttyAMA5'
         self.ser = serial.Serial(
-                port=self.pi_port,
+                port=self.test_port,
                 baudrate=115200,
                 timeout=1,
             )
@@ -130,7 +130,20 @@ class Dashboard:
             if widget_type == "progress_bar":
                 update_progress_bar(self.window, object_name, value)
             if widget_type == "badge":
-                toggle_badge(self.window, object_name, value)
+                if value !=0:
+                    state=True
+                else:
+                    state=False
+                
+                toggle_badge(self.window, object_name, state)
+            
+            if widget_type=="led":
+                if value !=0:
+                    state=True
+                else:
+                    state=False
+                led_blink(self.window, object_name, state)
+
 
     def toggle_fullscreen(self):
         if self.window.isFullScreen():

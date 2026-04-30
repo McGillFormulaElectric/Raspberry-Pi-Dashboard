@@ -31,12 +31,20 @@ def bar_resize(window, object_name, height):
 # Toggle an LED-style widget between on and off colors.
 def led_blink(window, object_name, state):
     '''change color of led from red to green, green to red, state is 0 for off/red and 1 for on/green'''
-    #red: rgb(255, 5, 38), green:  rgb(14, 255, 54)
-    label = window.findChild(QLabel, object_name) #grab the qlabel
-    if state:
-        label.setStyleSheet("color:  rgb(14, 255, 54);")
-    else:
-        label.setStyleSheet("rgb(255, 5, 38)")
+    label = window.findChild(QLabel, object_name)
+    if label is not None:
+        if state:
+            label.setStyleSheet("color: rgb(14, 255, 54);")
+        else:
+            label.setStyleSheet("color: rgb(255, 5, 38);")
+        return
+    # Fallback: QWidget-based LED (uses background-color instead of color)
+    widget = window.findChild(QWidget, object_name)
+    if widget is not None:
+        if state:
+            widget.setStyleSheet(f"#{object_name} {{ background-color: rgb(14, 255, 54); border-radius: 15px; }}")
+        else:
+            widget.setStyleSheet(f"#{object_name} {{ background-color: rgb(255, 5, 38); border-radius: 15px; }}")
 
 
 

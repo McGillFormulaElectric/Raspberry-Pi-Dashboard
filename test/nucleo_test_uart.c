@@ -98,8 +98,8 @@ int main(void)
   MX_USART1_UART_Init();
   /* USER CODE BEGIN 2 */
   uint8_t start = 0xFF;
-  uint8_t val = 1;
   uint8_t pData[3];
+  uint8_t val = 10;
 
   /* USER CODE END 2 */
 
@@ -107,25 +107,17 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-	for (uint8_t id = 19; id <= 34; id++)
+	for (uint8_t id = 1; id <= 42; id++)
 	{
 		pData[0] = start;
 		pData[1] = id;
 		pData[2] = val;
-
-		HAL_UART_Transmit(&huart1, (uint8_t*) pData, 3, 100);
+		HAL_UART_Transmit(&huart1, pData, 3, 100);
 		HAL_Delay(10);
 	}
-
 	val += 10;
-	if (val >= 100){
-		val = 0;
-	}
-
-	HAL_Delay(300);
-
-
-	  }
+	if (val > 100) val = 10;
+  }
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
